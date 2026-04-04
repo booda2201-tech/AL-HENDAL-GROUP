@@ -1,1 +1,233 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-white font-sans overflow-x-hidden;
+  }
+}
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'aos/dist/aos.css';
+
+
+
+
+.luxury-gradient-border {
+  border: 1px solid transparent;
+  background: linear-gradient(#121212, #121212) padding-box,
+              linear-gradient(to right, #D4AF37, #7A5C00) border-box;
+}
+
+.golden-text-gradient {
+  background: linear-gradient(to bottom, #F9E498 0%, #D4AF37 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.8) 80%, rgba(10, 10, 10, 1) 100%);
+}
+
+.nav-glass {
+  // background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+// أنيميشن الأمواج
+.wave-container {
+  position: absolute; width: 100%; height: 300px; bottom: 0; left: 0; overflow: hidden; pointer-events: none;
+}
+
+.animated-wave {
+  position: absolute; width: 200%; height: 100%; background-repeat: repeat-x; background-position: center bottom;
+  animation: waveFlow 20s ease-in-out infinite; opacity: 0.4;
+  // background-image: url('assets/images/wave.png');
+}
+
+@keyframes waveFlow {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-25%) translateY(10px); }
+}
+
+.reveal-up {
+  opacity: 0;
+  animation: revealUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+// --- 1. تعريف لوحة الألوان الفاخرة ---
+$gold-primary: #C5A059;   // الذهب الرئيسي
+$gold-soft:    #BF953F;   // ذهبي ناعم
+$gold-bright:  #FCF6BA;   // ذهبي ساطع للبريق
+$gold-dark:    #AA771C;   // ذهبي داكن للعمق
+$white-pure:   #ffffff;
+$gray-warm:    #8a8a8a;   // الرمادي الدافئ للنصوص الوصفية
+$gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
+
+:host {
+  display: block;
+}
+
+// --- 2. تأثير النص الذهبي المتوهج (Shimmer) ---
+// يُستخدم فقط للعناوين الرئيسية والسنوات (Titles & Years)
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    $gold-soft 0%,
+    $gold-bright 20%,
+    $gold-soft 40%,
+    $gold-bright 60%,
+    $gold-dark 80%,
+    $gold-soft 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shimmer 8s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+// --- 3. الفواصل والخطوط (Dividers & Timeline) ---
+// .animated-divider {
+//   height: 1px;
+//   background: linear-gradient(90deg, transparent, $gold-primary, transparent);
+//   width: 0;
+//   transition: width 2s ease-in-out;
+
+//   // دعم AOS للأنيميشن عند التمرير
+//   &.aos-animate, .aos-animate & {
+//     width: 100%;
+//   }
+// }
+    .animated-dividerr {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #C5A059, transparent);
+        width: 0;
+        animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-timeline: view();
+        animation-range: entry 10% cover 40%;
+    }
+
+.timeline-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba($gold-primary, 0.4) 50%,
+    transparent 100%
+  ) !important;
+}
+
+// --- 4. الكروت الفاخرة (Luxury Card) ---
+// مطابقة تماماً للصورة الأولى (تأثير الزجاج المطفى)
+.luxury-card {
+  background: rgba($white-pure, 0.02);
+  border: 1px solid rgba($gold-primary, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); // لدعم Safari
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: rgba($gold-primary, 0.5);
+    transform: translateY(-5px);
+    background: rgba($white-pure, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba($gold-primary, 0.1);
+  }
+}
+
+// --- 5. التحكم الموحد في ألوان النصوص ---
+// نصوص الوصف (رمادي دافئ بدلاً من الأزرق)
+.text-gray-500 {
+  color: $gray-warm !important;
+}
+
+.text-gray-400 {
+  color: $gray-light !important;
+}
+
+// النصوص الذهبية الثابتة (ليست شيمر)
+.text-primary {
+  color: $gold-primary !important;
+}
+
+.text-primary\/80 {
+  color: rgba($gold-primary, 0.8) !important;
+}
+
+// نصوص العناوين البيضاء
+.text-white {
+  color: $white-pure !important;
+}
+
+// --- 6. تعديلات إضافية للتوافق ---
+.border-primary\/20 {
+  border-color: rgba($gold-primary, 0.2) !important;
+}
+
+.bg-primary {
+  background-color: $gold-primary !important;
+}
+
+.material-symbols-outlined {
+  &.text-primary {
+    color: $gold-primary;
+  }
+}
+.border-white{
+  border-color: $gold-soft !important;
+}
+
+  .bg-gold {
+    background-color: rgba($gold-primary, 0.8) !important;
+
+  }
+
+        .animated-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #C5A059, transparent);
+            width: 0;
+            animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 40%;
+        }
+        @keyframes drawLine {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+.max-w-6xl{
+  border: 1px solid rgba(197, 160, 89, 0.1) !important;
+
+&:hover {
+            border-color: rgba(197, 160, 89, 0.4);
+            transform: translateY(-8px);
+        }
+
+}
+
+
+
+
+
+
+

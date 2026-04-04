@@ -1,0 +1,201 @@
+
+
+.custom-wave {
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  position: absolute;
+  bottom: 0;
+  animation: waveMotion 10s linear infinite;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+@keyframes waveMotion {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+h1, h2, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+.group {
+  cursor: pointer;
+
+  // تأثير الخط الذهبي السفلي اللي بيكبر عند الـ Hover
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #D4AF37;
+    transition: width 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 20;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  h3 {
+    // تقليل المسافات بين الحروف شوية عشان الخط السيريف يظهر
+    letter-spacing: 0.15em;
+  }
+}
+// --- 1. تعريف لوحة الألوان الفاخرة ---
+$gold-primary: #C5A059;   // الذهب الرئيسي
+$gold-soft:    #BF953F;   // ذهبي ناعم
+$gold-bright:  #FCF6BA;   // ذهبي ساطع للبريق
+$gold-dark:    #AA771C;   // ذهبي داكن للعمق
+$white-pure:   #ffffff;
+$gray-warm:    #8a8a8a;   // الرمادي الدافئ للنصوص الوصفية
+$gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
+
+:host {
+  display: block;
+}
+
+// --- 2. تأثير النص الذهبي المتوهج (Shimmer) ---
+// يُستخدم فقط للعناوين الرئيسية والسنوات (Titles & Years)
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    $gold-soft 0%,
+    $gold-bright 20%,
+    $gold-soft 40%,
+    $gold-bright 60%,
+    $gold-dark 80%,
+    $gold-soft 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shimmer 8s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+// --- 3. الفواصل والخطوط (Dividers & Timeline) ---
+// .animated-divider {
+//   height: 1px;
+//   background: linear-gradient(90deg, transparent, $gold-primary, transparent);
+//   width: 0;
+//   transition: width 2s ease-in-out;
+
+//   // دعم AOS للأنيميشن عند التمرير
+//   &.aos-animate, .aos-animate & {
+//     width: 100%;
+//   }
+// }
+    .animated-dividerr {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #C5A059, transparent);
+        width: 0;
+        animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-timeline: view();
+        animation-range: entry 10% cover 40%;
+    }
+
+.timeline-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba($gold-primary, 0.4) 50%,
+    transparent 100%
+  ) !important;
+}
+
+// --- 4. الكروت الفاخرة (Luxury Card) ---
+// مطابقة تماماً للصورة الأولى (تأثير الزجاج المطفى)
+.luxury-card {
+  background: rgba($white-pure, 0.02);
+  border: 1px solid rgba($gold-primary, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); // لدعم Safari
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: rgba($gold-primary, 0.5);
+    transform: translateY(-5px);
+    background: rgba($white-pure, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba($gold-primary, 0.1);
+  }
+}
+
+// --- 5. التحكم الموحد في ألوان النصوص ---
+// نصوص الوصف (رمادي دافئ بدلاً من الأزرق)
+.text-gray-500 {
+  color: $gray-warm !important;
+}
+
+.text-gray-400 {
+  color: $gray-light !important;
+}
+
+// النصوص الذهبية الثابتة (ليست شيمر)
+.text-primary {
+  color: $gold-primary !important;
+}
+
+.text-primary\/80 {
+  color: rgba($gold-primary, 0.8) !important;
+}
+
+// نصوص العناوين البيضاء
+.text-white {
+  color: $white-pure !important;
+}
+
+// --- 6. تعديلات إضافية للتوافق ---
+.border-primary\/20 {
+  border-color: rgba($gold-primary, 0.2) !important;
+}
+
+.bg-primary {
+  background-color: $gold-primary !important;
+}
+
+.material-symbols-outlined {
+  &.text-primary {
+    color: $gold-primary;
+  }
+}
+.border-white{
+  border-color: $gold-soft !important;
+}
+
+  .bg-gold {
+    background-color: rgba($gold-primary, 0.8) !important;
+
+  }
+
+        .animated-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #C5A059, transparent);
+            width: 0;
+            animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 40%;
+        }
+        @keyframes drawLine {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+.max-w-6xl{
+  border: 1px solid rgba(197, 160, 89, 0.1) !important;
+
+&:hover {
+            border-color: rgba(197, 160, 89, 0.4);
+            transform: translateY(-8px);
+        }
+
+}

@@ -1,0 +1,218 @@
+{
+  "NAV":{
+    "TITLE": "Al Hendal",
+    "SUBTITLE": "Group",
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "PROJECTS": "Projects",
+    "SUSTAINABILITY": "Sustainability",
+    "CONTACT": "Media & Contact"
+  },
+
+  "FOOTER":{
+    "SUBTITLE": "For Import and General Trade",
+    "DESC": "A specialized firm acting as a reliable link between global suppliers and local markets, providing innovative trading solutions.",
+    "NAV_TITLE": "Navigation",
+    "ABOUT": "About Us",
+    "GROWTH": "Growth Journey",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "BRANDS_TITLE": "Our Brands",
+    "RIGHTS": "© 2024 AL HENDAL GROUP. ALL RIGHTS RESERVED.",
+    "PRIVACY": "Privacy Policy",
+    "TERMS": "Terms of Service"
+  },
+
+  "HERO":{
+    "TITLE": "Al Hendal <br> Group",
+    "SUBTITLE": "Global Vision. Timeless Legacy"
+  },
+
+  "WHO":{
+    "TITLE": "Who We Are",
+    "DESC1": "AL HENDAL group is an investment and multi-activities company, focused on creating long term value...",
+    "DESC2": "مجموعة آل هندال هي شركة استثمارية متعددة النشاطات تركز على خلق قيمة طويلة الأمد..."
+  },
+
+  "FOOTPRINT":{
+    "TITLE": "Global Footprint",
+    "DESC": "Our strategic investments span across continents, driving innovation and sustainable growth in diverse markets.",
+    "CITIES": "Cities Worldwide",
+    "ASSETS": "Strategic Assets"
+  },
+
+  "BRANDS":{
+    "TITLE": "Our Brands",
+    "BUBBLE_DESC": "Burstin' Bites, Poppin' Delight! A unique bubble tea experience from Kuwait to Egypt.",
+    "T4_DESC": "A Global Journey of Flavor & Wellness. Founded in Taiwan in 2004.",
+    "SAIDY_DESC": "Premium tea brand inspired by the rich traditions and bold spirit of Southern Egypt.",
+    "DAL_DESC": "For Design and Decoration.",
+    "FORTO_DESC": "Quality and Trust in every product under the Al Hendal banner.",
+    "FRUITY_DESC": "A world of fresh fruits and vibrant flavors."
+  },
+
+  "ABOUT":{
+    "BADGE": "Our Heritage",
+    "TITLE": "Our Heritage",
+    "TITLE_SPAN": "& Vision",
+    "DESC_AR": "تراثنا ورؤيتنا - نسعى دوماً للتميز والريادة في كافة قطاعاتنا.",
+    "DESC_EN": "Since our inception, Al Hendal Holding Group has been a pillar of integrity and excellence, committed to shaping the future through innovation and sustainable growth.",
+
+    "VISION_EN": "Our Vision",
+    "VISION_AR": "رؤيتنا",
+    "VISION_DESC_EN": "To be an innovative leader in our core businesses providing cutting edge solutions and driving sustainable growth in every market we serve.",
+    "VISION_DESC_AR": "رؤيتنا أن نكون الرواد المبتكرين في قطاعاتنا، ملتزمين بتقديم الحلول المتطورة والنمو المستدام في كل ما نقوم به.",
+
+    "MISSION_EN": "Our Mission",
+    "MISSION_AR": "مهمتنا",
+    "MISSION_DESC_EN": "To deliver superior value to our stakeholders through operational excellence, ethical business practices, and a commitment to community and environmental responsibility.",
+    "MISSION_DESC_AR": "مهمتنا تقديم قيمة استثنائية لشركائنا من خلال عمليات متميزة والالتزام بالمسؤولية المجتمعية والبيئية في كل سوق نخدمه.",
+
+    "VALUES_TITLE": "Core Values",
+    "VALUES_SUBTITLE": "القيم الأساسية التي نؤمن بها",
+    "INTEGRITY": "Integrity",
+    "INTEGRITY_AR": "النزاهة",
+    "INTEGRITY_DESC": "Upholding the highest ethical standards in all our actions.",
+    "EXCELLENCE": "Excellence",
+    "EXCELLENCE_AR": "التميز",
+    "EXCELLENCE_DESC": "Striving for superior quality and performance in everything we do.",
+    "INNOVATION": "Innovation",
+    "INNOVATION_AR": "الابتكار",
+    "INNOVATION_DESC": "Embracing change and fostering creativity to drive future growth.",
+
+    "QUOTE": "Our company was established in Egypt as a specialized import and general trading firm. From day one, our goal has been to bring the best of the world to our local communities, building partnerships that last.",
+    "FOUNDER": "Abdelmohsen AL Hendal",
+    "FOUNDER_TITLE": "Founder & Chairman"
+  },
+
+  "PROJECTS":{
+    "BADGE": "A Global Footprint",
+    "TITLE": "Our Portfolio",
+    "TITLE_SPAN": "Global Excellence",
+    "SUBSIDIARIES_TITLE": "Our Subsidiaries",
+    "INDUSTRY_LABEL": "Industry focus"
+  },
+
+  "SUSTAIN":{
+    "BADGE": "Global Responsibility",
+    "TITLE": "Sustainability",
+    "TITLE_SPAN": "& Growth",
+    "QUOTE": "At Al Hendal Group, we believe that true success is measured by the long-term value we create for our partners, our employees, and the Egyptian market. Our commitment to sustainability is the foundation of our global vision.",
+
+    "ECONOMIC_TITLE": "Economic Impact",
+    "ECONOMIC_DESC": "Building an integrated business model that connects global suppliers with the local market. We focus on stabilizing supply chains to ensure constant economic expansion and market resilience.",
+
+    "COMMUNITY_TITLE": "Community Trust",
+    "COMMUNITY_DESC": "Acting as a reliable bridge of trust. By providing premium products like T4 Tea and Bubble Hope, we enhance the lifestyle of our community while ensuring health and safety standards.",
+
+    "LEGACY_TITLE": "Future Legacy",
+    "LEGACY_DESC": "Every investment we make today is a step toward a timeless legacy. We prioritize sustainable sourcing and environmentally conscious operations to protect the world for future generations.",
+
+    "STAT1_LABEL": "Client Retention",
+    "STAT2_LABEL": "Global Partners",
+    "STAT3_LABEL": "Annual Consumers",
+    "STAT4_LABEL": "Quality Tested",
+
+    "COMMITMENTS_TITLE": "Strategic Commitments",
+    "SOURCING_TITLE": "Ethical Sourcing",
+    "SOURCING_DESC": "We ensure that 100% of our products—from tea leaves to packaging—are sourced from certified ethical farms that respect both workers and the environment.",
+    "GROWTH_TITLE": "Innovative Growth",
+    "GROWTH_DESC": "Investing in digital transformation through brands like Forto to optimize logistics, reducing our carbon footprint by 25% through efficient route planning.",
+    "EMPOWERMENT_TITLE": "Local Empowerment",
+    "EMPOWERMENT_DESC": "Providing sustainable job opportunities and training for the Egyptian youth in the F&B and interior design sectors through Dal and our franchise networks.",
+
+    "CLOSING_QUOTE": "We invest in the future by building partnerships that last. Our sustainability is rooted in our integrity.",
+    "CLOSING_TAG": "Al Hendal Holding • 2026 Strategy"
+  },
+
+  "CONTACT":{
+    "BADGE": "Connect With Us",
+    "TITLE": "Contact",
+    "TITLE_SPAN": "Global",
+
+    "MEDIA_TITLE": "Media & Press Releases",
+    "READ_MORE": "Read More",
+    "VIEW_ALL": "View All News",
+
+    "NEWS1_DATE": "Oct 28, 2024",
+    "NEWS1_TITLE": "Al Hendal Holding Expands into Renewable Energy Sector",
+    "NEWS1_DESC": "Strategic investment marks a major milestone in sustainable growth for the region.",
+
+    "NEWS2_DATE": "Sept 14, 2024",
+    "NEWS2_TITLE": "Quarterly Earnings Report Shows Strong Performance",
+    "NEWS2_DESC": "Record revenue driven by key infrastructure projects and luxury real estate.",
+
+    "NEWS3_DATE": "Aug 05, 2024",
+    "NEWS3_TITLE": "New Partnership Announced with Global Tech Firm",
+    "NEWS3_DESC": "Collaboration aims to accelerate digital transformation across subsidiaries.",
+
+    "FORM_TITLE": "Contact Center",
+    "NAME_LABEL": "Your Name",
+    "NAME_PLACEHOLDER": "Full Name",
+    "EMAIL_LABEL": "Your Email Address",
+    "EMAIL_PLACEHOLDER": "email@example.com",
+    "SUBJECT_LABEL": "Subject",
+    "SUBJECT_PLACEHOLDER": "Topic of inquiry",
+    "CATEGORY_LABEL": "Inquiry Category",
+    "CAT1": "General Inquiry",
+    "CAT2": "Business Partnership",
+    "CAT3": "Career Opportunities",
+    "CAT4": "Media Relations",
+    "MESSAGE_LABEL": "Message (Required)",
+    "MESSAGE_PLACEHOLDER": "How can we help you?",
+    "SEND_BTN": "Send Message",
+
+    "OFFICE_TITLE": "Corporate Office",
+    "OFFICE_NAME": "Al Hendal Holding Group HQ",
+    "OFFICE_ADDR1": "Business Bay, Level 42, Sky Tower",
+    "OFFICE_ADDR2": "Dubai, United Arab Emirates",
+    "INVEST_TITLE": "Investment & Partnerships",
+    "CAREERS_TITLE": "Careers & HR"
+  },
+
+  "BRAND_DETAILS":{
+    "COMMON.BACK": "Back",
+    "TAGLINE": "A Legacy of Excellence and Visionary Craftsmanship",
+    "BUBBLE_HOPE": {
+      "NAME": "Bubble Hope",
+      "TAGLINE": "Effervescent Joy in Every Sip",
+      "DESC": "Redefining the beverage experience with a fusion of premium ingredients and innovative flavors. Bubble Hope represents the pinnacle of modern refreshment, crafted for those who seek extraordinary taste and vibrant energy."
+    },
+    "FORTO": {
+      "NAME": "FORTO",
+      "TAGLINE": "Precision Performance & Car Care",
+      "DESC": "Forto represents the gold standard in automotive maintenance, offering premium energy and care solutions for the modern driver who demands excellence."
+    },
+    "T4_TEA": {
+      "NAME": "T4 TEA",
+      "TAGLINE": "The Art of Traditional Brewing",
+      "DESC": "A sanctuary for tea connoisseurs. T4 TEA brings centuries of heritage into a contemporary setting, selecting only the finest hand-picked leaves to ensure a profound sensory journey in every cup."
+    },
+    "SAIDY": {
+      "NAME": "Said Tea",
+      "TAGLINE": "Authenticity Rooted in Tradition",
+      "DESC": "An ode to the rich heritage of Upper Egypt. Saidy Tea offers a robust, authentic flavor profile that resonates with history and hospitality, bringing the warmth of Egyptian tradition to the global stage."
+    },
+    "DAL": {
+      "NAME": "DAL",
+      "TAGLINE": "Excellence in Every Detail",
+      "DESC": "A multidisciplinary brand focused on delivering premium solutions. DAL stands for integrity and quality, ensuring that every project and product meets the highest standards of international luxury."
+    },
+    "VISIT_WEBSITE": "Visit Official Website"
+  },
+
+
+  "FEATURES":{
+    "ESTABLISHED": "Established",
+    "ENERGY": "Energy",
+    "LOCATION": "Location",
+    "QUALITY": "Quality Grade",
+    "PREMIUM": "Premium Gold",
+    "GLOBAL": "Global Reach",
+      "VALUES": {
+        "POWER_BOOST": "Power Boost",
+        "GOLD_STANDARD": "Gold Standard"
+        }
+  }
+
+}

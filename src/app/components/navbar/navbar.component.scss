@@ -1,0 +1,241 @@
+
+// الـ Variables الموجودة لديك مسبقاً
+$gold-primary: #C5A059;
+$gold-soft:    #BF953F;
+$gold-bright:  #FCF6BA;
+$gold-dark:    #AA771C;
+$white-pure:   #ffffff;
+
+
+
+nav {
+  will-change: transform;
+}
+
+
+.-translate-y-full {
+  transition-duration: 500ms !important;
+}
+
+
+.nav-link {
+  @apply text-gray-400 text-[15px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.2em] transition-all duration-300 relative pb-1;
+  font-weight: 500;
+
+  &:hover {
+    @apply text-[#d4af37];
+  }
+
+  &.active {
+    @apply text-[#d4af37];
+    &::after {
+      content: '';
+      @apply absolute bottom-0 left-0 w-full h-[1px] bg-[#d4af37];
+    }
+  }
+}
+
+// تعديل الـ Fixed Navbar ليكون شفافاً قليلاً مع Backdrop Filter
+.fixed {
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+// أنيميشن بسيط لظهور قائمة الجوال
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// تحسين الـ Shimmer ليكون أسرع قليلاً وأوضح
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    $gold-soft 0%,
+    $gold-bright 20%,
+    $gold-soft 40%,
+    $gold-bright 60%,
+    $gold-dark 80%,
+    $gold-soft 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+// استعلامات الوسائط (Media Queries) للشاشات الصغيرة جداً
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1rem !important;
+  }
+  p {
+    letter-spacing: 0.2em !important;
+  }
+}
+
+
+
+html[lang="ar"] {
+
+  // روابط القائمة الكبيرة (Desktop)
+  .nav-link {
+    font-size: 25px !important;
+    font-family: 'Tajawal', sans-serif !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+  }
+
+  // روابط قائمة الموبايل (Mobile Overlay)
+  .nav-link-mobile {
+    font-size: 20px !important;
+    font-family: 'Tajawal', sans-serif !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+
+:host-context([lang="ar"]) .nav-link-mobile {
+    font-size: 20px !important;
+}
+
+
+
+
+
+
+
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #d4af37; // اللون الذهبي
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.menu-open {
+  .top-line {
+    transform: translateY(7px) rotate(45deg);
+    background-color: #ffffff;
+  }
+  .mid-line {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  .bot-line {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: #ffffff;
+  }
+}
+
+// --- تحسين ظهور القائمة المنسدلة ---
+.mobile-menu-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba($gold-primary, 0.2);
+  z-index: 50;
+  animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.nav-link-mobile {
+  @apply text-white text-lg font-light uppercase tracking-[0.3em] transition-all duration-300;
+  &:hover {
+    @apply text-[#d4af37];
+    letter-spacing: 0.4em;
+  }
+}
+
+
+
+
+.mobile-menu-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba($gold-primary, 0.2);
+  z-index: 50;
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+.nav-link-mobile {
+  @apply text-white font-light uppercase transition-all duration-300;
+
+  font-size: 14px;
+  letter-spacing: 0.25em;
+
+  &:hover {
+    @apply text-[#d4af37];
+    letter-spacing: 0.35em;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile-menu-overlay {
+    .flex {
+      gap: 1.25rem !important;
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+  }
+
+  .nav-link-mobile {
+    font-size: 13px !important;
+    letter-spacing: 0.2em !important;
+  &:hover {
+    @apply text-[#d4af37];
+    letter-spacing: 0.35em;
+  }
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.nav-link {
+  @apply text-white font-light uppercase transition-all duration-300;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+}
+.nav-link-mobile {
+  @apply text-white font-light uppercase transition-all duration-300;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+
+  &:hover {
+    @apply text-[#d4af37];
+    padding-inline-start: 10px;
+  }
+}
+

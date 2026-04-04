@@ -1,0 +1,9 @@
+
+
+.gold-shimmer-text {
+  background-size: 200% auto;
+  /* لو عايز اللمعة تبان أسرع في الموبايل */
+  @media (max-width: 768px) {
+    background-size: 150% auto;
+  }
+}

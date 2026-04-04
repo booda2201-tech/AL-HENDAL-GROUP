@@ -1,0 +1,119 @@
+
+<div class="bg-holding-black text-white min-h-screen font-sans" >
+
+  <!-- Hero -->
+  <header class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070')] bg-cover bg-center opacity-30"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-holding-black/60 to-holding-black"></div>
+    <div class="relative z-10">
+      <h1 data-aos="fade-up" data-aos-duration="1200"
+          class="text-5xl md:text-8xl font-serif text-holding-gold tracking-[0.1em] uppercase leading-tight mb-4 gold-shimmer-text"
+          [innerHTML]="'HERO.TITLE' | translate">
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="400"
+          class="text-gray-400 tracking-[0.5em] text-sm md:text-lg uppercase">
+        {{ 'HERO.SUBTITLE' | translate }}
+      </p>
+    </div>
+  </header>
+
+  <!-- Who We Are -->
+  <section class="py-20 bg-holding-black text-center px-8 overflow-hidden">
+    <h2 data-aos="fade-right" class="text-4xl lg:text-5xl font-display gold-shimmer-text mb-4">
+      {{ 'WHO.TITLE' | translate }}
+    </h2>
+    <div class="max-w-4xl mx-auto space-y-8">
+      <p data-aos="fade-up" class="text-gray-300 leading-relaxed text-lg italic">
+        {{ 'WHO.DESC1' | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 mt-20 max-w-5xl mx-auto opacity-40">
+      <div class="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-holding-gold text-4xl mb-2">🏢</div>
+        <span class="text-[10px] uppercase tracking-widest">Al Hendal Prop</span>
+      </div>
+      <div class="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-holding-gold text-4xl mb-2">📊</div>
+        <span class="text-[10px] uppercase tracking-widest">Finmore Capital</span>
+      </div>
+      <div class="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-holding-gold text-4xl mb-2">⚡</div>
+        <span class="text-[10px] uppercase tracking-widest">Apex Energy</span>
+      </div>
+      <div class="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-holding-gold text-4xl mb-2">🍃</div>
+        <span class="text-[10px] uppercase tracking-widest">Fruity Hope</span>
+      </div>
+      <div class="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="500">
+        <div class="text-holding-gold text-4xl mb-2">🌐</div>
+        <span class="text-[10px] uppercase tracking-widest">Global Connect</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footprint -->
+  <section class="py-24 bg-holding-black px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-holding-gold text-4xl font-serif mb-6 uppercase tracking-widest gold-shimmer-text">
+          {{ 'FOOTPRINT.TITLE' | translate }}
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+          {{ 'FOOTPRINT.DESC' | translate }}
+        </p>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <span class="text-holding-gold text-3xl font-light block gold-shimmer-text">20+</span>
+            <span class="text-gray-600 text-xs uppercase tracking-widest">{{ 'FOOTPRINT.CITIES' | translate }}</span>
+          </div>
+          <div>
+            <span class="text-holding-gold text-3xl font-light block gold-shimmer-text">150+</span>
+            <span class="text-gray-600 text-xs uppercase tracking-widest">{{ 'FOOTPRINT.ASSETS' | translate }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2033"
+              class="opacity-40 grayscale hover:grayscale-0 transition duration-700 shadow-2xl border border-holding-gold/10" alt="World Map">
+        <div class="absolute inset-0 bg-gradient-to-t from-holding-black via-transparent to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Brands -->
+  <section class="py-24 bg-holding-black px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-holding-gold text-4xl font-serif uppercase tracking-[0.4em] gold-shimmer-text" data-aos="fade-up">
+        {{ 'BRANDS.TITLE' | translate }}
+      </h2>
+      <div class="h-[1px] w-20 bg-holding-gold mx-auto mt-4 opacity-50" data-aos="zoom-in"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div *ngFor="let item of brandsList; let i = index"
+            [routerLink]="['/brand', item.id]"
+            class="group relative h-[300px] bg-black rounded-sm flex items-center justify-center p-8 overflow-hidden transition-transform hover:scale-105 shadow-lg cursor-pointer"
+            data-aos="zoom-in"
+           [attr.data-aos-delay]="(i % 3 + 1) * 100">
+
+        <img [src]="item.image" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-60">
+
+        <h3 [class]="'text-2xl font-bold z-10 relative drop-shadow-md ' + item.textColor">
+          {{ item.name }}
+        </h3>
+
+        <div class="absolute inset-0 bg-black/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-center items-center p-6 text-center z-20">
+          <p class="text-white text-sm mb-4">{{ item.translateKey | translate }}</p>
+          <span class="text-holding-gold text-xs tracking-widest uppercase border-b border-holding-gold/30 pb-1">View Detail</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+

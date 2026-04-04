@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<footer class="bg-[#0a0a0a] border-t border-yellow-900/20 pt-8 pb-8 text-gray-300"
+        [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="max-w-8xl mx-auto px-6 lg:px-12">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <!-- Logo & Desc -->
+      <div class="space-y-6">
+        <div class="flex flex-col">
+          <span class="text-white font-display font-bold tracking-[0.2em] text-xl mb-1">AL HENDAL</span>
+          <span class="text-[10px] text-yellow-600 uppercase tracking-widest">{{ 'FOOTER.SUBTITLE' | translate }}</span>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">
+          {{ 'FOOTER.DESC' | translate }}
+        </p>
+        <div class="flex space-x-4" [class.space-x-reverse]="currentLang === 'ar'">
+          <a href="#" class="w-10 h-10 rounded-full border border-yellow-900/30 flex items-center justify-center text-slate-400 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all duration-300">
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-yellow-900/30 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:border-transparent hover:text-white transition-all duration-300">
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-yellow-900/30 flex items-center justify-center text-slate-400 hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white transition-all duration-300">
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-yellow-900/30 flex items-center justify-center text-slate-400 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300">
+            <i class="fab fa-whatsapp text-lg"></i>
+          </a>
+          <a href="mailto:alhendal01@gmail.com" class="w-10 h-10 rounded-full border border-yellow-900/30 flex items-center justify-center text-slate-400 hover:bg-[#EA4335] hover:border-[#EA4335] hover:text-white transition-all duration-300">
+            <i class="far fa-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-white font-semibold mb-6 text-xs uppercase tracking-[0.2em] border-b border-yellow-900/20 pb-2">
+          {{ 'FOOTER.NAV_TITLE' | translate }}
+        </h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/about">{{ 'FOOTER.ABOUT' | translate }}</a></li>
+          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/sustainability">{{ 'FOOTER.GROWTH' | translate }}</a></li>
+          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/Projects">{{ 'FOOTER.PROJECTS' | translate }}</a></li>
+          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/contact">{{ 'FOOTER.CONTACT' | translate }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Brands -->
+      <div>
+        <h4 class="text-white font-semibold mb-6 text-xs uppercase tracking-[0.2em] border-b border-yellow-900/20 pb-2">
+          {{ 'FOOTER.BRANDS_TITLE' | translate }}
+        </h4>
+        <ul class="space-y-3 text-sm font-light">
+          <li class="flex items-center group cursor-pointer" routerLink="/brand/bubble-hope">
+            <span class="w-1.5 h-1.5 bg-yellow-700 rounded-full mr-2 group-hover:bg-yellow-500"></span>
+            <span class="group-hover:text-white transition-colors">Bubble Hope</span>
+          </li>
+          <li class="flex items-center group cursor-pointer" routerLink="/brand/fruity-hope">
+            <span class="w-1.5 h-1.5 bg-yellow-700 rounded-full mr-2 group-hover:bg-yellow-500"></span>
+            <span class="group-hover:text-white transition-colors">Fruity Hope</span>
+          </li>
+          <li class="flex items-center group cursor-pointer" routerLink="/brand/forto">
+            <span class="w-1.5 h-1.5 bg-yellow-700 rounded-full mr-2 group-hover:bg-yellow-500"></span>
+            <span class="group-hover:text-white transition-colors">Forto & Morto</span>
+          </li>
+          <li class="flex items-center group cursor-pointer" routerLink="/brand/t4-tea">
+            <span class="w-1.5 h-1.5 bg-yellow-700 rounded-full mr-2 group-hover:bg-yellow-500"></span>
+            <span class="group-hover:text-white transition-colors">T4T</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Arabic Section -->
+      <div [class.text-right]="currentLang !== 'ar'" [class.text-left]="currentLang === 'ar'" class="font-arabic">
+        <h4 class="text-white font-bold mb-6 text-lg tracking-normal">
+          {{ currentLang === 'ar' ? 'الهندل للتجارة' : 'Al Hendal Trading' }}
+        </h4>
+        <p class="text-xs leading-loose text-slate-400">
+          {{ 'FOOTER.DESC' | translate }}
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest text-slate-500 uppercase">
+      <p>{{ 'FOOTER.RIGHTS' | translate }}</p>
+      <div class="flex items-center space-x-4 mt-4 md:mt-0" [class.space-x-reverse]="currentLang === 'ar'">
+        <a href="#" class="hover:text-white">{{ 'FOOTER.PRIVACY' | translate }}</a>
+        <span class="text-yellow-900">|</span>
+        <a href="#" class="hover:text-white">{{ 'FOOTER.TERMS' | translate }}</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;700&display=swap');
+  .font-arabic { font-family: 'Noto Sans Arabic', sans-serif; }
+</style>

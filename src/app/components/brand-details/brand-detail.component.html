@@ -1,0 +1,192 @@
+<!-- <div class="bg-holding-black min-h-screen text-white font-sans overflow-x-hidden">
+
+  <section class="relative h-[75vh] flex items-end pb-20 px-10 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div *ngFor="let img of brand.heroImages; let i = index"
+            class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            [style.opacity]="i === currentHeroIndex ? '0.5' : '0'">
+        <img [src]="img"
+              class="w-full h-full object-cover grayscale transition-all duration-1000"
+              [class.animate-slow-zoom]="i === currentHeroIndex">
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-t from-holding-black via-holding-black/60 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto w-full">
+      <span class="text-holding-gold tracking-[0.5em] uppercase text-[10px] md:text-sm mb-4 block" data-aos="fade-up">
+        Elite Brand Selection
+      </span>
+      <h1 class="text-6xl md:text-8xl font-serif gold-shimmer-text mb-6" data-aos="fade-up" data-aos-delay="200">
+        {{ brand.name }}
+      </h1>
+    </div>
+  </section>
+
+
+
+  <section class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+
+      <div data-aos="fade-right">
+        <div class="w-20 h-[2px] bg-holding-gold mb-10"></div>
+        <h2 class="text-3xl font-serif mb-8 leading-tight italic text-gray-200">
+          {{ brand.tagline | translate }}
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:text-holding-gold first-letter:mr-3">
+          {{ brand.fullDescription | translate }}
+        </p>
+
+        <div class="grid grid-cols-2 gap-10 mt-12 border-t border-white/10 pt-10">
+          <div *ngFor="let feature of brand.features">
+            <span class="text-holding-gold block text-xl font-serif mb-2">{{ feature.title }}</span>
+            <span class="text-gray-500 text-sm uppercase tracking-widest">{{ feature.value }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-10" data-aos="zoom-in-left">
+        <div class="space-y-4">
+          <img [src]="brand.gallery[1]" class="rounded-sm grayscale hover:grayscale-0 transition duration-700 border border-white/5">
+          <img [src]="brand.gallery[0]" class="rounded-sm grayscale hover:grayscale-0 transition duration-700 border border-white/5">
+        </div>
+      </div>
+
+        <div class="mt-12 flex items-center gap-6" data-aos="fade-up">
+          <span class="text-xs uppercase tracking-[0.3em] text-white/30">Connect With Us —</span>
+          <div class="flex gap-4">
+                <a *ngIf="brand.socialLinks?.facebook" [href]="brand.socialLinks.facebook" target="_blank"
+                    class="social-icon-btn">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a *ngIf="brand.socialLinks?.instagram" [href]="brand.socialLinks.instagram" target="_blank"
+                    class="social-icon-btn">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a *ngIf="brand.socialLinks?.tiktok" [href]="brand.socialLinks.tiktok" target="_blank"
+                    class="social-icon-btn">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a *ngIf="brand.socialLinks?.whatsapp" [href]="brand.socialLinks.whatsapp" target="_blank"
+                    class="social-icon-btn">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+          </div>
+        </div>
+
+    </div>
+  </section>
+</div> -->
+
+
+
+
+
+<div class="bg-holding-black min-h-screen text-white font-sans overflow-x-hidden w-full">
+
+  <section class="relative h-[60vh] md:h-[75vh] flex items-end pb-10 md:pb-20 px-6 md:px-10 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div *ngFor="let img of brand.heroImages; let i = index"
+            class="absolute inset-0 transition-all duration-1000 ease-in-out"
+            [style.opacity]="i === currentHeroIndex ? '0.5' : '0'">
+        <img [src]="img"
+              class="w-full h-full object-cover transition-all duration-1000"
+              [class.animate-slow-zoom]="i === currentHeroIndex">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-holding-black via-holding-black/60 to-transparent"></div>
+    </div>
+
+  <div class="relative z-10 max-w-8xl mx-auto w-full">
+
+      <button (click)="goBack()"
+                class="group flex items-center gap-2 text-white/40 hover:text-holding-gold transition-all duration-500 uppercase tracking-[0.2em] text-[10px] mb-8 w-fit"
+                data-aos="fade-down">
+            <i class="fas fa-arrow-left text-[12px] group-hover:-translate-x-1 transition-transform"></i>
+            <span class="border-b border-transparent group-hover:border-holding-gold pb-0.5 transition-all duration-500">
+                    {{ 'BRAND_DETAILS.COMMON.BACK' | translate }}
+            </span>
+      </button>
+
+      <span class="text-holding-gold tracking-[0.3em] md:tracking-[0.5em] uppercase text-[10px] md:text-sm mb-4 block" data-aos="fade-up">
+          {{ 'Elite Brand Selection' | translate }}
+      </span>
+      <h1 class="text-4xl md:text-8xl font-serif gold-shimmer-text mb-6">
+          {{ brand.name | translate }}
+      </h1>
+  </div>
+</section>
+
+  <section class="py-12 md:py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+
+      <div data-aos="fade-right">
+        <div class="w-16 md:w-20 h-[2px] bg-holding-gold mb-6 md:mb-10"></div>
+        <h2 class="text-2xl md:text-3xl font-serif mb-6 md:mb-8 leading-tight italic text-gray-200">
+          {{ brand.tagline | translate }}
+        </h2>
+        <p class="text-gray-400 text-base md:text-lg leading-relaxed first-letter:text-4xl md:first-letter:text-5xl first-letter:text-holding-gold first-letter:mr-3">
+          {{ brand.fullDescription | translate }}
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-12 border-t border-white/10 pt-10">
+            <div *ngFor="let feature of brand.features">
+                <span class="text-holding-gold block text-lg md:text-xl font-serif mb-2">
+                    {{ feature.title | translate }}
+                </span>
+                <span class="text-gray-500 text-[10px] md:text-sm uppercase tracking-widest">
+                    {{ feature.value | translate }}
+                </span>
+            </div>
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6" data-aos="fade-up">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-white/30">
+                {{ 'BRAND_DETAILS.CONNECT' | translate }} —
+            </span>
+      <div class="flex gap-4">
+          <a *ngIf="brand.socialLinks?.facebook" [href]="brand.socialLinks.facebook"
+              target="_blank" class="social-icon-btn fb-hover">
+              <i class="fab fa-facebook-f fs-2"></i>
+          </a>
+
+          <a *ngIf="brand.socialLinks?.instagram" [href]="brand.socialLinks.instagram"
+              target="_blank" class="social-icon-btn ig-hover">
+              <i class="fab fa-instagram fs-2"></i>
+          </a>
+
+          <a *ngIf="brand.socialLinks?.tiktok" [href]="brand.socialLinks.tiktok"
+              target="_blank" class="social-icon-btn tk-hover">
+              <i class="fab fa-tiktok fs-2"></i>
+          </a>
+
+          <a *ngIf="brand.socialLinks?.whatsapp" [href]="brand.socialLinks.whatsapp"
+              target="_blank" class="social-icon-btn wa-hover">
+              <i class="fab fa-whatsapp fs-2"></i>
+          </a>
+</div>
+        </div>
+
+        <div *ngIf="brand.website" class="mt-8" data-aos="fade-up">
+          <a [href]="brand.website"
+              target="_blank"
+              class="inline-flex items-center gap-3 px-8 py-3 border border-holding-gold text-holding-gold hover:bg-holding-gold hover:text-black transition-all duration-500 rounded-sm uppercase tracking-widest text-xs font-bold">
+            <span>{{ 'BRAND_DETAILS.VISIT_WEBSITE' | translate }}</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:gap-10" data-aos="zoom-in-left">
+        <div class="space-y-6">
+          <img *ngIf="brand.gallery[1]" [src]="brand.gallery[1]" class="w-full rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-4xl">
+          <img *ngIf="brand.gallery[0]" [src]="brand.gallery[0]" class="w-full rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-4x1">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

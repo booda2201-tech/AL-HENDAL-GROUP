@@ -1,0 +1,145 @@
+
+<div class="bg-holding-black text-white min-h-screen pt-24 font-sans overflow-hidden"
+      [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+
+  <!-- Hero -->
+        <div class="relative py-16 md:py-28 px-6 text-center border-b border-white/5 overflow-hidden">
+          <div class="absolute inset-0 opacity-10 md:opacity-10 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070"
+                  class="w-full h-full object-cover"
+                  alt="Sustainability Background">
+          </div>
+
+          <div class="relative z-10 max-w-5xl mx-auto">
+            <span class="text-holding-gold tracking-[0.3em] md:tracking-[0.5em] text-[10px] md:text-xs uppercase mb-4 block"
+                  data-aos="fade-up">
+              {{ 'SUSTAIN.BADGE' | translate }}
+            </span>
+
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-serif text-white uppercase tracking-[0.1em] md:tracking-[0.2em] gold-shimmer-text leading-tight"
+                data-aos="fade-down">
+              {{ 'SUSTAIN.TITLE' | translate }}
+              <span class="text-holding-gold block md:inline-block">{{ 'SUSTAIN.TITLE_SPAN' | translate }}</span>
+            </h1>
+
+            <p class="text-gray-400 mt-6 md:mt-8 max-w-2xl mx-auto font-light leading-relaxed text-base md:text-lg px-2"
+                data-aos="fade-up"
+                data-aos-delay="200">
+              "{{ 'SUSTAIN.QUOTE' | translate }}"
+            </p>
+          </div>
+        </div>
+
+  <!-- 3 Cards -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white/5 p-12 border border-white/10 group hover:border-holding-gold/50 transition-all duration-700" data-aos="fade-up">
+        <div class="w-16 h-16 border border-holding-gold flex items-center justify-center mb-10 rotate-45 group-hover:bg-holding-gold transition-colors duration-500">
+          <i class="fas fa-chart-line -rotate-45 text-holding-gold group-hover:text-black text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif text-white uppercase tracking-widest mb-6 gold-shimmer-text">
+          {{ 'SUSTAIN.ECONOMIC_TITLE' | translate }}
+        </h3>
+        <p class="text-gray-400 font-light leading-relaxed">{{ 'SUSTAIN.ECONOMIC_DESC' | translate }}</p>
+      </div>
+
+      <div class="bg-white/5 p-12 border border-white/10 group hover:border-holding-gold/50 transition-all duration-700" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 border border-holding-gold flex items-center justify-center mb-10 rotate-45 group-hover:bg-holding-gold transition-colors duration-500">
+          <i class="fas fa-users -rotate-45 text-holding-gold group-hover:text-black text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif text-white uppercase tracking-widest mb-6 gold-shimmer-text">
+          {{ 'SUSTAIN.COMMUNITY_TITLE' | translate }}
+        </h3>
+        <p class="text-gray-400 font-light leading-relaxed">{{ 'SUSTAIN.COMMUNITY_DESC' | translate }}</p>
+      </div>
+
+      <div class="bg-white/5 p-12 border border-white/10 group hover:border-holding-gold/50 transition-all duration-700" data-aos="fade-up" data-aos-delay="400">
+        <div class="w-16 h-16 border border-holding-gold flex items-center justify-center mb-10 rotate-45 group-hover:bg-holding-gold transition-colors duration-500">
+          <i class="fas fa-leaf -rotate-45 text-holding-gold group-hover:text-black text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif text-white uppercase tracking-widest mb-6 gold-shimmer-text">
+          {{ 'SUSTAIN.LEGACY_TITLE' | translate }}
+        </h3>
+        <p class="text-gray-400 font-light leading-relaxed">{{ 'SUSTAIN.LEGACY_DESC' | translate }}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 bg-holding-gold/5 px-6 border-y border-holding-gold/10">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+      <div data-aos="zoom-in">
+        <h3 class="text-holding-gold text-5xl font-serif mb-2">95%</h3>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.3em]">{{ 'SUSTAIN.STAT1_LABEL' | translate }}</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <h3 class="text-holding-gold text-5xl font-serif mb-2">12+</h3>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.3em]">{{ 'SUSTAIN.STAT2_LABEL' | translate }}</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <h3 class="text-holding-gold text-5xl font-serif mb-2">500k+</h3>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.3em]">{{ 'SUSTAIN.STAT3_LABEL' | translate }}</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <h3 class="text-holding-gold text-5xl font-serif mb-2">100%</h3>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.3em]">{{ 'SUSTAIN.STAT4_LABEL' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Commitments -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div class="relative" data-aos="fade-right">
+        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-holding-gold opacity-30"></div>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069"
+              class="grayscale hover:grayscale-0 transition duration-1000 shadow-2xl border border-white/5" alt="Office">
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-holding-gold opacity-30"></div>
+      </div>
+      <div data-aos="fade-left">
+        <h2 class="text-holding-gold text-3xl font-serif mb-8 uppercase tracking-widest gold-shimmer-text">
+          {{ 'SUSTAIN.COMMITMENTS_TITLE' | translate }}
+        </h2>
+        <div class="space-y-10">
+          <div class="group">
+            <h4 class="text-white uppercase tracking-wider mb-3 flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-holding-gold"></span>
+              {{ 'SUSTAIN.SOURCING_TITLE' | translate }}
+            </h4>
+            <p class="text-gray-400 font-light text-sm leading-relaxed">{{ 'SUSTAIN.SOURCING_DESC' | translate }}</p>
+          </div>
+          <div class="group">
+            <h4 class="text-white uppercase tracking-wider mb-3 flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-holding-gold"></span>
+              {{ 'SUSTAIN.GROWTH_TITLE' | translate }}
+            </h4>
+            <p class="text-gray-400 font-light text-sm leading-relaxed">{{ 'SUSTAIN.GROWTH_DESC' | translate }}</p>
+          </div>
+          <div class="group">
+            <h4 class="text-white uppercase tracking-wider mb-3 flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-holding-gold"></span>
+              {{ 'SUSTAIN.EMPOWERMENT_TITLE' | translate }}
+            </h4>
+            <p class="text-gray-400 font-light text-sm leading-relaxed">{{ 'SUSTAIN.EMPOWERMENT_DESC' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Quote -->
+  <section class="bg-[#0c0c0c] py-28 px-6 border-y border-white/5 text-center relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-holding-gold to-transparent opacity-50"></div>
+    <div class="max-w-4xl mx-auto pt-10">
+      <i class="fas fa-quote-right text-holding-gold/10 text-7xl absolute top-10 right-10"></i>
+      <h2 class="text-holding-gold font-serif text-4xl mb-10 italic leading-snug gold-shimmer-text" data-aos="zoom-in">
+        "{{ 'SUSTAIN.CLOSING_QUOTE' | translate }}"
+      </h2>
+      <div class="h-[1px] w-24 bg-holding-gold/40 mx-auto mb-10"></div>
+      <p class="text-gray-500 uppercase tracking-[0.5em] text-xs">{{ 'SUSTAIN.CLOSING_TAG' | translate }}</p>
+    </div>
+  </section>
+
+</div>

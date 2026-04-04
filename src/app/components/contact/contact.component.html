@@ -1,0 +1,270 @@
+
+<div class="bg-[#0a0a0a] text-white min-h-screen pt-32 pb-24 font-sans relative overflow-hidden"
+      [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+
+  <!-- Background -->
+  <div class="absolute inset-0 z-0 opacity-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a] to-[#0a0a0a] z-10"></div>
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069"
+          class="w-full h-full object-cover grayscale"/>
+  </div>
+
+  <!-- Hero -->
+  <div class="text-center py-12 px-6 relative z-10" data-aos="fade-up">
+    <span class="text-holding-gold/60 tracking-[0.8em] text-[10px] uppercase mb-4 block font-medium">
+      {{ 'CONTACT.BADGE' | translate }}
+    </span>
+    <h1 class="text-5xl md:text-6xl font-serif text-white uppercase tracking-[0.15em]">
+      {{ 'CONTACT.TITLE' | translate }}
+      <span class="text-holding-gold italic">{{ 'CONTACT.TITLE_SPAN' | translate }}</span>
+    </h1>
+    <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-holding-gold/50 to-transparent mx-auto mt-8"></div>
+  </div>
+
+  <main class="pt-32 pb-20 abstract-bg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+        <!-- Media Section -->
+        <section class="lg:col-span-5">
+          <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
+            {{ 'CONTACT.MEDIA_TITLE' | translate }}
+          </h2>
+          <div class="space-y-10">
+
+            <div class="group flex gap-6 items-start">
+              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
+                <img alt="Solar panels" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkSqKQLmjxVsNQgRZCGUWc7gyOKTdOdFTfU_TyViR0_SKkvYEb3JaTsn2F4L67t2xTUI9mce_2Cd4Zc1xoTNni5cq0klwztnmnlnlhfB2vLEtxs5SXwtodRzwbvlR7skGiNhurvGRU17rkU89pyBmyMbBfEl-_p7YyrgqYqk5jO6DIssh-i03uJSqfc9PUNGXc-7baOIeQKtSUpFsVJ-1JC3wa0ji2Ek1cywtfBldg9VAMM2iezAujgaGlNIkVVnNWBMNlLusUIno0"/>
+              </div>
+              <div class="flex-1">
+                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS1_DATE' | translate }}</span>
+                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS1_TITLE' | translate }}</h3>
+                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS1_DESC' | translate }}</p>
+                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
+                  {{ 'CONTACT.READ_MORE' | translate }}
+                </a>
+              </div>
+            </div>
+
+            <div class="group flex gap-6 items-start">
+              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
+                <img alt="Business graphs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUX2ATh5RtCmhMDII7-MyW2mHSf6q7BBgu7wyN75HIKrTUrf4vuJfeZ2_DO0kl2_bmH3eImJSMMjIEo2JU4B9o8L9Qrf47WCBHJ-5pUprZZIQNFGr19TXjou66KgAAolHTAe8mYHbAkBbtauXhzIH3t1SADZqxts3LSN9Xez7sWb_-Zlv6dufXvNdwnSGzuwmT3U3MG-gH4xV36YhVSERTokMiaFT0KRELYyGp7fdXzDWcTXb82Mz5t2MC3eQbCCSYX2yNfh9ocO1g"/>
+              </div>
+              <div class="flex-1">
+                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS2_DATE' | translate }}</span>
+                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS2_TITLE' | translate }}</h3>
+                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS2_DESC' | translate }}</p>
+                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
+                  {{ 'CONTACT.READ_MORE' | translate }}
+                </a>
+              </div>
+            </div>
+
+            <div class="group flex gap-6 items-start">
+              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
+                <img alt="Handshake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBU7qRYrgfiIyUyjwkRVTwGPSKOaeA48U4uqA0vXB7fK73Uh5LowsxbS-ZvBFsjfPwIw5vIloPljibrHRobnkjmeKp_t54urvMlKbfZ-ULb7tU1GVQ24Q42s1pRJ1cyVeLolE71gQVcjcuJhdNSgNHvmSXMTFahGByy4DsDAkf-pWpCu58u3pJRy1IdfefaXMZS2Zs3v5DPVm-ALI6AK61NGPY86TbF0bGZ3Mx9NxsjF7Dq0oze6cy8bX-VfoYd016WS61lpDhIj2O"/>
+              </div>
+              <div class="flex-1">
+                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS3_DATE' | translate }}</span>
+                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS3_TITLE' | translate }}</h3>
+                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS3_DESC' | translate }}</p>
+                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
+                  {{ 'CONTACT.READ_MORE' | translate }}
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <button class="mt-12 px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-bold border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all duration-500">
+            {{ 'CONTACT.VIEW_ALL' | translate }}
+          </button>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="lg:col-span-7">
+          <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
+            {{ 'CONTACT.FORM_TITLE' | translate }}
+          </h2>
+          <!-- <div class="luxury-card p-4 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-primary/20">
+            <form class="space-y-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="relative">
+                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
+                    {{ 'CONTACT.NAME_LABEL' | translate }}
+                  </label>
+                  <input class="w-full custom-input px-2 py-4 rounded text-sm bg-transparent"
+                          [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate" type="text"/>
+                </div>
+                <div class="relative">
+                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
+                    {{ 'CONTACT.EMAIL_LABEL' | translate }}
+                  </label>
+                  <input class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent"
+                          [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate" type="email"/>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="relative">
+                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
+                    {{ 'CONTACT.SUBJECT_LABEL' | translate }}
+                  </label>
+                  <input class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent"
+                          [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate" type="text"/>
+                </div>
+                <div class="relative">
+                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
+                    {{ 'CONTACT.CATEGORY_LABEL' | translate }}
+                  </label>
+                  <select class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent appearance-none">
+                    <option class="bg-background-dark">{{ 'CONTACT.CAT1' | translate }}</option>
+                    <option class="bg-background-dark">{{ 'CONTACT.CAT2' | translate }}</option>
+                    <option class="bg-background-dark">{{ 'CONTACT.CAT3' | translate }}</option>
+                    <option class="bg-background-dark">{{ 'CONTACT.CAT4' | translate }}</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-4 bottom-4 text-primary pointer-events-none text-sm opacity-50">expand_more</span>
+                </div>
+              </div>
+              <div class="relative">
+                <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
+                  {{ 'CONTACT.MESSAGE_LABEL' | translate }}
+                </label>
+                <textarea class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent resize-none"
+                          [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate" rows="5"></textarea>
+              </div>
+              <button class="w-full gold-gradient-bg text-black font-bold uppercase
+                      tracking-[0.4em] py-5 text-xs hover:brightness-110 transition-all
+                      shadow-xl active:scale-[0.98] raunded-3" type="submit">
+                {{ 'CONTACT.SEND_BTN' | translate }}
+              </button>
+            </form>
+          </div> -->
+
+<div class="max-w-3xl mx-auto bg-[#0d0d0d] p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] border-t-2 border-[#d4af37]/40">
+  <form class="space-y-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="relative flex flex-col">
+        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
+          {{ 'CONTACT.NAME_LABEL' | translate }}*
+        </label>
+        <input
+          type="text"
+          [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
+          class="w-full bg-black/40 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+        />
+      </div>
+
+      <div class="relative flex flex-col">
+        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
+          {{ 'CONTACT.EMAIL_LABEL' | translate }}*
+        </label>
+        <input
+          type="email"
+          [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
+          class="w-full bg-black/40 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="relative flex flex-col">
+        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
+          {{ 'CONTACT.SUBJECT_LABEL' | translate }}*
+        </label>
+        <input
+          type="text"
+          [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate"
+          class="w-full bg-black/40 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+        />
+      </div>
+
+      <div class="relative flex flex-col">
+        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
+          {{ 'CONTACT.CATEGORY_LABEL' | translate }}*
+        </label>
+        <div class="relative">
+          <select class="w-full bg-black/40 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white appearance-none focus:outline-none focus:border-[#d4af37] transition-all duration-300 cursor-pointer">
+            <option class="bg-[#111111]">{{ 'CONTACT.CAT1' | translate }}</option>
+            <option class="bg-[#111111]">{{ 'CONTACT.CAT2' | translate }}</option>
+            <option class="bg-[#111111]">{{ 'CONTACT.CAT3' | translate }}</option>
+          </select>
+          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#d4af37] pointer-events-none text-sm opacity-70">expand_more</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative flex flex-col">
+      <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
+        {{ 'CONTACT.MESSAGE_LABEL' | translate }}*
+      </label>
+      <textarea
+        rows="5"
+        [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+        class="w-full bg-black/40 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] resize-none transition-all duration-300"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#b8860b] text-black font-bold py-4 rounded-md shadow-xl transition-all duration-300 hover:brightness-110 active:scale-[0.98] uppercase tracking-[0.4em] text-xs"
+    >
+      {{ 'CONTACT.SEND_BTN' | translate }}
+    </button>
+  </form>
+</div>
+
+
+          <!-- Address -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="p-6 border-l border-primary/20">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">
+                {{ 'CONTACT.OFFICE_TITLE' | translate }}
+              </h3>
+              <address class="not-italic text-sm text-gray-400 space-y-2 leading-relaxed">
+                <p class="text-white font-medium">{{ 'CONTACT.OFFICE_NAME' | translate }}</p>
+                <p>{{ 'CONTACT.OFFICE_ADDR1' | translate }}</p>
+                <p>{{ 'CONTACT.OFFICE_ADDR2' | translate }}</p>
+                <a class="text-primary hover:text-gold-light transition-colors" href="mailto:info@alhendal.com">info@alhendal.com</a>
+              </address>
+            </div>
+            <div class="grid grid-cols-1 gap-8 p-6 border-l border-primary/20">
+              <div>
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-primary/70 mb-2">
+                  {{ 'CONTACT.INVEST_TITLE' | translate }}
+                </h3>
+                <a class="text-sm text-white/80 hover:text-primary transition-colors" href="mailto:invest@alhendal.com">invest@alhendal.com</a>
+              </div>
+              <div>
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-primary/70 mb-2">
+                  {{ 'CONTACT.CAREERS_TITLE' | translate }}
+                </h3>
+                <a class="text-sm text-white/80 hover:text-primary transition-colors" href="mailto:careers@alhendal.com">careers@alhendal.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Wave -->
+  <div class="golden-wave-container">
+    <svg class="wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="goldGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+          <stop offset="0%" style="stop-color: #996515; stop-opacity: 1"></stop>
+          <stop offset="50%" style="stop-color: #d4af37; stop-opacity: 1"></stop>
+          <stop offset="100%" style="stop-color: #f9e6b3; stop-opacity: 1"></stop>
+        </linearGradient>
+      </defs>
+      <path d="M0,160 C320,300 420,10 720,160 C1020,310 1120,20 1440,160 V320 H0 Z" fill="url(#goldGradient)" opacity="0.8"></path>
+      <path d="M1440,160 C1760,300 1860,10 2160,160 C2460,310 2560,20 2880,160 V320 H1440 Z" fill="url(#goldGradient)" opacity="0.8"></path>
+    </svg>
+    <svg class="wave-svg delayed" preserveAspectRatio="none" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,160 C320,20 420,300 720,160 C1020,20 1120,310 1440,160 V320 H0 Z" fill="#D4AF37" opacity="0.3"></path>
+      <path d="M1440,160 C1760,20 1860,300 2160,160 C2460,20 2560,310 2880,160 V320 H1440 Z" fill="#D4AF37" opacity="0.3"></path>
+    </svg>
+  </div>
+</div>

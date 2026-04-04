@@ -1,0 +1,122 @@
+
+<div [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+
+  <!-- Hero Header -->
+  <header class="project-header relative pt-20 h-[75vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/1.jpg'); animation-delay: 0s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/2.jpg'); animation-delay: 2s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/3.jpg'); animation-delay: 4s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/4.jpg'); animation-delay: 6s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/b4.jpg'); animation-delay: 8s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/b5.jpg'); animation-delay: 10s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/b31.png'); animation-delay: 12s;"></div>
+      <div class="slider-img"
+                  style="background-image: url('../../../assets/imges/b6.jpg'); animation-delay: 14s;"></div>
+
+      <div class="overlay-gradient"></div>
+    </div>
+
+    <div class="relative z-10 max-w-8xl mx-auto px-6 w-full pointer-events-none">
+      <h2 data-aos="fade-right" data-aos-duration="1000"
+          class="text-[#C5A059] font-medium tracking-[0.4em] uppercase text-[10px] mb-6 flex items-center gap-4">
+        <span class="h-px w-8 bg-[#C5A059]"></span>
+        {{ 'PROJECTS.BADGE' | translate }}
+      </h2>
+      <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200"
+          class="text-5xl md:text-8xl font-serif text-white max-w-4xl leading-[1.1] uppercase">
+        {{ 'PROJECTS.TITLE' | translate }} <br/>
+        <span class="italic font-light gold-shimmer-text mx-4">{{ 'PROJECTS.TITLE_SPAN' | translate }}</span>
+      </h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative py-24 min-h-screen bg-[#0a0a0a] overflow-hidden">
+    <div class="fluid-line opacity-10" style="top: 10%; left: -25%;"></div>
+    <div class="fluid-line opacity-10" style="top: 40%; left: -10%; animation-delay: -2s;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+      <!-- Section Title -->
+      <div class="text-center mb-16" data-aos="fade-down">
+        <h1 class="text-4xl md:text-5xl font-serif text-white uppercase mb-4 tracking-widest gold-shimmer-text">
+          {{ 'PROJECTS.SUBSIDIARIES_TITLE' | translate }}
+        </h1>
+        <div class="h-[1px] w-24 bg-[#C5A059] mx-auto" data-aos="zoom-in" data-aos-delay="500"></div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <ng-container *ngFor="let item of filteredSubsidiaries; let i = index">
+
+          <!-- Image Card -->
+          <div *ngIf="item.type === 'image'"
+              [routerLink]="['/brand', item.id]"
+              data-aos="fade-up"
+               [attr.data-aos-delay]="(i % 4) * 100"
+              class="portfolio-card group relative overflow-hidden rounded-2xl aspect-[4/5] bg-[#0f0f0f] border border-white/[0.03] transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div class="absolute inset-0 z-0 transition-all duration-1000 group-hover:scale-110 opacity-50 group-hover:opacity-70">
+              <img [src]="item.image" class="w-full h-full object-cover filter grayscale-[50%] group-hover:grayscale-0" [alt]="item.title">
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-20">
+              <span class="text-[12rem] font-serif text-transparent bg-clip-text bg-gradient-to-b from-white/[0.1] to-transparent uppercase select-none">
+                {{ item.title.charAt(0) }}
+              </span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent z-20"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8 z-30">
+              <div class="transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                <span class="inline-block text-[#C5A059] text-[9px] font-bold uppercase tracking-[0.3em] mb-3 opacity-70 group-hover:opacity-100">
+                  // {{ currentLang === 'ar' ? item.tag_ar : item.tag }}
+                </span>
+                <h3 class="text-xl font-serif text-white/90 mb-2 leading-tight group-hover:text-white transition-colors">
+                  {{ currentLang === 'ar' ? item.title_ar : item.title }}
+                </h3>
+                <p class="text-white/30 text-[9px] uppercase tracking-[0.2em] overflow-hidden h-0 group-hover:h-4 transition-all duration-500">
+                  {{ currentLang === 'ar' ? item.location_ar : item.location }}
+                </p>
+              </div>
+              <div class="h-[1px] w-0 bg-gradient-to-r from-[#C5A059] to-transparent group-hover:w-full transition-all duration-700 mt-4"></div>
+            </div>
+          </div>
+
+          <!-- Logo Card -->
+          <div *ngIf="item.type === 'card'"
+              [routerLink]="['/brand', item.id]"
+              data-aos="fade-up"
+               [attr.data-aos-delay]="(i % 4) * 100"
+              class="portfolio-card group relative rounded-2xl aspect-[4/5] p-[1px] bg-white/[0.05] hover:bg-[#C5A059]/20 transition-all duration-500">
+            <div class="h-full w-full bg-[#0d0d0d] rounded-2xl flex flex-col justify-center items-center p-8 text-center relative overflow-hidden">
+              <div class="relative z-10 w-full">
+                <div class="w-20 h-20 mx-auto mb-8 transition-all duration-700 group-hover:scale-110">
+                  <img [src]="item.image" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-100" [alt]="item.title">
+                </div>
+                <h3 class="text-xl font-serif text-white/90 mb-4">
+                  {{ currentLang === 'ar' ? item.title_ar : item.title }}
+                </h3>
+                <div class="space-y-1 mb-10">
+                  <p class="text-white/20 text-[8px] uppercase tracking-[0.3em]">
+                    {{ 'PROJECTS.INDUSTRY_LABEL' | translate }}
+                  </p>
+                  <p class="text-[#C5A059]/80 text-xs font-light">
+                    {{ currentLang === 'ar' ? item.industry_ar : item.industry }}
+                  </p>
+                </div>
+                <button class="group/btn relative inline-flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-[#C5A059] transition-all duration-500">
+                  <span class="text-white group-hover/btn:text-[#C5A059] transition-transform group-hover/btn:translate-x-1">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </main>
+</div>

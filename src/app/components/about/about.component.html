@@ -1,0 +1,194 @@
+
+<div class="bg-holding-black text-white min-h-screen pt-24 font-sans overflow-hidden"
+      [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+
+  <!-- Hero -->
+  <header class="relative min-h-[80vh] flex items-center pt-24 overflow-hidden bg-luxury-black">
+    <div class="absolute inset-0 opacity-40">
+      <img alt="Abstract Golden Texture"
+            class="w-full h-full object-cover mix-blend-overlay"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSoxL-fvy20qDEgnSi3Gav-7lrkCPj7iM0QbDM_Zjl458rW0yXfPtRTA4tmgJzOibTe3UVT-8sCoR-RdPNTkA6SQzsrrzEeJC50trmvkKBIezqd1hAqHDzZ9Ya0s-rJHAVPTsstOAUZ1rCezWaZO1YCNuVzJxxoSZ-1NYzullSeoCEhPlpIC_M1Vibu5iyeaVp_ruFFERgdLeAFHkx8HOak3ro4lCM8Yxmaf0tSJ1vwrvwKJH8OAANXbHaYQd4laKhdD4Wm4qwwsBd"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-luxury-black via-luxury-black/80 to-transparent"></div>
+    </div>
+
+    <!-- <div class="main relative z-10 max-w-8x1 mx-auto px-3 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200">
+        <div class="inline-block py-1 px-4 border border-white rounded-full text-xs tracking-widest uppercase text-primary mb-4">
+          {{ 'ABOUT.BADGE' | translate }}
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-display leading-tight">
+          {{ 'ABOUT.TITLE' | translate }} <br />
+          <span class="gold-shimmer-text">{{ 'ABOUT.TITLE_SPAN' | translate }}</span>
+        </h1>
+        <div class="space-y-6 max-w-xl">
+          <p class="text-lg text-gray-400 font-arabic leading-relaxed">
+            {{ 'ABOUT.DESC_AR' | translate }}
+          </p>
+          <p class="text-gray-500 leading-relaxed font-light">
+            {{ 'ABOUT.DESC_EN' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden lg:block" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+        <div class="relative p-4 border border-primary/20 rounded-2xl">
+          <img alt="Architecture"
+                class="w-full h-[450px] object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                src="../../../assets/imges/b1.jpeg"/>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="main relative z-10 max-w-full mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-20 items-center justify-between">
+          <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200">
+            <div class="inline-block py-1 px-4 border border-white rounded-full text-xs tracking-widest uppercase text-primary mb-4">
+              {{ 'ABOUT.BADGE' | translate }}
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-display leading-tight">
+              {{ 'ABOUT.TITLE' | translate }} <br />
+              <span class="gold-shimmer-text">{{ 'ABOUT.TITLE_SPAN' | translate }}</span>
+            </h1>
+            <div class="space-y-6 max-w-xl">
+              <p class="text-lg text-gray-400 font-arabic leading-relaxed">
+                {{ 'ABOUT.DESC_AR' | translate }}
+              </p>
+              <p class="text-gray-500 leading-relaxed font-light">
+                {{ 'ABOUT.DESC_EN' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden lg:block ml-auto w-full max-w-lg" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <div class="boder relative p-4 border border-primary/20 rounded-2xl">
+              <img alt="Architecture"
+                    class="h-[450px] w-full object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                    src="../../../assets/imges/b4.jpg"/>
+            </div>
+          </div>
+        </div>
+  </header>
+
+  <!-- Vision & Mission -->
+  <section class="py-32 bg-background-dark text-slate-300 relative">
+    <div class="absolute inset-0 overflow-hidden opacity-10">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+      <div class="absolute top-1/2 -left-24 w-64 h-64 bg-primary rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="space-y-32">
+
+          <!-- Vision -->
+          <div class="space-y-8 group" data-aos="fade-right">
+            <div class="flex items-baseline space-x-6" [class.space-x-reverse]="currentLang === 'ar'">
+              <h2 class="text-4xl lg:text-5xl font-display gold-shimmer-text">{{ 'ABOUT.VISION_EN' | translate }}</h2>
+              <span class="text-2xl font-arabic text-primary/40 italic">{{ 'ABOUT.VISION_AR' | translate }}</span>
+            </div>
+            <div class="animated-divider"></div>
+            <div class="space-y-6">
+              <p class="text-xl leading-relaxed font-light text-slate-300">{{ 'ABOUT.VISION_DESC_EN' | translate }}</p>
+              <p class="font-arabic text-slate-500 leading-relaxed text-lg">{{ 'ABOUT.VISION_DESC_AR' | translate }}</p>
+            </div>
+          </div>
+
+          <!-- Mission -->
+          <div class="space-y-8 group" data-aos="fade-right" data-aos-delay="200">
+            <div class="flex items-baseline space-x-6" [class.space-x-reverse]="currentLang === 'ar'">
+              <h2 class="text-4xl lg:text-5xl font-display gold-shimmer-text">{{ 'ABOUT.MISSION_EN' | translate }}</h2>
+              <span class="text-2xl font-arabic text-primary/40 italic">{{ 'ABOUT.MISSION_AR' | translate }}</span>
+            </div>
+            <div class="animated-divider"></div>
+            <div class="space-y-6">
+              <p class="text-xl leading-relaxed font-light text-slate-300">{{ 'ABOUT.MISSION_DESC_EN' | translate }}</p>
+              <p class="font-arabic text-slate-500 leading-relaxed text-lg">{{ 'ABOUT.MISSION_DESC_AR' | translate }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="luxury-card p-10 lg:p-16 rounded-[2.5rem] relative overflow-hidden group" data-aos="zoom-in-up" data-aos-duration="1200">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-colors duration-700"></div>
+          <h2 class="text-5xl font-display gold-shimmer-text mb-2">{{ 'ABOUT.VALUES_TITLE' | translate }}</h2>
+          <p class="font-arabic text-slate-400 mb-16 tracking-wide">{{ 'ABOUT.VALUES_SUBTITLE' | translate }}</p>
+
+          <div class="space-y-16">
+            <div class="flex items-start space-x-8" [class.space-x-reverse]="currentLang === 'ar'" data-aos="fade-left" data-aos-delay="400">
+              <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-xl font-bold text-slate-100 flex items-center gap-3">
+                  {{ 'ABOUT.INTEGRITY' | translate }}
+                  <span class="text-primary/30 font-light">|</span>
+                  <span class="font-arabic font-normal text-slate-400">{{ 'ABOUT.INTEGRITY_AR' | translate }}</span>
+                </h3>
+                <p class="text-sm text-slate-500 leading-relaxed">{{ 'ABOUT.INTEGRITY_DESC' | translate }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-8" [class.space-x-reverse]="currentLang === 'ar'" data-aos="fade-left" data-aos-delay="600">
+              <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-xl font-bold text-slate-100 flex items-center gap-3">
+                  {{ 'ABOUT.EXCELLENCE' | translate }}
+                  <span class="text-primary/30 font-light">|</span>
+                  <span class="font-arabic font-normal text-slate-400">{{ 'ABOUT.EXCELLENCE_AR' | translate }}</span>
+                </h3>
+                <p class="text-sm text-slate-500 leading-relaxed">{{ 'ABOUT.EXCELLENCE_DESC' | translate }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-8" [class.space-x-reverse]="currentLang === 'ar'" data-aos="fade-left" data-aos-delay="800">
+              <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-xl font-bold text-slate-100 flex items-center gap-3">
+                  {{ 'ABOUT.INNOVATION' | translate }}
+                  <span class="text-primary/30 font-light">|</span>
+                  <span class="font-arabic font-normal text-slate-400">{{ 'ABOUT.INNOVATION_AR' | translate }}</span>
+                </h3>
+                <p class="text-sm text-slate-500 leading-relaxed">{{ 'ABOUT.INNOVATION_DESC' | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Quote -->
+  <section class="py-24 bg-[#0a0a0a] px-6">
+    <div class="max-w-6xl mx-auto border flex flex-col md:flex-row items-stretch bg-[#111] shadow-2xl rounded-2xl overflow-hidden"
+          data-aos="zoom-in" data-aos-duration="1200">
+      <div class="w-full md:w-2/5 md:grayscale transition-all duration-500 hover:grayscale-0 relative group overflow-hidden">
+        <img src="../../../assets/imges/a2.jpeg"
+              alt="Abdelmohsen AL Hendal"
+              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+      </div>
+      <div class="p-12 md:p-16 md:w-3/5 flex flex-col justify-center bg-[#151515]">
+        <i class="fas fa-quote-left text-primary/20 text-6xl mb-4" data-aos="fade-down" data-aos-delay="400"></i>
+        <p class="text-gray-300 text-xl leading-relaxed mb-8 italic font-light" data-aos="fade-up" data-aos-delay="500">
+          "{{ 'ABOUT.QUOTE' | translate }}"
+        </p>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <h4 class="text-primary font-display text-3xl mb-1 uppercase tracking-wider gold-shimmer-text">
+            {{ 'ABOUT.FOUNDER' | translate }}
+          </h4>
+          <p class="text-gray-500 text-xs uppercase tracking-[0.4em]">
+            {{ 'ABOUT.FOUNDER_TITLE' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+
