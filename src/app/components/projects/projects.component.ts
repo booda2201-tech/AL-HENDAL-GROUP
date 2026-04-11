@@ -56,7 +56,7 @@ export class ProjectsComponent implements OnInit {
       tag: 'F&B',
       tag_ar: 'أغذية ومشروبات',
       title: 'T4 Tea',
-      title_ar: 'تي ٤ شاي',
+      title_ar: 'تي فور تي',
       location: 'Egypt',
       location_ar: 'مصر',
       type: 'image',
