@@ -10,6 +10,7 @@
   },
 
   "FOOTER":{
+    "TITLE": "Al Hendal Group",
     "SUBTITLE": "For Import and General Trade",
     "DESC": "A specialized firm acting as a reliable link between global suppliers and local markets, providing innovative trading solutions.",
     "NAV_TITLE": "Navigation",
@@ -20,7 +21,14 @@
     "BRANDS_TITLE": "Our Brands",
     "RIGHTS": "© 2024 AL HENDAL GROUP. ALL RIGHTS RESERVED.",
     "PRIVACY": "Privacy Policy",
-    "TERMS": "Terms of Service"
+    "TERMS": "Terms of Service",
+    "BRANDS_LIST": {
+      "ALAMANA": "Alamana",
+      "BUBBLE": "Bubble Hop",
+      "FORTO": "FORTO",
+      "T4T": "T4T Tea",
+      "dall":"DALL Software Solutions"
+    }
   },
 
   "HERO":{
@@ -30,8 +38,8 @@
 
   "WHO":{
     "TITLE": "Who We Are",
-    "DESC1": "AL HENDAL group is an investment and multi-activities company, focused on creating long term value...",
-    "DESC2": "مجموعة آل هندال هي شركة استثمارية متعددة النشاطات تركز على خلق قيمة طويلة الأمد..."
+    "DESC1": "AL HENDAL group is an investment and multi-activities company, focused on creating long term value Our company was established in the Arab Republic of Egypt as a specialized import and general trading firm. We hold the franchise rights for a distinguished Kuwaiti brand, reflecting our expertise in project management and development, and our commitment to providing high-quality products that meet the needs of the Egyptian market. Since our inception, we have been dedicated to serving as a reliable link between global suppliers and local clients, offering flexible business solutions and comprehensive professional services. We are also expanding our operations to include private ventures such as Bubble Hop Café, our own brand offering innovative beverages and a modern hospitality experience....",
+    "DESC2": "مجموعة آل هندال شركة استثمارية متعددة الأنشطة تركز على خلق قيمة طويلة الأمد... تأسست شركتنا في جمهورية مصر العربية كشركة متخصصة في الاستيراد والتجارة العامة، نحرص على أن نكون حلقة وصل موثوقة بين الموردين العالميين والعملاء المحليين، كما نعمل على توسيع أنشطتنا لتشمل مشروعات خاصة مثل كافيه بابل هوب وهو علامتنا التجارية الخاصة التي تقدم مشروبات مبتكرة وتجربة ضيافة عصرية."
   },
 
   "FOOTPRINT":{
@@ -46,9 +54,9 @@
     "BUBBLE_DESC": "Burstin' Bites, Poppin' Delight! A unique bubble tea experience from Kuwait to Egypt.",
     "T4_DESC": "A Global Journey of Flavor & Wellness. Founded in Taiwan in 2004.",
     "SAIDY_DESC": "Premium tea brand inspired by the rich traditions and bold spirit of Southern Egypt.",
-    "DAL_DESC": "For Design and Decoration.",
+    "alamana_DESC": "We offer you a complete range of building products",
     "FORTO_DESC": "Quality and Trust in every product under the Al Hendal banner.",
-    "FRUITY_DESC": "A world of fresh fruits and vibrant flavors."
+    "DALL_DESC": "Innovative software solutions that blend design beauty with performance efficiency."
   },
 
   "ABOUT":{
@@ -115,13 +123,13 @@
 
     "COMMITMENTS_TITLE": "Strategic Commitments",
     "SOURCING_TITLE": "Ethical Sourcing",
-    "SOURCING_DESC": "We ensure that 100% of our products—from tea leaves to packaging—are sourced from certified ethical farms that respect both workers and the environment.",
+    "SOURCING_DESC": "We are committed to working as a team, and we encourage creativity and innovation to provide our clients with the best quality and integrated services that meet all market needs.",
     "GROWTH_TITLE": "Innovative Growth",
-    "GROWTH_DESC": "Investing in digital transformation through brands like Forto to optimize logistics, reducing our carbon footprint by 25% through efficient route planning.",
+    "GROWTH_DESC": "Our vision for the future is based on continuous expansion and adding more specializations and strong teams, so that we always remain at the forefront and achieve our ambitious goals.",
     "EMPOWERMENT_TITLE": "Local Empowerment",
     "EMPOWERMENT_DESC": "Providing sustainable job opportunities and training for the Egyptian youth in the F&B and interior design sectors through Dal and our franchise networks.",
 
-    "CLOSING_QUOTE": "We invest in the future by building partnerships that last. Our sustainability is rooted in our integrity.",
+    "CLOSING_QUOTE": "Our step towards expansion: We started our activity with our headquarters, then we recently opened a second office, and we are currently planning to open two new offices as part of our expansion plan and to support our growing business.",
     "CLOSING_TAG": "Al Hendal Holding • 2026 Strategy"
   },
 
@@ -173,6 +181,13 @@
   "BRAND_DETAILS":{
     "COMMON.BACK": "Back",
     "TAGLINE": "A Legacy of Excellence and Visionary Craftsmanship",
+  "alamana": {
+      "NAME": "Al-Amana Building Materials",
+      "TAGLINE": "Excellence in Every Detail",
+      "DESC": "We present a comprehensive range of construction products designed to meet the highest standards of quality and performance. Our solutions combine innovation, durability, and ease of application to deliver reliable, long-lasting results for residential and industrial projects.",
+      "MISSION": "Providing easy and economical solutions to repair weather-related construction damage, ensuring long-term structural integrity.",
+      "VISION": "To be the leading global partner in developing innovative building materials that balance high quality with cost-effectiveness."
+    },
     "BUBBLE_HOPE": {
       "NAME": "Bubble Hope",
       "TAGLINE": "Effervescent Joy in Every Sip",
@@ -193,13 +208,19 @@
       "TAGLINE": "Authenticity Rooted in Tradition",
       "DESC": "An ode to the rich heritage of Upper Egypt. Saidy Tea offers a robust, authentic flavor profile that resonates with history and hospitality, bringing the warmth of Egyptian tradition to the global stage."
     },
-    "DAL": {
-      "NAME": "DAL",
-      "TAGLINE": "Excellence in Every Detail",
-      "DESC": "A multidisciplinary brand focused on delivering premium solutions. DAL stands for integrity and quality, ensuring that every project and product meets the highest standards of international luxury."
+    "DALL": {
+      "NAME": "DALL Software Solutions",
+      "TAGLINE": "Where Technology Meets Creativity",
+      "DESC": "A leading provider of integrated digital solutions, specializing in building smart software systems and web applications that blend premium design with robust performance."
     },
+    "CONNECT": "Connect With Us",
     "VISIT_WEBSITE": "Visit Official Website"
   },
+
+  "COMMON": {
+    "VIEW_DETAIL": "View Details",
+    "BACK": "Back"
+},
 
 
   "FEATURES":{
@@ -209,9 +230,21 @@
     "QUALITY": "Quality Grade",
     "PREMIUM": "Premium Gold",
     "GLOBAL": "Global Reach",
+    "RANGE": "Product Range",
+    "VISION": "Vision",
+    "MISSION": "Mission",
+    "STANDARDS": "",
+
       "VALUES": {
+        "COMPREHENSIVE": "Comprehensive & Integrated Range",
+        "BUILDING_EXCELLENCE": "Building Sustainable Excellence",
+        "PREMIUM_SOLUTIONS": "Advanced Construction Solutions",
+        "GOLD_STANDARD": "The Gold Standard of Quality",
+        "GLOBAL_REACH": "Egypt, KSA, UAE, Turkey",
+        "INNOVATIVE_TECH": "Innovative Building Technologies",
         "POWER_BOOST": "Power Boost",
-        "GOLD_STANDARD": "Gold Standard"
+        "INT_QUALITY": "International Code Quality",
+        "PREMIUM_SOLUTIONS1": "Custom Premium Solutions"
         }
   }
 

@@ -13,13 +13,26 @@ export class ProjectsComponent implements OnInit {
 
   subsidiaries = [
     {
+      id: 'alamana',
+      tag: 'building',
+      tag_ar: 'مواد بناء',
+      title: 'Alamana',
+      title_ar: 'الامانة',
+      location: 'Kuwait - Egypt',
+      location_ar: 'الكويت - مصر',
+      type: 'image',
+      image: '../../../assets/imges/a22.png',
+      industry: 'building & construction materials',
+      industry_ar: 'مواد بناء'
+    },
+    {
       id: 'bubble-hope',
       tag: 'F&B',
       tag_ar: 'أغذية ومشروبات',
       title: 'Bubble Hope',
       title_ar: 'بابل هوب',
-      location: 'Kuwait - Egypt',
-      location_ar: 'الكويت - مصر',
+      location: 'Egypt',
+      location_ar:  ' مصر ',
       type: 'image',
       image: '../../../assets/imges/b3.jpg',
       industry: 'Food & Beverage',
@@ -63,7 +76,21 @@ export class ProjectsComponent implements OnInit {
       image: '../../../assets/imges/p4.jpg',
       industry: 'Premium Tea',
       industry_ar: 'شاي فاخر'
+    },
+    {
+      id: 'dall',
+      tag: 'Tech',
+      tag_ar: 'تكنولوجيا',
+      title: 'DALL',
+      title_ar: 'دال',
+      location: 'Egypt',
+      location_ar: 'مصر',
+      type: 'image',
+      image: '../../../assets/imges/dal-logo2.png',
+      industry: 'Software Solutions',
+      industry_ar: 'حلول برمجية'
     }
+
   ];
 
   constructor(private translate: TranslateService) {}

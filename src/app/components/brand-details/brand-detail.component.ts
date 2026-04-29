@@ -13,12 +13,45 @@ export class BrandDetailComponent implements OnInit {
   intervalId: any;
 
   brandsData: any = {
+    'alamana': {
+      name: 'BRAND_DETAILS.alamana.NAME',
+      id: 'alamana',
+      tagline: 'BRAND_DETAILS.alamana.TAGLINE',
+      fullDescription: 'BRAND_DETAILS.alamana.DESC',
+      mission: 'BRAND_DETAILS.alamana.MISSION',
+      vision: 'BRAND_DETAILS.alamana.VISION',
+      heroImages: [
+        '../../../assets/imges/al-1.png',
+        '../../../assets/imges/al-2.png',
+        '../../../assets/imges/al-3.png',
+        '../../../assets/imges/al-4.png',
+        '../../../assets/imges/al-8.jpg',
+      ],
+      features: [
+        { title: 'FEATURES.RANGE', value: 'FEATURES.VALUES.COMPREHENSIVE' },
+        { title: 'FEATURES.QUALITY', value: 'FEATURES.VALUES.BUILDING_EXCELLENCE' },
+        { title: 'FEATURES.PREMIUM', value: 'FEATURES.VALUES.GOLD_STANDARD' },
+        { title: 'FEATURES.GLOBAL', value: 'FEATURES.VALUES.PREMIUM_SOLUTIONS' }
+      ],
+      socialLinks: {
+        facebook: 'https://www.facebook.com/share/1NEJBjjVnP/',
+        instagram: 'https://www.instagram.com/alamana.building.materials?igsh=MzQ0ODg5ODg3Nw==',
+        whatsapp: 'https://wa.me/yournumber',
+        tiktok: 'https://www.tiktok.com/@bubblehope.eg?_r=1&_t=ZS-94jUtf7alIC'
+      },
+      gallery: [
+        '../../../assets/imges/al-5.png',
+        '../../../assets/imges/al-6.png',
+        '../../../assets/imges/al-7.png'
+      ],
+
+    },
     'bubble-hope': {
       name: 'BRAND_DETAILS.BUBBLE_HOPE.NAME',
       id: 'BUBBLE_HOPE',
       heroImages: [
         '../../../assets/imges/b4.jpg',
-        '../../../assets/imges/b5.jpg',
+        '../../../assets/imges/02.jpg',
         '../../../assets/imges/b6.jpg'
       ],
       tagline: 'BRAND_DETAILS.BUBBLE_HOPE.TAGLINE',
@@ -34,7 +67,11 @@ export class BrandDetailComponent implements OnInit {
         tiktok: 'https://www.tiktok.com/@bubblehope.eg?_r=1&_t=ZS-94jUtf7alIC'
       },
       website: 'https://www.bubblehope.com/home',
-      gallery: ['assets/imges/b6.jpg', '../../../assets/imges/b31.png']
+      gallery: [
+        'assets/imges/b6.jpg',
+        '../../../assets/imges/02.jpg',
+        '../../../assets/imges/b3.jpg'
+      ]
     },
     'forto': {
       name: 'BRAND_DETAILS.FORTO.NAME',
@@ -57,7 +94,12 @@ export class BrandDetailComponent implements OnInit {
         whatsapp: 'https://wa.me/yournumber',
         tiktok: 'https://tiktok.com/@yourpage'
       },
-      gallery: ['assets/imges/2.jpg','assets/imges/1.jpg']
+      gallery: [
+        'assets/imges/2.jpg',
+        'assets/imges/1.jpg',
+        'assets/imges/f4.png',
+
+      ]
     },
     't4-tea': {
       name: 'BRAND_DETAILS.T4_TEA.NAME',
@@ -105,15 +147,18 @@ export class BrandDetailComponent implements OnInit {
         'assets/imges/33.jpg'
       ]
     },
-    'dal': {
-      name: 'BRAND_DETAILS.DAL.NAME',
-      id: 'DAL',
-      heroImage: 'assets/imges/55.png',
-      tagline: 'BRAND_DETAILS.DAL.TAGLINE',
-      fullDescription: 'BRAND_DETAILS.DAL.DESC',
+    'dall': {
+      name: 'BRAND_DETAILS.DALL.NAME',
+      id: 'dall',
+      heroImages: [
+          '../../../assets/imges/d-1.png',
+          'assets/imges/d-2.png',
+      ] ,
+      tagline: 'BRAND_DETAILS.DALL.TAGLINE',
+      fullDescription: 'BRAND_DETAILS.DALL.DESC',
       features: [
         { title: 'FEATURES.STANDARDS', value: 'FEATURES.VALUES.INT_QUALITY' },
-        { title: 'FEATURES.VISION', value: 'FEATURES.VALUES.PREMIUM_SOLUTIONS' }
+        { title: 'FEATURES.VISION', value: 'FEATURES.VALUES.PREMIUM_SOLUTIONS1' }
       ],
       socialLinks: {
         facebook: 'https://facebook.com/yourpage',
@@ -121,25 +166,12 @@ export class BrandDetailComponent implements OnInit {
         whatsapp: 'https://wa.me/yournumber',
         tiktok: 'https://tiktok.com/@yourpage'
       },
-      gallery: ['assets/imges/55.png', 'assets/imges/2.jpg', 'assets/imges/44.avif']
-    },
-    'fruity-hope': {
-      name: 'BRAND_DETAILS.FRUITY_HOPE.NAME',
-      id: 'FRUITY_HOPE',
-      heroImage: 'assets/imges/44.avif',
-      tagline: 'BRAND_DETAILS.FRUITY_HOPE.TAGLINE',
-      fullDescription: 'BRAND_DETAILS.FRUITY_HOPE.DESC',
-      features: [
-        { title: 'FEATURES.SOURCE', value: 'FEATURES.VALUES.ORGANIC_FRUITS' },
-        { title: 'FEATURES.FRESHNESS', value: 'FEATURES.VALUES.DAILY_CRAFTED' }
-      ],
-      socialLinks: {
-        facebook: 'https://facebook.com/yourpage',
-        instagram: 'https://instagram.com/yourpage',
-        whatsapp: 'https://wa.me/yournumber',
-        tiktok: 'https://tiktok.com/@yourpage'
-      },
-      gallery: ['assets/imges/44.avif', 'assets/imges/11.jpeg', 'assets/imges/p4.png']
+      website: 'https://dal-solution.com/', // الرابط الجديد اللي ضفته
+      gallery: [
+        'assets/imges/55.png',
+        'assets/imges/d-1.png',
+        'assets/imges/d-2.png'
+      ]
     }
   };
 

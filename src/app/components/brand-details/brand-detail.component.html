@@ -142,6 +142,17 @@
             </div>
         </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 italic border-l-2 border-holding-gold pl-4">
+        <div *ngIf="brand.mission">
+            <h4 class="text-holding-gold text-sm uppercase tracking-widest mb-1">{{ 'FEATURES.MISSION' | translate }}</h4>
+            <p class="text-gray-400 text-sm">{{ brand.mission | translate }}</p>
+        </div>
+        <div *ngIf="brand.vision">
+            <h4 class="text-holding-gold text-sm uppercase tracking-widest mb-1">{{ 'FEATURES.VISION' | translate }}</h4>
+            <p class="text-gray-400 text-sm">{{ brand.vision | translate }}
+        </div>
+      </div>
+
         <div class="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6" data-aos="fade-up">
             <span class="text-[10px] uppercase tracking-[0.3em] text-white/30">
                 {{ 'BRAND_DETAILS.CONNECT' | translate }} —
@@ -180,13 +191,16 @@
 
       </div>
 
-      <div class="grid grid-cols-1 gap-6 md:gap-10" data-aos="zoom-in-left">
-        <div class="space-y-6">
-          <img *ngIf="brand.gallery[1]" [src]="brand.gallery[1]" class="w-full rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-4xl">
-          <img *ngIf="brand.gallery[0]" [src]="brand.gallery[0]" class="w-full rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-4x1">
-        </div>
-      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" data-aos="zoom-in-left">
+          <img *ngIf="brand.gallery[0]" [src]="brand.gallery[0]"
+                class="col-span-1 md:col-span-2 w-full h-48 md:h-80 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
 
+          <img *ngIf="brand.gallery[1]" [src]="brand.gallery[1]"
+                class="w-full h-48 md:h-52 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
+
+          <img *ngIf="brand.gallery[2]" [src]="brand.gallery[2]"
+                class="w-full h-48 md:h-52 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
+        </div>
     </div>
   </section>
 </div>
