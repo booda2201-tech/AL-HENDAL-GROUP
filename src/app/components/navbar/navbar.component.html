@@ -1,15 +1,15 @@
 
 <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/90
             backdrop-blur-md border-b border-[#d4af37]/20
-            px-1 md:px-8 lg:px-12 py-4 md:py-6 flex items-center justify-between
+            px-3 sm:px-4 md:px-8 lg:px-12 py-3 md:py-6 flex items-center justify-between max-w-full overflow-x-clip
             transition-transform duration-500 ease-in-out"
       [class.-translate-y-full]="!isVisible && !isMenuOpen">
-  <div class="flex items-center cursor-pointer group" routerLink="/home">
+  <div class="flex items-center cursor-pointer group min-w-0" routerLink="/home">
     <img src="../../../assets/imges/logo (4).png" alt="logo"
           class="w-auto h-8 md:h-10 lg:h-12 object-contain transition-transform duration-300 group-hover:scale-105">
     <div class="h-8 md:h-10 w-[1px] bg-gradient-to-b from-transparent via-gray-400 to-transparent opacity-50 mx-2 md:mx-3"></div>
 
-    <div class="flex flex-col justify-center">
+    <!-- <div class="flex flex-col justify-center">
       <h1 class="text-[#d4af37] font-serif font-bold tracking-[0.1em] md:tracking-[0.15em] text-2xl md:text-2xl lg:text-3xl leading-[0.9] uppercase
                   bg-gradient-to-r from-[#d4af37] via-[#f7e08b] to-[#b8860b] bg-clip-text text-transparent
                   animate-shimmer decoration-none">
@@ -19,7 +19,7 @@
       <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.3em] md:tracking-[0.5em] uppercase mt-1 font-light leading-none">
         {{ 'NAV.SUBTITLE' | translate }}
       </p>
-    </div>
+    </div> -->
   </div>
 
   <div class="hidden lg:flex items-center gap-6 xl:gap-12 ms-auto xl:pe-5">
@@ -30,8 +30,8 @@
     <a routerLink="/contact" routerLinkActive="active" class="nav-link">{{ 'NAV.CONTACT' | translate }}</a>
   </div>
 
-  <div class="flex items-center gap-2 md:gap-6 border-s border-gray-800 md:ps-8">
-    <button (click)="toggleLanguage()" class="text-white hover:text-[#d4af37] transition-colors flex items-center gap-2 mx-2">
+  <div class="flex items-center gap-2 md:gap-6 border-s border-gray-800 ps-2 sm:ps-3 md:ps-8 shrink-0">
+    <button (click)="toggleLanguage()" class="text-white hover:text-[#d4af37] transition-colors flex items-center gap-2 mx-0 sm:mx-1">
       <i class="fa-solid fa-globe text-sm md:text-lg"></i>
       <span class="text-xs md:text-sm font-bold">{{ currentLang === 'en' ? 'AR' : 'EN' }}</span>
     </button>

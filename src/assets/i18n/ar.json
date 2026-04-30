@@ -8,7 +8,6 @@
     "SUSTAINABILITY": "الاستدامة",
     "CONTACT": "الإعلام والتواصل"
   },
-
   "FOOTER": {
     "TITLE": "مجموعة الهندال",
     "SUBTITLE": "للاستيراد والتجارة العامة",
@@ -22,34 +21,29 @@
     "RIGHTS": "© 2024 مجموعة الهندال. جميع الحقوق محفوظة.",
     "PRIVACY": "سياسة الخصوصية",
     "TERMS": "شروط الخدمة",
-  "BRANDS_LIST": {
-    "ALAMANA": "الامانة",
-    "BUBBLE": "بابل هوب",
-    "FORTO": "فورتو",
-    "T4T": "تي فور تي",
-    "dall":" دال للبرمجية"
-
-  }
+    "BRANDS_LIST": {
+      "ALAMANA": "الامانة",
+      "BUBBLE": "بابل هوب",
+      "FORTO": "فورتو",
+      "T4T": "تي فور تي",
+      "dall": " دال للبرمجية"
+    }
   },
-
   "HERO": {
     "TITLE": "مجموعة الهندال <br>",
     "SUBTITLE": "رؤية عالمية. إرث خالد"
   },
-
   "WHO": {
     "TITLE": "من نحن",
     "DESC1": "مجموعة آل هندال شركة استثمارية متعددة الأنشطة تركز على خلق قيمة طويلة الأمد... تأسست شركتنا في جمهورية مصر العربية كشركة متخصصة في الاستيراد والتجارة العامة، نحرص على أن نكون حلقة وصل موثوقة بين الموردين العالميين والعملاء المحليين، كما نعمل على توسيع أنشطتنا لتشمل مشروعات خاصة مثل كافيه بابل هوب وهو علامتنا التجارية الخاصة التي تقدم مشروبات مبتكرة وتجربة ضيافة عصرية.",
     "DESC2": "AL HENDAL group is an investment and multi-activities company, focused on creating long term value Our company was established in the Arab Republic of Egypt as a specialized import and general trading firm. We hold the franchise rights for a distinguished Kuwaiti brand, reflecting our expertise in project management and development, and our commitment to providing high-quality products that meet the needs of the Egyptian market. Since our inception, we have been dedicated to serving as a reliable link between global suppliers and local clients, offering flexible business solutions and comprehensive professional services. We are also expanding our operations to include private ventures such as Bubble Hop Café, our own brand offering innovative beverages and a modern hospitality experience...."
   },
-
   "FOOTPRINT": {
     "TITLE": "حضور عالمي",
-    "DESC": "تمتد استثماراتنا الاستراتيجية عبر القارات، مما يدفع الابتكار والنمو المستدام في أسواق متنوعة.",
+    "DESC": "تمتد استثماراتنا الاستراتيجية عبر القارات، مما يدفع الابتكار والنمو المستدام في أسواق متنوعة. ومن خلال شبكة متنامية من الشراكات والعلامات التجارية والمراكز التشغيلية، نربط الخبرات العالمية بالفرص المحلية لنصنع أثرًا اقتصاديًا ملموسًا وقيمة طويلة الأمد للمجتمعات التي نخدمها.",
     "CITIES": "مدينة حول العالم",
     "ASSETS": "أصول استراتيجية"
   },
-
   "BRANDS": {
     "TITLE": "علاماتنا التجارية",
     "BUBBLE_DESC": "تجربة شاي الفقاعات الفريدة من الكويت إلى مصر.",
@@ -58,26 +52,21 @@
     "alamana_DESC": "نقدّم لكم مجموعة متكاملة من منتجات البناء",
     "FORTO_DESC": "الجودة والثقة في كل منتج تحت مظلة الهندال.",
     "DALL_DESC": "حلول برمجية مبتكرة تدمج جمال التصميم وكفاءة الأداء."
-
   },
-
   "ABOUT": {
     "BADGE": "تراثنا",
     "TITLE": "تراثنا",
     "TITLE_SPAN": "و رؤيتنا",
-    "DESC_AR": "تراثنا ورؤيتنا - نسعى دوماً للتميز والريادة في كافة قطاعاتنا.",
-    "DESC_EN": "منذ تأسيسنا، كانت مجموعة الهندال القابضة ركيزة للنزاهة والتميز، ملتزمة بتشكيل المستقبل من خلال الابتكار والنمو المستدام.",
-
-    "VISION_EN": "رؤيتنا",
-    "VISION_AR": "Our Vision",
-    "VISION_DESC_EN": "أن نكون رواداً مبتكرين في قطاعاتنا الأساسية، نقدم حلولاً متطورة ونحقق نمواً مستداماً في كل سوق نخدمه.",
-    "VISION_DESC_AR": "To be an innovative leader in our core businesses providing cutting edge solutions and driving sustainable growth in every market we serve.",
-
-    "MISSION_EN": "مهمتنا",
-    "MISSION_AR": "Our Mission",
-    "MISSION_DESC_EN": "تقديم قيمة استثنائية لأصحاب المصلحة من خلال التميز التشغيلي والممارسات التجارية الأخلاقية والالتزام بالمسؤولية المجتمعية والبيئية.",
-    "MISSION_DESC_AR": "To deliver superior value to our stakeholders through operational excellence, ethical business practices, and a commitment to community and environmental responsibility.",
-
+    "DESC_AR": "منذ انطلاقة مجموعة الهندال، كان لدينا إيمان واضح بأن النجاح الحقيقي لا يتحقق بالنتائج السريعة فقط، بل ببناء قيمة مستدامة تقوم على الثقة والانضباط والابتكار. بدأت رحلتنا كشركة متخصصة في الاستيراد والتجارة العامة، ثم تطورنا بخطة مدروسة إلى مجموعة أعمال متنوعة تعمل في قطاعات مواد البناء، والضيافة، والأغذية والمشروبات، وخدمات العناية بالسيارات، والحلول الرقمية. وعلى مدار سنوات النمو، ركزنا على تطوير علامات تجارية قوية، وبناء شراكات طويلة الأمد، وتقديم تجربة موثوقة للسوق المحلي بمعايير عالمية. نحن نؤمن أن كل مشروع ناجح يجب أن يجمع بين الجودة والكفاءة والمرونة، وأن يكون له أثر اقتصادي ومجتمعي حقيقي. واليوم، تواصل مجموعة الهندال الاستثمار في الكفاءات والأنظمة الحديثة والتوسع الاستراتيجي، بهدف ترسيخ مكانتها ككيان إقليمي رائد يصنع فرصًا مستمرة للأفراد والأسواق والأجيال القادمة.",
+    "DESC_EN": "Since our inception, Al Hendal Holding Group has been built on a clear belief: long-term value is created through trust, disciplined execution, and bold innovation. What started as a focused import and general trading business has evolved into a diversified group operating across construction materials, hospitality, food and beverage, automotive care, and digital solutions. Over the years, we have expanded with a deliberate strategy, selecting sectors where operational excellence and brand quality can produce sustainable impact. Our approach combines global standards with deep local market understanding, allowing us to build resilient brands, strong partnerships, and reliable service experiences. Today, Al Hendal continues to invest in scalable ventures, people development, and modern systems that support performance, transparency, and growth. We are not only building businesses; we are building a long-term legacy that serves communities, strengthens regional markets, and creates meaningful opportunities for future generations.",
+    "VISION_EN": "Our Vision",
+    "VISION_AR": "رؤيتنا",
+    "VISION_DESC_EN": "Our vision is to become a leading regional group recognized for responsible growth, operational excellence, and future-ready innovation. We aim to shape benchmarks in every sector we enter by integrating quality, efficiency, and customer-centric thinking into every stage of the value chain. Through strategic expansion, advanced technologies, and high-performance teams, we seek to transform opportunities into durable value. We envision an ecosystem of brands that are trusted by customers, respected by partners, and admired for consistency, integrity, and positive market contribution.",
+    "VISION_DESC_AR": "تتمثل رؤيتنا في أن نصبح مجموعة إقليمية رائدة يُشار إليها كنموذج للنمو المسؤول والتميز التشغيلي والابتكار المستقبلي. نسعى إلى صناعة معايير جديدة في كل قطاع نعمل فيه عبر دمج الجودة والكفاءة والتركيز على العميل في كل مرحلة من مراحل العمل. ومن خلال التوسع الاستراتيجي، وتبنّي التقنيات المتقدمة، وتمكين الفرق عالية الأداء، نهدف إلى تحويل الفرص إلى قيمة حقيقية ومستدامة. رؤيتنا هي بناء منظومة علامات تجارية موثوقة لدى العملاء، ومقدّرة لدى الشركاء، ومؤثرة بشكل إيجابي في السوق والمجتمع.",
+    "MISSION_EN": "Our Mission",
+    "MISSION_AR": "مهمتنا",
+    "MISSION_DESC_EN": "Our mission is to deliver measurable and sustainable value to all stakeholders through disciplined execution, ethical governance, and continuous improvement. We commit to building products and services that meet international standards while remaining relevant to local market needs. We invest in talent, systems, and partnerships that strengthen performance and long-term competitiveness. In every operation, we prioritize accountability, customer trust, and responsible business practices, ensuring that growth is not only profitable but also meaningful for society and aligned with long-term environmental and community priorities.",
+    "MISSION_DESC_AR": "مهمتنا هي تقديم قيمة ملموسة ومستدامة لجميع أصحاب المصلحة من خلال الانضباط في التنفيذ، والحوكمة الأخلاقية، والتحسين المستمر. نلتزم بتقديم منتجات وخدمات تتوافق مع المعايير الدولية مع الحفاظ على ملاءمتها لاحتياجات السوق المحلي. كما نستثمر في الكفاءات والأنظمة والشراكات التي تعزز الأداء والتنافسية على المدى الطويل. وفي كل عملياتنا، نضع الشفافية وثقة العملاء والمسؤولية المهنية في صميم قراراتنا، لضمان أن يكون النمو مربحًا ومؤثرًا في الوقت نفسه على المجتمع والبيئة.",
     "VALUES_TITLE": "قيمنا الأساسية",
     "VALUES_SUBTITLE": "The core values we believe in",
     "INTEGRITY": "النزاهة",
@@ -89,40 +78,33 @@
     "INNOVATION": "الابتكار",
     "INNOVATION_AR": "Innovation",
     "INNOVATION_DESC": "تبني التغيير وتعزيز الإبداع لدفع النمو المستقبلي.",
-
-    "QUOTE": "تأسست شركتنا في مصر كشركة متخصصة في الاستيراد والتجارة العامة. منذ اليوم الأول، كان هدفنا إحضار أفضل ما في العالم لمجتمعاتنا المحلية، وبناء شراكات دائمة.",
+    "QUOTE": "تأسست شركتنا في مصر كشركة متخصصة في الاستيراد والتجارة العامة. ومنذ اليوم الأول، كان هدفنا أن نصل بين الخبرات العالمية واحتياجات السوق المحلي عبر شراكات طويلة الأمد مبنية على الثقة والالتزام. ومع مرور الوقت، تحولت هذه الرؤية إلى مجموعة متنوعة تضم علامات وقطاعات متعددة، لكن المبدأ الأساسي لم يتغير: صناعة قيمة حقيقية من خلال الجودة والابتكار والانضباط في التنفيذ. كل خطوة توسع نقوم بها تُبنى على منظور طويل المدى، حيث نقيس نجاحنا ليس فقط بحجم الأعمال، بل بالأثر الذي نحققه لعملائنا وشركائنا والمجتمعات التي نخدمها.",
     "FOUNDER": "عبدالمحسن الهندال",
     "FOUNDER_TITLE": "المؤسس ورئيس مجلس الإدارة"
   },
-
-  "PROJECTS":{
+  "PROJECTS": {
     "BADGE": "حضور عالمي",
     "TITLE": "محفظتنا",
     "TITLE_SPAN": " تميز عالمي ",
+    "DESC": "اكتشف شركاتنا وعلاماتنا التابعة المتنوعة، حيث نعمل على تقديم الجودة والابتكار والقيمة الحقيقية عبر قطاعات مواد البناء، والضيافة، وتجارب الشاي، وخدمات السيارات، والحلول الرقمية.",
     "SUBSIDIARIES_TITLE": "شركاتنا التابعة",
     "INDUSTRY_LABEL": "القطاع"
   },
-
-  "SUSTAIN":{
+  "SUSTAIN": {
     "BADGE": "المسؤولية العالمية",
     "TITLE": "الاستدامة",
     "TITLE_SPAN": "والنمو",
     "QUOTE": "في مجموعة الهندال، نؤمن بأن النجاح الحقيقي يُقاس بالقيمة طويلة المدى التي نخلقها لشركائنا وموظفينا والسوق المصري. التزامنا بالاستدامة هو أساس رؤيتنا العالمية.",
-
     "ECONOMIC_TITLE": "الأثر الاقتصادي",
     "ECONOMIC_DESC": "بناء نموذج أعمال متكامل يربط الموردين العالميين بالسوق المحلي. نركز على استقرار سلاسل التوريد لضمان التوسع الاقتصادي المستمر وقدرة السوق على الصمود.",
-
     "COMMUNITY_TITLE": "ثقة المجتمع",
     "COMMUNITY_DESC": "نعمل كجسر موثوق للثقة. من خلال تقديم منتجات متميزة مثل T4 Tea وBubble Hope، نعزز نمط حياة مجتمعنا مع ضمان معايير الصحة والسلامة.",
-
     "LEGACY_TITLE": "الإرث المستقبلي",
     "LEGACY_DESC": "كل استثمار نقوم به اليوم هو خطوة نحو إرث خالد. نولي الأولوية للمصادر المستدامة والعمليات الصديقة للبيئة لحماية العالم للأجيال القادمة.",
-
     "STAT1_LABEL": "معدل الاحتفاظ بالعملاء",
     "STAT2_LABEL": "شريك عالمي",
     "STAT3_LABEL": "مستهلك سنوياً",
     "STAT4_LABEL": "اختبار الجودة",
-
     "COMMITMENTS_TITLE": "الالتزامات الاستراتيجية",
     "SOURCING_TITLE": "المصادر الأخلاقية",
     "SOURCING_DESC": "نحرص على العمل بروح الفريق الواحد، ونشجع الإبداع والابتكار لنقدم لعملائنا أفضل جودة وخدمات متكاملة تلبي جميع احتياجات السوق..",
@@ -130,33 +112,25 @@
     "GROWTH_DESC": "رؤيتنا للمستقبل تعتمد على التوسع المستمر وإضافة المزيد من التخصصات والفرق القوية، لنظل دائمًا في المقدمة ونحقق أهدافنا الطموحة.",
     "EMPOWERMENT_TITLE": "تمكين المحليين",
     "EMPOWERMENT_DESC": "توفير فرص عمل مستدامة وتدريب للشباب المصري في قطاعي الأغذية والمشروبات والتصميم الداخلي من خلال دال وشبكات الامتياز التجاري.",
-
     "CLOSING_QUOTE": "خطوتنا نحو التوسع بدأنا نشاطنا بمقرنا الرئيسي، ثم افتتحنا مكتبًا ثانيًا مؤخرًا، ونخطط حاليًا لافتتاح مكتبين جديدين ضمن خطة التوسع ودعم أعمالنا المتزايدة.",
     "CLOSING_TAG": "مجموعة الهندال القابضة • استراتيجية 2026"
-
   },
-
-  "CONTACT":{
+  "CONTACT": {
     "BADGE": "تواصل معنا",
     "TITLE": "اتصل",
     "TITLE_SPAN": "بنا",
-
     "MEDIA_TITLE": "الإعلام والبيانات الصحفية",
     "READ_MORE": "اقرأ المزيد",
     "VIEW_ALL": "عرض كل الأخبار",
-
     "NEWS1_DATE": "٢٨ أكتوبر ٢٠٢٤",
     "NEWS1_TITLE": "مجموعة الهندال تتوسع في قطاع الطاقة المتجددة",
     "NEWS1_DESC": "يمثل الاستثمار الاستراتيجي علامة فارقة في النمو المستدام للمنطقة.",
-
     "NEWS2_DATE": "١٤ سبتمبر ٢٠٢٤",
     "NEWS2_TITLE": "تقرير الأرباح الفصلية يُظهر أداءً قوياً",
     "NEWS2_DESC": "إيرادات قياسية مدفوعة بمشاريع البنية التحتية الرئيسية والعقارات الفاخرة.",
-
     "NEWS3_DATE": "٠٥ أغسطس ٢٠٢٤",
     "NEWS3_TITLE": "الإعلان عن شراكة جديدة مع شركة تقنية عالمية",
     "NEWS3_DESC": "يهدف التعاون إلى تسريع التحول الرقمي عبر الشركات التابعة.",
-
     "FORM_TITLE": "مركز التواصل",
     "NAME_LABEL": "الاسم ",
     "NAME_PLACEHOLDER": "الاسم الكامل",
@@ -172,7 +146,6 @@
     "MESSAGE_LABEL": "الرسالة (مطلوب)",
     "MESSAGE_PLACEHOLDER": "كيف يمكننا مساعدتك؟",
     "SEND_BTN": "إرسال الرسالة",
-
     "OFFICE_TITLE": "المكتب الرئيسي",
     "OFFICE_NAME": "مقر مجموعة الهندال ",
     "OFFICE_ADDR1": " شارع الثروه المعدنيه البوابه الاولى، حدائق الاهرام ، الجيزة",
@@ -180,17 +153,17 @@
     "INVEST_TITLE": "الاستثمار والشراكات",
     "CAREERS_TITLE": "الوظائف والموارد البشرية"
   },
-
-  "BRAND_DETAILS":{
+  "BRAND_DETAILS": {
     "COMMON.BACK": "الرجوع",
+    "ELITE_BRAND": "نخبة العلامات التجارية",
     "TAGLINE": "إرث من التميز ورؤية تتجسد في الإتقان",
-      "alamana": {
-        "NAME": "الأمانة لمواد البناء",
-        "TAGLINE": "التميز في أدق التفاصيل",
-        "DESC": "نقدم مجموعة شاملة من منتجات البناء المصممة لتلبية أعلى معايير الجودة والأداء. تجمع حلولنا بين الابتكار والمتانة وسهولة الاستخدام لتقديم نتائج موثوقة وطويلة الأمد للمشاريع السكنية والصناعية.",
-        "MISSION": "تقديم حلول سهلة واقتصادية لإصلاح أضرار البناء الناتجة عن العوامل الجوية لضمان عمر أطول للمنشآت.",
-        "VISION": "أن نكون الشريك الأول عالمياً في تطوير مواد بناء مبتكرة تجمع بين الجودة العالية والسعر المناسب."
-      },
+    "alamana": {
+      "NAME": "الأمانة لمواد البناء",
+      "TAGLINE": "التميز في أدق التفاصيل",
+      "DESC": "نقدم مجموعة شاملة من منتجات البناء المصممة لتلبية أعلى معايير الجودة والأداء. تجمع حلولنا بين الابتكار والمتانة وسهولة الاستخدام لتقديم نتائج موثوقة وطويلة الأمد للمشاريع السكنية والصناعية.",
+      "MISSION": "تقديم حلول سهلة واقتصادية لإصلاح أضرار البناء الناتجة عن العوامل الجوية لضمان عمر أطول للمنشآت.",
+      "VISION": "أن نكون الشريك الأول عالمياً في تطوير مواد بناء مبتكرة تجمع بين الجودة العالية والسعر المناسب."
+    },
     "BUBBLE_HOPE": {
       "NAME": "بابل هوب",
       "TAGLINE": "بهجة متجددة في كل رشفة",
@@ -219,14 +192,73 @@
     "CONNECT": "تواصل معنا",
     "VISIT_WEBSITE": "زيارة الموقع الرسمي"
   },
-
   "COMMON": {
     "VIEW_DETAIL": "عرض التفاصيل",
     "BACK": "الرجوع"
   },
-
-
-
+  "HOME": {
+    "SECTORS": {
+      "TITLE": "قطاعاتنا",
+      "ITEM1": "مواد البناء",
+      "ITEM2": "الأغذية والمشروبات",
+      "ITEM3": "الضيافة والمقاهي",
+      "ITEM4": "خدمات السيارات",
+      "ITEM5": "التجارة والتوزيع",
+      "ITEM6": "الحلول الرقمية والتقنية"
+    },
+    "JOURNEY": {
+      "TITLE": "رحلتنا",
+      "Y2012": "تأسيس AL HENDAL Trading",
+      "Y2016": "التوسع في مواد البناء",
+      "Y2019": "إطلاق Bubble Hope",
+      "Y2021": "افتتاح Forto Car Care",
+      "Y2023": "توسعات إقليمية خارج مصر",
+      "Y2025": "إطلاق حلول رقمية جديدة"
+    },
+    "NUMBERS": {
+      "TITLE": "بالأرقام",
+      "BRANCHES": "فرع",
+      "BRANDS": "علامات تجارية",
+      "YEARS": "سنوات خبرة",
+      "EMPLOYEES": "موظف",
+      "COUNTRIES": "دول",
+      "CUSTOMERS": "عميل تم خدمتهم"
+    },
+    "PROJECTS": {
+      "TITLE": "مشاريع مميزة",
+      "ITEM1": "فروع Bubble Hope",
+      "ITEM2": "مراكز Forto Car Care",
+      "ITEM3": "حلول الأمانة للإنشاءات",
+      "ITEM4": "عمليات التجارة والتوزيع"
+    },
+    "FOUNDER": {
+      "TITLE": "رسالة من المؤسس",
+      "QUOTE": "نؤمن ببناء علامات تجارية تجمع بين الابتكار والجودة والقيمة طويلة المدى."
+    },
+    "SUSTAIN": {
+      "TITLE": "الاستدامة والرؤية",
+      "ITEM1": "دعم الأسواق المحلية",
+      "ITEM2": "نمو مستدام",
+      "ITEM3": "توسع قائم على الابتكار",
+      "ITEM4": "شراكات طويلة الأمد"
+    },
+    "VALUES": {
+      "TITLE": "قيمنا",
+      "ITEM1": "الابتكار",
+      "ITEM2": "الجودة",
+      "ITEM3": "الثقة",
+      "ITEM4": "الاستدامة",
+      "ITEM5": "تميز خدمة العملاء"
+    },
+    "PARTNERS": {
+      "TITLE": "الشركاء والعملاء"
+    },
+    "CAREERS": {
+      "TITLE": "انضم لفريقنا",
+      "DESC": "نبحث دائمًا عن المواهب الشغوفة للانضمام إلى علاماتنا ومشروعاتنا المتنامية.",
+      "CTA": "عرض الفرص"
+    }
+  },
   "FEATURES": {
     "NATURE": "الطبيعة",
     "VIBE": "الأجواء",
@@ -244,8 +276,6 @@
     "GLOBAL": "الانتشار العالمي",
     "MISSION": "المهمة",
     "STANDARDS": "المعايير التقنية",
-
-
     "VALUES": {
       "COMPREHENSIVE": "مجموعة شاملة ومتكاملة",
       "BUILDING_EXCELLENCE": "التميز في البناء المستدام",
@@ -266,5 +296,4 @@
       "DAILY_CRAFTED": "صنع يومي طازج"
     }
   }
-
 }

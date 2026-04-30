@@ -14,6 +14,26 @@
   }
 }
 
+.hero-content-shell {
+  max-width: 48rem;
+  padding: 1.25rem 1.1rem;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  border-radius: 0.9rem;
+  background: linear-gradient(145deg, rgba(5, 5, 5, 0.78), rgba(8, 8, 8, 0.45));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero-overlay-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 2.2rem;
+}
+
+.hero-overlay-wrap.ar .hero-content-shell {
+  margin-left: auto;
+}
+
   .overlay-gradient {
     position: absolute;
     inset: 0;
@@ -56,8 +76,26 @@
 
 
 .portfolio-card {
+  cursor: pointer;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
   img {
     transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
   }
 
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(197, 160, 89, 0.35);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay-wrap { padding-bottom: 1.2rem; }
+
+  .hero-content-shell {
+    max-width: 100%;
+    padding: 1rem 0.9rem;
+    border-radius: 0.9rem;
+  }
 }

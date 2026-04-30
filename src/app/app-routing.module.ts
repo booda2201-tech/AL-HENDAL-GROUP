@@ -29,10 +29,11 @@ const routes: Routes = [
         title: 'About Us - Al Hendal Group',
       },
       {
-        path: 'Projects',
+        path: 'projects',
         component: ProjectsComponent,
         title: 'Our Brands - Projects',
       },
+      { path: 'Projects', redirectTo: 'projects', pathMatch: 'full' },
       {
         path: 'contact',
         component: ContactComponent,

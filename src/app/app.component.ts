@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { LanguageService } from './Service/language.service';
+import { SeoService } from './Service/seo.service';
 import { RouterOutlet } from '@angular/router';
 
 
@@ -12,9 +13,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-constructor(private langService: LanguageService) {}
+constructor(
+  private langService: LanguageService,
+  private seoService: SeoService
+) {}
 
   ngOnInit() {
+    this.seoService.init();
     AOS.init({
       duration: 1000,
       once: true,

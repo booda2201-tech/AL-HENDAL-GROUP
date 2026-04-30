@@ -9,6 +9,14 @@
   }
 }
 
+html, body {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+}
+
+body *:not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fat):not([class*='fa-']):not(.material-symbols-outlined) {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif !important;
+}
+
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';

@@ -1,5 +1,5 @@
 {
-  "NAV":{
+  "NAV": {
     "TITLE": "Al Hendal",
     "SUBTITLE": "Group",
     "HOME": "Home",
@@ -8,8 +8,7 @@
     "SUSTAINABILITY": "Sustainability",
     "CONTACT": "Media & Contact"
   },
-
-  "FOOTER":{
+  "FOOTER": {
     "TITLE": "Al Hendal Group",
     "SUBTITLE": "For Import and General Trade",
     "DESC": "A specialized firm acting as a reliable link between global suppliers and local markets, providing innovative trading solutions.",
@@ -27,29 +26,25 @@
       "BUBBLE": "Bubble Hop",
       "FORTO": "FORTO",
       "T4T": "T4T Tea",
-      "dall":"DALL Software Solutions"
+      "dall": "DALL Software Solutions"
     }
   },
-
-  "HERO":{
+  "HERO": {
     "TITLE": "Al Hendal <br> Group",
     "SUBTITLE": "Global Vision. Timeless Legacy"
   },
-
-  "WHO":{
+  "WHO": {
     "TITLE": "Who We Are",
-    "DESC1": "AL HENDAL group is an investment and multi-activities company, focused on creating long term value Our company was established in the Arab Republic of Egypt as a specialized import and general trading firm. We hold the franchise rights for a distinguished Kuwaiti brand, reflecting our expertise in project management and development, and our commitment to providing high-quality products that meet the needs of the Egyptian market. Since our inception, we have been dedicated to serving as a reliable link between global suppliers and local clients, offering flexible business solutions and comprehensive professional services. We are also expanding our operations to include private ventures such as Bubble Hop Café, our own brand offering innovative beverages and a modern hospitality experience....",
-    "DESC2": "مجموعة آل هندال شركة استثمارية متعددة الأنشطة تركز على خلق قيمة طويلة الأمد... تأسست شركتنا في جمهورية مصر العربية كشركة متخصصة في الاستيراد والتجارة العامة، نحرص على أن نكون حلقة وصل موثوقة بين الموردين العالميين والعملاء المحليين، كما نعمل على توسيع أنشطتنا لتشمل مشروعات خاصة مثل كافيه بابل هوب وهو علامتنا التجارية الخاصة التي تقدم مشروبات مبتكرة وتجربة ضيافة عصرية."
+    "DESC1": "AL HENDAL Group is a diversified investment and multi-activity company dedicated to building long-term value across multiple industries. Established in the Arab Republic of Egypt, the company began as a specialized import and general trading firm and has since grown into a dynamic business group with operations spanning construction materials, hospitality, food & beverage, retail services, and lifestyle brands. Over the years, AL HENDAL has successfully developed and managed several brands serving different sectors of the market. Our portfolio includes high-quality construction and waterproofing products, premium tea and beverage brands, modern bubble tea cafés, and professional automotive care and detailing centers. Each brand reflects our commitment to innovation, quality, and delivering exceptional customer experiences. The group proudly operates through a growing network of branches and business partnerships both inside and outside Egypt, strengthening our regional presence and expanding our reach into international markets. Through strategic collaborations and franchise partnerships, we continue to connect global expertise with local market needs while maintaining international standards across all our operations.At AL HENDAL, we believe in continuous growth, operational excellence, and creating brands that combine functionality, innovation, and modern lifestyle experiences. Our vision is to become a leading regional business group recognized for quality, trust, and diversified success across multiple industries.",
+    "DESC2": "تُعد مجموعة الهندال شركة استثمارية متعددة الأنشطة تهدف إلى بناء قيمة طويلة الأمد من خلال العمل في العديد من القطاعات المختلفة. تأسست الشركة في جمهورية مصر العربية كشركة متخصصة في الاستيراد والتجارة العامة، ثم تطورت لتصبح مجموعة أعمال متكاملة تعمل في مجالات مواد البناء، والعوازل، والضيافة، والمشروبات، وخدمات السيارات، والتجزئة الحديثة. على مدار السنوات، نجحت مجموعة الهندال في إنشاء وإدارة عدة علامات تجارية تخدم قطاعات متنوعة من السوق، حيث تضم المجموعة علامات متخصصة في منتجات البناء والعزل عالية الجودة، بالإضافة إلى علامات متخصصة في الشاي والمشروبات المميزة، ومقاهي البابل تي العصرية، إلى جانب مراكز متطورة لغسيل وتفصيل السيارات. وتعكس جميع هذه العلامات التزامنا المستمر بالجودة والابتكار وتقديم تجربة استثنائية للعملاء. تمتلك المجموعة شبكة متنامية من الفروع والشراكات التجارية داخل مصر وخارجها، مما يعزز من تواجدها الإقليمي ويدعم خططها للتوسع في الأسواق الدولية. كما تعتمد المجموعة على شراكات استراتيجية وخبرات عالمية لتقديم منتجات وخدمات تتوافق مع احتياجات السوق المحلي مع الحفاظ على أعلى معايير الجودة العالمية. في مجموعة الهندال، نؤمن بأن النجاح الحقيقي يقوم على التنوع، والتطوير المستمر، وبناء علامات تجارية تجمع بين الجودة والابتكار والتجربة العصرية. وتسعى المجموعة إلى أن تكون واحدة من أبرز الكيانات الاستثمارية الرائدة في المنطقة من خلال تقديم حلول ومنتجات وخدمات موثوقة في مختلف القطاعات."
   },
-
-  "FOOTPRINT":{
+  "FOOTPRINT": {
     "TITLE": "Global Footprint",
-    "DESC": "Our strategic investments span across continents, driving innovation and sustainable growth in diverse markets.",
+    "DESC": "Our strategic investments span across continents, driving innovation and sustainable growth in diverse markets. Through a growing network of partners, brands, and operational hubs, we connect global expertise with local opportunities to create measurable economic impact and long-term value for the communities we serve.",
     "CITIES": "Cities Worldwide",
     "ASSETS": "Strategic Assets"
   },
-
-  "BRANDS":{
+  "BRANDS": {
     "TITLE": "Our Brands",
     "BUBBLE_DESC": "Burstin' Bites, Poppin' Delight! A unique bubble tea experience from Kuwait to Egypt.",
     "T4_DESC": "A Global Journey of Flavor & Wellness. Founded in Taiwan in 2004.",
@@ -58,24 +53,20 @@
     "FORTO_DESC": "Quality and Trust in every product under the Al Hendal banner.",
     "DALL_DESC": "Innovative software solutions that blend design beauty with performance efficiency."
   },
-
-  "ABOUT":{
+  "ABOUT": {
     "BADGE": "Our Heritage",
     "TITLE": "Our Heritage",
     "TITLE_SPAN": "& Vision",
     "DESC_AR": "تراثنا ورؤيتنا - نسعى دوماً للتميز والريادة في كافة قطاعاتنا.",
-    "DESC_EN": "Since our inception, Al Hendal Holding Group has been a pillar of integrity and excellence, committed to shaping the future through innovation and sustainable growth.",
-
+    "DESC_EN": "Since our inception, Al Hendal Holding Group has been built on a clear belief: long-term value is created through trust, disciplined execution, and bold innovation. What started as a focused import and general trading business has evolved into a diversified group operating across construction materials, hospitality, food and beverage, automotive care, and digital solutions. Over the years, we have expanded with a deliberate strategy, selecting sectors where operational excellence and brand quality can produce sustainable impact. Our approach combines global standards with deep local market understanding, allowing us to build resilient brands, strong partnerships, and reliable service experiences. Today, Al Hendal continues to invest in scalable ventures, people development, and modern systems that support performance, transparency, and growth. We are not only building businesses; we are building a long-term legacy that serves communities, strengthens regional markets, and creates meaningful opportunities for future generations.",
     "VISION_EN": "Our Vision",
     "VISION_AR": "رؤيتنا",
-    "VISION_DESC_EN": "To be an innovative leader in our core businesses providing cutting edge solutions and driving sustainable growth in every market we serve.",
+    "VISION_DESC_EN": "Our vision is to become a leading regional group recognized for responsible growth, operational excellence, and future-ready innovation. We aim to shape benchmarks in every sector we enter by integrating quality, efficiency, and customer-centric thinking into every stage of the value chain. Through strategic expansion, advanced technologies, and high-performance teams, we seek to transform opportunities into durable value. We envision an ecosystem of brands that are trusted by customers, respected by partners, and admired for consistency, integrity, and positive market contribution.",
     "VISION_DESC_AR": "رؤيتنا أن نكون الرواد المبتكرين في قطاعاتنا، ملتزمين بتقديم الحلول المتطورة والنمو المستدام في كل ما نقوم به.",
-
     "MISSION_EN": "Our Mission",
     "MISSION_AR": "مهمتنا",
-    "MISSION_DESC_EN": "To deliver superior value to our stakeholders through operational excellence, ethical business practices, and a commitment to community and environmental responsibility.",
+    "MISSION_DESC_EN": "Our mission is to deliver measurable and sustainable value to all stakeholders through disciplined execution, ethical governance, and continuous improvement. We commit to building products and services that meet international standards while remaining relevant to local market needs. We invest in talent, systems, and partnerships that strengthen performance and long-term competitiveness. In every operation, we prioritize accountability, customer trust, and responsible business practices, ensuring that growth is not only profitable but also meaningful for society and aligned with long-term environmental and community priorities.",
     "MISSION_DESC_AR": "مهمتنا تقديم قيمة استثنائية لشركائنا من خلال عمليات متميزة والالتزام بالمسؤولية المجتمعية والبيئية في كل سوق نخدمه.",
-
     "VALUES_TITLE": "Core Values",
     "VALUES_SUBTITLE": "القيم الأساسية التي نؤمن بها",
     "INTEGRITY": "Integrity",
@@ -87,40 +78,33 @@
     "INNOVATION": "Innovation",
     "INNOVATION_AR": "الابتكار",
     "INNOVATION_DESC": "Embracing change and fostering creativity to drive future growth.",
-
-    "QUOTE": "Our company was established in Egypt as a specialized import and general trading firm. From day one, our goal has been to bring the best of the world to our local communities, building partnerships that last.",
+    "QUOTE": "Our company was established in Egypt as a specialized import and general trading firm. From day one, our goal has been to connect world-class products and expertise with local market needs through long-lasting partnerships built on trust. Over time, this vision has grown into a diversified group with multiple brands and sectors, yet our core principle remains the same: create real value through quality, innovation, and disciplined execution. Every expansion we pursue is guided by a long-term perspective, where success is measured not only by scale, but by the impact we create for customers, partners, and the communities we serve.",
     "FOUNDER": "Abdelmohsen AL Hendal",
     "FOUNDER_TITLE": "Founder & Chairman"
   },
-
-  "PROJECTS":{
+  "PROJECTS": {
     "BADGE": "A Global Footprint",
     "TITLE": "Our Portfolio",
     "TITLE_SPAN": "Global Excellence",
+    "DESC": "Explore our diversified subsidiaries and brands, each built to deliver quality, innovation, and measurable value across construction materials, hospitality, tea experiences, automotive services, and digital solutions.",
     "SUBSIDIARIES_TITLE": "Our Subsidiaries",
     "INDUSTRY_LABEL": "Industry focus"
   },
-
-  "SUSTAIN":{
+  "SUSTAIN": {
     "BADGE": "Global Responsibility",
     "TITLE": "Sustainability",
     "TITLE_SPAN": "& Growth",
     "QUOTE": "At Al Hendal Group, we believe that true success is measured by the long-term value we create for our partners, our employees, and the Egyptian market. Our commitment to sustainability is the foundation of our global vision.",
-
     "ECONOMIC_TITLE": "Economic Impact",
     "ECONOMIC_DESC": "Building an integrated business model that connects global suppliers with the local market. We focus on stabilizing supply chains to ensure constant economic expansion and market resilience.",
-
     "COMMUNITY_TITLE": "Community Trust",
     "COMMUNITY_DESC": "Acting as a reliable bridge of trust. By providing premium products like T4 Tea and Bubble Hope, we enhance the lifestyle of our community while ensuring health and safety standards.",
-
     "LEGACY_TITLE": "Future Legacy",
     "LEGACY_DESC": "Every investment we make today is a step toward a timeless legacy. We prioritize sustainable sourcing and environmentally conscious operations to protect the world for future generations.",
-
     "STAT1_LABEL": "Client Retention",
     "STAT2_LABEL": "Global Partners",
     "STAT3_LABEL": "Annual Consumers",
     "STAT4_LABEL": "Quality Tested",
-
     "COMMITMENTS_TITLE": "Strategic Commitments",
     "SOURCING_TITLE": "Ethical Sourcing",
     "SOURCING_DESC": "We are committed to working as a team, and we encourage creativity and innovation to provide our clients with the best quality and integrated services that meet all market needs.",
@@ -128,32 +112,25 @@
     "GROWTH_DESC": "Our vision for the future is based on continuous expansion and adding more specializations and strong teams, so that we always remain at the forefront and achieve our ambitious goals.",
     "EMPOWERMENT_TITLE": "Local Empowerment",
     "EMPOWERMENT_DESC": "Providing sustainable job opportunities and training for the Egyptian youth in the F&B and interior design sectors through Dal and our franchise networks.",
-
     "CLOSING_QUOTE": "Our step towards expansion: We started our activity with our headquarters, then we recently opened a second office, and we are currently planning to open two new offices as part of our expansion plan and to support our growing business.",
     "CLOSING_TAG": "Al Hendal Holding • 2026 Strategy"
   },
-
-  "CONTACT":{
+  "CONTACT": {
     "BADGE": "Connect With Us",
     "TITLE": "Contact",
     "TITLE_SPAN": "Global",
-
     "MEDIA_TITLE": "Media & Press Releases",
     "READ_MORE": "Read More",
     "VIEW_ALL": "View All News",
-
     "NEWS1_DATE": "Oct 28, 2024",
     "NEWS1_TITLE": "Al Hendal Holding Expands into Renewable Energy Sector",
     "NEWS1_DESC": "Strategic investment marks a major milestone in sustainable growth for the region.",
-
     "NEWS2_DATE": "Sept 14, 2024",
     "NEWS2_TITLE": "Quarterly Earnings Report Shows Strong Performance",
     "NEWS2_DESC": "Record revenue driven by key infrastructure projects and luxury real estate.",
-
     "NEWS3_DATE": "Aug 05, 2024",
     "NEWS3_TITLE": "New Partnership Announced with Global Tech Firm",
     "NEWS3_DESC": "Collaboration aims to accelerate digital transformation across subsidiaries.",
-
     "FORM_TITLE": "Contact Center",
     "NAME_LABEL": "Your Name",
     "NAME_PLACEHOLDER": "Full Name",
@@ -169,7 +146,6 @@
     "MESSAGE_LABEL": "Message (Required)",
     "MESSAGE_PLACEHOLDER": "How can we help you?",
     "SEND_BTN": "Send Message",
-
     "OFFICE_TITLE": "Corporate Office",
     "OFFICE_NAME": "Al Hendal Holding Group HQ",
     "OFFICE_ADDR1": "Business Bay, Level 42, Sky Tower",
@@ -177,11 +153,11 @@
     "INVEST_TITLE": "Investment & Partnerships",
     "CAREERS_TITLE": "Careers & HR"
   },
-
-  "BRAND_DETAILS":{
+  "BRAND_DETAILS": {
     "COMMON.BACK": "Back",
+    "ELITE_BRAND": "Elite Brand Selection",
     "TAGLINE": "A Legacy of Excellence and Visionary Craftsmanship",
-  "alamana": {
+    "alamana": {
       "NAME": "Al-Amana Building Materials",
       "TAGLINE": "Excellence in Every Detail",
       "DESC": "We present a comprehensive range of construction products designed to meet the highest standards of quality and performance. Our solutions combine innovation, durability, and ease of application to deliver reliable, long-lasting results for residential and industrial projects.",
@@ -216,16 +192,82 @@
     "CONNECT": "Connect With Us",
     "VISIT_WEBSITE": "Visit Official Website"
   },
-
   "COMMON": {
     "VIEW_DETAIL": "View Details",
     "BACK": "Back"
-},
-
-
-  "FEATURES":{
+  },
+  "HOME": {
+    "SECTORS": {
+      "TITLE": "Our Sectors",
+      "ITEM1": "Construction Materials",
+      "ITEM2": "Food & Beverage",
+      "ITEM3": "Hospitality & Cafes",
+      "ITEM4": "Automotive Services",
+      "ITEM5": "Trading & Distribution",
+      "ITEM6": "Technology & Digital Solutions"
+    },
+    "JOURNEY": {
+      "TITLE": "Our Journey",
+      "Y2012": "AL HENDAL Trading founded",
+      "Y2016": "Expansion in construction materials",
+      "Y2019": "Bubble Hope launched",
+      "Y2021": "Forto Car Care opened",
+      "Y2023": "Regional expansion outside Egypt",
+      "Y2025": "New digital solutions launched"
+    },
+    "NUMBERS": {
+      "TITLE": "By The Numbers",
+      "BRANCHES": "Branches",
+      "BRANDS": "Brands",
+      "YEARS": "Years Experience",
+      "EMPLOYEES": "Employees",
+      "COUNTRIES": "Countries",
+      "CUSTOMERS": "Customers Served"
+    },
+    "PROJECTS": {
+      "TITLE": "Featured Projects",
+      "ITEM1": "Bubble Hope Branches",
+      "ITEM2": "Forto Car Care Centers",
+      "ITEM3": "Alamana Construction Solutions",
+      "ITEM4": "Trading & Distribution Operations"
+    },
+    "FOUNDER": {
+      "TITLE": "Message From The Founder",
+      "QUOTE": "We believe in building brands that combine innovation, quality, and long-term value."
+    },
+    "SUSTAIN": {
+      "TITLE": "Sustainability & Vision",
+      "ITEM1": "Supporting Local Markets",
+      "ITEM2": "Sustainable Growth",
+      "ITEM3": "Innovation-Driven Expansion",
+      "ITEM4": "Long-Term Partnerships"
+    },
+    "VALUES": {
+      "TITLE": "Our Values",
+      "ITEM1": "Innovation",
+      "ITEM2": "Quality",
+      "ITEM3": "Trust",
+      "ITEM4": "Sustainability",
+      "ITEM5": "Customer Excellence"
+    },
+    "PARTNERS": {
+      "TITLE": "Partners & Clients"
+    },
+    "CAREERS": {
+      "TITLE": "Join Our Team",
+      "DESC": "We are always looking for passionate talents to grow with our brands and ventures.",
+      "CTA": "View Opportunities"
+    }
+  },
+  "FEATURES": {
+    "NATURE": "Nature",
+    "VIBE": "Vibe",
     "ESTABLISHED": "Established",
     "ENERGY": "Energy",
+    "BREW": "Brew Method",
+    "ORIGIN": "Origin",
+    "AUTHENTICITY": "Authenticity",
+    "TASTE": "Taste",
     "LOCATION": "Location",
     "QUALITY": "Quality Grade",
     "PREMIUM": "Premium Gold",
@@ -234,18 +276,22 @@
     "VISION": "Vision",
     "MISSION": "Mission",
     "STANDARDS": "",
-
-      "VALUES": {
-        "COMPREHENSIVE": "Comprehensive & Integrated Range",
-        "BUILDING_EXCELLENCE": "Building Sustainable Excellence",
-        "PREMIUM_SOLUTIONS": "Advanced Construction Solutions",
-        "GOLD_STANDARD": "The Gold Standard of Quality",
-        "GLOBAL_REACH": "Egypt, KSA, UAE, Turkey",
-        "INNOVATIVE_TECH": "Innovative Building Technologies",
-        "POWER_BOOST": "Power Boost",
-        "INT_QUALITY": "International Code Quality",
-        "PREMIUM_SOLUTIONS1": "Custom Premium Solutions"
-        }
+    "VALUES": {
+      "COMPREHENSIVE": "Comprehensive & Integrated Range",
+      "BUILDING_EXCELLENCE": "Building Sustainable Excellence",
+      "PREMIUM_SOLUTIONS": "Advanced Construction Solutions",
+      "GOLD_STANDARD": "The Gold Standard of Quality",
+      "GLOBAL_REACH": "Egypt, KSA, UAE, Turkey",
+      "INNOVATIVE_TECH": "Innovative Building Technologies",
+      "PREMIUM_INGREDIENTS": "Premium Ingredients",
+      "MODERN_REFRESH": "Modern Refresh",
+      "TRADITIONAL_METHOD": "Traditional Method",
+      "HAND_PICKED": "Hand-Picked Leaves",
+      "EGYPTIAN_HERITAGE": "Egyptian Heritage",
+      "STRONG_BOLD": "Strong & Bold Flavor",
+      "POWER_BOOST": "Power Boost",
+      "INT_QUALITY": "International Code Quality",
+      "PREMIUM_SOLUTIONS1": "Custom Premium Solutions"
+    }
   }
-
 }

@@ -81,39 +81,6 @@ nav {
 
 
 
-html[lang="ar"] {
-
-  // روابط القائمة الكبيرة (Desktop)
-  .nav-link {
-    font-size: 25px !important;
-    font-family: 'Tajawal', sans-serif !important;
-    letter-spacing: 0 !important;
-    font-weight: 600 !important;
-  }
-
-  // روابط قائمة الموبايل (Mobile Overlay)
-  .nav-link-mobile {
-    font-size: 20px !important;
-    font-family: 'Tajawal', sans-serif !important;
-    letter-spacing: 0 !important;
-    font-weight: 600 !important;
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-
-
-:host-context([lang="ar"]) .nav-link-mobile {
-    font-size: 20px !important;
-}
-
-
-
-
-
-
-
-
 .hamburger-line {
   display: block;
   width: 24px;
@@ -238,4 +205,17 @@ html[lang="ar"] {
     padding-inline-start: 10px;
   }
 }
+
+nav .group img {
+  width: 110px !important;
+  max-width: 32vw;
+}
+
+@media (max-width: 420px) {
+  nav .group img {
+    width: 88px !important;
+    max-width: 28vw;
+  }
+}
+
 

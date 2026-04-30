@@ -56,3 +56,34 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+
+.contact-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-shell {
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 14px;
+  padding: 1.4rem;
+  background: rgba(8, 8, 8, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.media-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.5) rgba(255, 255, 255, 0.05);
+}
+
+.media-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.media-list::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 20px;
+}

@@ -1,9 +1,9 @@
 
-<div class="bg-[#0a0a0a] text-white min-h-screen pt-32 pb-24 font-sans relative overflow-hidden"
+<div class="bg-[#0a0a0a] text-white min-h-screen pt-32 pb-24 font-sans relative overflow-hidden contact-page"
       [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
   <!-- Background -->
-  <div class="absolute inset-0 z-0 opacity-20">
+  <div class="absolute inset-0 z-0 opacity-30">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a] to-[#0a0a0a] z-10"></div>
     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069"
           class="w-full h-full object-cover grayscale"/>
@@ -21,62 +21,29 @@
     <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-holding-gold/50 to-transparent mx-auto mt-8"></div>
   </div>
 
-  <main class="pt-32 pb-20 abstract-bg">
+  <main class="pt-24 pb-20 abstract-bg relative z-10">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
         <!-- Media Section -->
-        <section class="lg:col-span-5">
+        <section class="lg:col-span-5 section-shell">
           <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
             {{ 'CONTACT.MEDIA_TITLE' | translate }}
           </h2>
-          <div class="space-y-10">
-
-            <div class="group flex gap-6 items-start">
+          <div class="space-y-8 max-h-[760px] overflow-y-auto pr-2 media-list">
+            <div *ngFor="let news of mediaReleases" class="group flex gap-6 items-start">
               <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
-                <img alt="Solar panels" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkSqKQLmjxVsNQgRZCGUWc7gyOKTdOdFTfU_TyViR0_SKkvYEb3JaTsn2F4L67t2xTUI9mce_2Cd4Zc1xoTNni5cq0klwztnmnlnlhfB2vLEtxs5SXwtodRzwbvlR7skGiNhurvGRU17rkU89pyBmyMbBfEl-_p7YyrgqYqk5jO6DIssh-i03uJSqfc9PUNGXc-7baOIeQKtSUpFsVJ-1JC3wa0ji2Ek1cywtfBldg9VAMM2iezAujgaGlNIkVVnNWBMNlLusUIno0"/>
+                <img [alt]="news.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" [src]="news.image"/>
               </div>
               <div class="flex-1">
-                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS1_DATE' | translate }}</span>
-                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS1_TITLE' | translate }}</h3>
-                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS1_DESC' | translate }}</p>
+                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ news.date }}</span>
+                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug text-white">{{ news.title }}</h3>
+                <p class="text-sm text-gray-300 mt-2 line-clamp-3 leading-relaxed">{{ news.desc }}</p>
                 <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
                   {{ 'CONTACT.READ_MORE' | translate }}
                 </a>
               </div>
             </div>
-
-            <div class="group flex gap-6 items-start">
-              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
-                <img alt="Business graphs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUX2ATh5RtCmhMDII7-MyW2mHSf6q7BBgu7wyN75HIKrTUrf4vuJfeZ2_DO0kl2_bmH3eImJSMMjIEo2JU4B9o8L9Qrf47WCBHJ-5pUprZZIQNFGr19TXjou66KgAAolHTAe8mYHbAkBbtauXhzIH3t1SADZqxts3LSN9Xez7sWb_-Zlv6dufXvNdwnSGzuwmT3U3MG-gH4xV36YhVSERTokMiaFT0KRELYyGp7fdXzDWcTXb82Mz5t2MC3eQbCCSYX2yNfh9ocO1g"/>
-              </div>
-              <div class="flex-1">
-                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS2_DATE' | translate }}</span>
-                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS2_TITLE' | translate }}</h3>
-                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS2_DESC' | translate }}</p>
-                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
-                  {{ 'CONTACT.READ_MORE' | translate }}
-                </a>
-              </div>
-            </div>
-
-            <div class="group flex gap-6 items-start">
-              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
-                <img alt="Handshake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBU7qRYrgfiIyUyjwkRVTwGPSKOaeA48U4uqA0vXB7fK73Uh5LowsxbS-ZvBFsjfPwIw5vIloPljibrHRobnkjmeKp_t54urvMlKbfZ-ULb7tU1GVQ24Q42s1pRJ1cyVeLolE71gQVcjcuJhdNSgNHvmSXMTFahGByy4DsDAkf-pWpCu58u3pJRy1IdfefaXMZS2Zs3v5DPVm-ALI6AK61NGPY86TbF0bGZ3Mx9NxsjF7Dq0oze6cy8bX-VfoYd016WS61lpDhIj2O"/>
-              </div>
-              <div class="flex-1">
-                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ 'CONTACT.NEWS3_DATE' | translate }}</span>
-                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug">{{ 'CONTACT.NEWS3_TITLE' | translate }}</h3>
-                <p class="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">{{ 'CONTACT.NEWS3_DESC' | translate }}</p>
-                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
-                  {{ 'CONTACT.READ_MORE' | translate }}
-                </a>
-              </div>
-            </div>
-
           </div>
           <button class="mt-12 px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-bold border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all duration-500">
             {{ 'CONTACT.VIEW_ALL' | translate }}
@@ -84,7 +51,7 @@
         </section>
 
         <!-- Contact Form -->
-        <section class="lg:col-span-7">
+        <section class="lg:col-span-7 section-shell">
           <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
             {{ 'CONTACT.FORM_TITLE' | translate }}
           </h2>
@@ -142,7 +109,7 @@
             </form>
           </div> -->
 
-<div class="max-w-3xl mx-auto bg-[#0d0d0d] p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] border-t-2 border-[#d4af37]/40">
+<div class="max-w-3xl mx-auto bg-[#0f0f0f]/95 p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] border border-[#d4af37]/25">
   <form class="space-y-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="relative flex flex-col">
@@ -152,7 +119,7 @@
         <input
           type="text"
           [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
-          class="w-full bg-black/40  border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
         />
       </div>
 
@@ -163,7 +130,7 @@
         <input
           type="email"
           [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
-          class="w-full bg-black/40  border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
         />
       </div>
     </div>
@@ -176,7 +143,7 @@
         <input
           type="text"
           [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate"
-          class="w-full bg-black/40  border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
+          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
         />
       </div>
 
@@ -185,7 +152,7 @@
           {{ 'CONTACT.CATEGORY_LABEL' | translate }}*
         </label>
         <div class="relative">
-          <select class="w-full bg-black/40  border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white appearance-none focus:outline-none focus:border-[#d4af37] transition-all duration-300 cursor-pointer">
+          <select class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white appearance-none focus:outline-none focus:border-[#d4af37] transition-all duration-300 cursor-pointer">
             <option class="bg-[#111111]">{{ 'CONTACT.CAT1' | translate }}</option>
             <option class="bg-[#111111]">{{ 'CONTACT.CAT2' | translate }}</option>
             <option class="bg-[#111111]">{{ 'CONTACT.CAT3' | translate }}</option>
@@ -202,7 +169,7 @@
       <textarea
         rows="5"
         [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
-        class="w-full bg-black/40  border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#d4af37] resize-none transition-all duration-300"
+        class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] resize-none transition-all duration-300"
       ></textarea>
     </div>
 
@@ -217,8 +184,8 @@
 
 
           <!-- Address -->
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="p-6 border-l border-primary/20">
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-6 border border-primary/20 rounded-lg bg-black/35">
               <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">
                 {{ 'CONTACT.OFFICE_TITLE' | translate }}
               </h3>
@@ -229,7 +196,7 @@
                 <a class="text-primary hover:text-gold-light transition-colors" href="mailto:info@alhendal.com">info@alhendal.com</a>
               </address>
             </div>
-            <div class="grid grid-cols-1 gap-8 p-6 border-l border-primary/20">
+            <div class="grid grid-cols-1 gap-8 p-6 border border-primary/20 rounded-lg bg-black/35">
               <div>
                 <h3 class="text-[10px] font-bold uppercase tracking-widest text-primary/70 mb-2">
                   {{ 'CONTACT.INVEST_TITLE' | translate }}
