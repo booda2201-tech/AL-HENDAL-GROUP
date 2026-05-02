@@ -206,13 +206,13 @@ nav {
   }
 }
 
-nav .group img {
+  .group img {
   width: 110px !important;
   max-width: 32vw;
 }
 
 @media (max-width: 420px) {
-  nav .group img {
+    .group img {
     width: 88px !important;
     max-width: 28vw;
   }

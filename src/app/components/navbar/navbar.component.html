@@ -1,4 +1,4 @@
-
+<!--
 <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/90
             backdrop-blur-md border-b border-[#d4af37]/20
             px-3 sm:px-4 md:px-8 lg:px-12 py-3 md:py-6 flex items-center justify-between max-w-full overflow-x-clip
@@ -9,17 +9,7 @@
           class="w-auto h-8 md:h-10 lg:h-12 object-contain transition-transform duration-300 group-hover:scale-105">
     <div class="h-8 md:h-10 w-[1px] bg-gradient-to-b from-transparent via-gray-400 to-transparent opacity-50 mx-2 md:mx-3"></div>
 
-    <!-- <div class="flex flex-col justify-center">
-      <h1 class="text-[#d4af37] font-serif font-bold tracking-[0.1em] md:tracking-[0.15em] text-2xl md:text-2xl lg:text-3xl leading-[0.9] uppercase
-                  bg-gradient-to-r from-[#d4af37] via-[#f7e08b] to-[#b8860b] bg-clip-text text-transparent
-                  animate-shimmer decoration-none">
-        {{ 'NAV.TITLE' | translate }}
-      </h1>
 
-      <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.3em] md:tracking-[0.5em] uppercase mt-1 font-light leading-none">
-        {{ 'NAV.SUBTITLE' | translate }}
-      </p>
-    </div> -->
   </div>
 
   <div class="hidden lg:flex items-center gap-6 xl:gap-12 ms-auto xl:pe-5">
@@ -56,9 +46,69 @@
     <a routerLink="/contact" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.CONTACT' | translate }}</a>
   </div>
 </div>
+</nav> -->
+
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#d4af37]/20
+            px-4 md:px-8 lg:px-12 py-3 md:py-4 flex items-center justify-between transition-transform duration-500 ease-in-out"
+      [class.-translate-y-full]="!isVisible && !isMenuOpen">
+
+  <!-- Logo Section -->
+  <div class="flex items-center cursor-pointer group" routerLink="/home">
+    <img src="../../../assets/imges/logo (4).png" alt="logo"
+          class="w-auto h-8 md:h-10 lg:h-12 object-contain transition-transform duration-300 group-hover:scale-105">
+    <!-- <div class="h-8 md:h-10 w-[1px] bg-gradient-to-b from-transparent via-gray-400 to-transparent opacity-50 mx-3"></div> -->
+  </div>
+
+  <!-- Desktop Navigation -->
+  <div class="hidden lg:flex items-center gap-8 xl:gap-12 ms-auto pe-8">
+    <a routerLink="/home" routerLinkActive="active" class="nav-link">{{ 'NAV.HOME' | translate }}</a>
+    <a routerLink="/about" routerLinkActive="active" class="nav-link">{{ 'NAV.ABOUT' | translate }}</a>
+    <a routerLink="/Projects" routerLinkActive="active" class="nav-link">{{ 'NAV.PROJECTS' | translate }}</a>
+    <a routerLink="/sustainability" routerLinkActive="active" class="nav-link">{{ 'NAV.SUSTAINABILITY' | translate }}</a>
+    <a routerLink="/contact" routerLinkActive="active" class="nav-link">{{ 'NAV.CONTACT' | translate }}</a>
+  </div>
+
+  <!-- Actions Section (Language & Hamburger) -->
+  <div class="flex items-center gap-4 border-s border-gray-800 ps-4 shrink-0">
+    <button (click)="toggleLanguage()" class="text-white hover:text-[#d4af37] transition-colors flex items-center gap-2">
+      <i class="fa-solid fa-globe text-sm md:text-lg"></i>
+      <span class="text-xs md:text-sm font-bold uppercase">{{ currentLang === 'en' ? 'AR' : 'EN' }}</span>
+    </button>
+
+    <button (click)="isMenuOpen = !isMenuOpen"
+            class="lg:hidden relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none z-[60]"
+            [class.menu-open]="isMenuOpen">
+      <span class="hamburger-line top-line"></span>
+      <span class="hamburger-line mid-line"></span>
+      <span class="hamburger-line bot-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div *ngIf="isMenuOpen" class="mobile-menu-overlay lg:hidden">
+    <div class="flex flex-col items-start gap-6 py-10 px-6">
+      <a routerLink="/home" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.HOME' | translate }}</a>
+      <a routerLink="/about" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.ABOUT' | translate }}</a>
+      <a routerLink="/Projects" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.PROJECTS' | translate }}</a>
+      <a routerLink="/sustainability" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.SUSTAINABILITY' | translate }}</a>
+      <a routerLink="/contact" (click)="isMenuOpen = false" class="nav-link-mobile">{{ 'NAV.CONTACT' | translate }}</a>
+    </div>
+  </div>
 </nav>
 
 
 
 
 
+    <!-- <div class="flex flex-col justify-center">
+      <h1 class="text-[#d4af37] font-serif font-bold tracking-[0.1em] md:tracking-[0.15em] text-2xl md:text-2xl lg:text-3xl leading-[0.9] uppercase
+                  bg-gradient-to-r from-[#d4af37] via-[#f7e08b] to-[#b8860b] bg-clip-text text-transparent
+                  animate-shimmer decoration-none">
+        {{ 'NAV.TITLE' | translate }}
+      </h1>
+
+      <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.3em] md:tracking-[0.5em] uppercase mt-1 font-light leading-none">
+        {{ 'NAV.SUBTITLE' | translate }}
+      </p>
+    </div> -->

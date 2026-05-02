@@ -1,8 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { LanguageService } from '../../Service/language.service';
 
-
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,33 +8,40 @@ import { LanguageService } from '../../Service/language.service';
 })
 export class NavbarComponent {
   isMenuOpen = false;
-  isScrolled = false;
   isVisible = true;
   lastScrollPosition = 0;
   currentLang: string = 'en';
 
-  @HostListener('window:scroll', [])
-
-onWindowScroll() {
-    const currentScroll = window.scrollY;
-    this.isScrolled = currentScroll > 50;
-
-    if (currentScroll > this.lastScrollPosition && currentScroll > 150) {
-      this.isVisible = false;
-    } else {
-      this.isVisible = true;
-    }
-    this.lastScrollPosition = currentScroll;
-  }
-
-constructor(private langService: LanguageService) {
-
+  constructor(private langService: LanguageService) {
     this.langService.languageChanged$.subscribe(lang => {
       this.currentLang = lang;
     });
   }
-toggleLanguage() {
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.scrollY;
+
+    // إذا كانت القائمة مفتوحة، لا تقم بإخفاء الناف بار
+    if (this.isMenuOpen) {
+      this.isVisible = true;
+      return;
+    }
+
+    // إخفاء عند النزول، إظهار عند الصعود
+    if (currentScroll > this.lastScrollPosition && currentScroll > 100) {
+      this.isVisible = false;
+    } else {
+      this.isVisible = true;
+    }
+
+    this.lastScrollPosition = currentScroll;
+  }
+
+  toggleLanguage() {
     const nextLang = this.currentLang === 'en' ? 'ar' : 'en';
     this.langService.switchLanguage(nextLang);
+    // اختياري: إغلاق القائمة عند تغيير اللغة
+    this.isMenuOpen = false;
   }
 }
