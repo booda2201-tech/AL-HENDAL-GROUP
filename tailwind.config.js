@@ -10,7 +10,12 @@ module.exports = {
         'dark-card': '#16161681',
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Noto Sans Arabic', 'Inter', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'display': ['Playfair Display', 'Georgia', 'serif'],
+      },
+      letterSpacing: {
+        'luxury': '0.22em',
       }
     },
   },

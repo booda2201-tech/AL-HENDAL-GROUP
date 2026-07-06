@@ -18,6 +18,8 @@ private languageSubject = new BehaviorSubject<string>('en');
     localStorage.setItem('lang', language);
     this.translate.use(language);
 
+    document.documentElement.setAttribute('lang', language);
+
     if (language === 'ar') {
       document.documentElement.setAttribute('dir', 'rtl');
     } else {

@@ -4,8 +4,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-[#0a0a0a] text-white font-sans overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(197, 160, 89, 0.35);
+    color: #fff;
   }
 }
 
@@ -13,8 +24,52 @@ html, body {
   font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
 }
 
-body *:not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fat):not([class*='fa-']):not(.material-symbols-outlined) {
-  font-family: 'Noto Sans Arabic', 'Inter', sans-serif !important;
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+html[lang="en"] h5,
+html[lang="en"] h6,
+html[lang="en"] .font-serif,
+html[lang="en"] .font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] .font-serif,
+html[lang="ar"] .font-display {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 160, 89, 0.45) rgba(255, 255, 255, 0.04);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.45);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.7);
 }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
@@ -223,14 +278,76 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
             from { width: 0; }
             to { width: 100%; }
         }
-.max-w-6xl{
-  border: 1px solid rgba(197, 160, 89, 0.1) !important;
 
-&:hover {
-            border-color: rgba(197, 160, 89, 0.4);
-            transform: translateY(-8px);
-        }
+.section-heading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
 
+.section-heading--start {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.section-title {
+  color: #d4af37;
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+html[lang="ar"] .section-title {
+  letter-spacing: 0.04em;
+}
+
+.section-divider {
+  width: 4.5rem;
+  height: 1px;
+  margin: 1.1rem auto 0;
+  background: linear-gradient(90deg, transparent, #c5a059, transparent);
+  opacity: 0.65;
+}
+
+.section-heading--start .section-divider {
+  margin-inline: 0;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(197, 160, 89, 0.75);
+}
+
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.45s ease, background-color 0.45s ease, border-color 0.45s ease, transform 0.35s ease, box-shadow 0.35s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.14) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.65s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 18px rgba(197, 160, 89, 0.12);
+
+    &::before {
+      transform: translateX(120%);
+    }
+  }
+}
+
+img {
+  image-rendering: auto;
 }
 
 

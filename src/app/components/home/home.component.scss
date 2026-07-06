@@ -60,6 +60,66 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
     #050505;
 }
 
+.hero-cinematic {
+  isolation: isolate;
+}
+
+.hero-vignette {
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.hero-content {
+  max-width: 56rem;
+  padding-inline: 1rem;
+}
+
+.hero-eyebrow {
+  color: rgba(197, 160, 89, 0.8);
+  font-size: 0.72rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+html[lang="ar"] .hero-eyebrow {
+  letter-spacing: 0.08em;
+}
+
+.hero-accent-line {
+  width: 5.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c5a059, transparent);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 1.4rem;
+  height: 2.3rem;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 999px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.35rem;
+  opacity: 0.7;
+
+  span {
+    width: 3px;
+    height: 8px;
+    border-radius: 999px;
+    background: #c5a059;
+    animation: scrollCue 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollCue {
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(7px); opacity: 1; }
+}
+
 .section-block {
   position: relative;
 }
@@ -206,14 +266,15 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
             from { width: 0; }
             to { width: 100%; }
         }
-.max-w-6xl{
-  border: 1px solid rgba(197, 160, 89, 0.1) !important;
 
-&:hover {
-            border-color: rgba(197, 160, 89, 0.4);
-            transform: translateY(-8px);
-        }
+.brand-showcase-card {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease, box-shadow 0.45s ease;
 
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: rgba(197, 160, 89, 0.45);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55), 0 0 24px rgba(197, 160, 89, 0.1);
+  }
 }
 
 .sector-card {
