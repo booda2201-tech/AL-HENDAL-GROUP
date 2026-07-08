@@ -145,6 +145,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
         whatsapp: 'https://wa.me/yournumber',
         tiktok: 'https://tiktok.com/@yourpage'
       },
+      website: 'https://elsaeidtea.com/',
       gallery: [
         'assets/imges/p4.jpg',
         'assets/imges/33.jpg'
