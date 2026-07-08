@@ -38,7 +38,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://www.facebook.com/share/1NEJBjjVnP/',
         instagram: 'https://www.instagram.com/alamana.building.materials?igsh=MzQ0ODg5ODg3Nw==',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://www.tiktok.com/@bubblehope.eg?_r=1&_t=ZS-94jUtf7alIC'
       },
       website: 'https://alamanamarket.com/',
@@ -66,7 +66,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://www.facebook.com/share/1NEJBjjVnP/',
         instagram: 'https://www.instagram.com/bubblehope.eg?igsh=MWE1eWdtb3N0NzNndA==',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://www.tiktok.com/@bubblehope.eg?_r=1&_t=ZS-94jUtf7alIC'
       },
       website: 'https://www.bubblehope.com/home',
@@ -94,7 +94,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://www.facebook.com/share/14aFPLyoorz/',
         instagram: 'https://www.instagram.com/forto.car.care?igsh=ZHhxMWN6aHhuNGk0',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://tiktok.com/@yourpage'
       },
       gallery: [
@@ -121,7 +121,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://facebook.com/yourpage',
         instagram: 'https://instagram.com/yourpage',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://tiktok.com/@yourpage'
       },
           website: 'https://darkslateblue-dove-147065.hostingersite.com/home',
@@ -142,7 +142,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://facebook.com/yourpage',
         instagram: 'https://instagram.com/yourpage',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://tiktok.com/@yourpage'
       },
       website: 'https://elsaeidtea.com/',
@@ -167,7 +167,7 @@ export class BrandDetailComponent implements OnInit, OnDestroy {
       socialLinks: {
         facebook: 'https://facebook.com/yourpage',
         instagram: 'https://instagram.com/yourpage',
-        whatsapp: 'https://wa.me/yournumber',
+        whatsapp: 'https://wa.me/201040478409',
         tiktok: 'https://tiktok.com/@yourpage'
       },
       website: 'https://dal-solution.com/', // الرابط الجديد اللي ضفته
