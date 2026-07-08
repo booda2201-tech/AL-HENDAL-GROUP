@@ -158,10 +158,110 @@ $white-pure: #fff;
     pointer-events: none;
   }
 
+  .portfolio-carousel-shell {
+    @media (max-width: 639px) {
+      margin-inline: -1.5rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .portfolio-carousel-track {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    @media (max-width: 639px) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 2.25rem;
+      width: 100%;
+      max-width: 100%;
+      direction: ltr;
+      overflow-x: scroll;
+      overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scroll-padding-inline: 1.75rem;
+      scroll-padding-block: 0.75rem;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
+      overscroll-behavior-x: contain;
+      padding: 0.75rem 1.75rem 0.5rem;
+      scrollbar-width: none;
+      cursor: grab;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &.is-dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+        user-select: none;
+
+        .portfolio-brand-card {
+          pointer-events: none;
+        }
+      }
+    }
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  .portfolio-brand-slide {
+    min-width: 0;
+
+    @media (max-width: 639px) {
+      flex: 0 0 calc(100vw - 4.5rem);
+      width: calc(100vw - 4.5rem);
+      max-width: calc(100vw - 4.5rem);
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+
+  .portfolio-carousel-dots {
+    display: flex;
+    flex-direction: row;
+    direction: ltr;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-inline: 1.5rem;
+  }
+
+  .portfolio-carousel-dot {
+    width: 0.42rem;
+    height: 0.42rem;
+    border: none;
+    border-radius: 999px;
+    padding: 0;
+    background: rgba($gold-primary, 0.28);
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease, width 0.25s ease;
+
+    &.is-active {
+      width: 1.15rem;
+      background: $gold-primary;
+    }
+  }
+
   .portfolio-brand-card {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
     min-height: 360px;
     overflow: hidden;
     border-radius: 1rem;
@@ -169,9 +269,24 @@ $white-pure: #fff;
     background: linear-gradient(165deg, rgba($white-pure, 0.035), rgba($white-pure, 0.008));
     text-decoration: none;
     cursor: pointer;
+    appearance: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
       border-color 0.45s ease,
       box-shadow 0.45s ease;
+
+    @media (max-width: 639px) {
+      min-height: 340px;
+      touch-action: manipulation;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
 
     &:hover {
       transform: translateY(-6px);

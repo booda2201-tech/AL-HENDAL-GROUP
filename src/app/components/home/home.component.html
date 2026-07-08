@@ -1,4 +1,4 @@
-<div class="bg-holding-black text-white min-h-screen font-sans home-shell">
+<div class="bg-holding-black text-white min-h-screen font-sans home-shell overflow-x-hidden max-w-full">
   
   <header class="home-hero relative flex min-h-[92svh] flex-col justify-end overflow-hidden">
     <div class="home-hero-bg" aria-hidden="true">
@@ -31,7 +31,7 @@
           class="home-hero-title text-holding-gold gold-shimmer-text"
           [ngClass]="currentLang === 'ar'
             ? 'max-w-3xl font-semibold text-[2.15rem] leading-[1.22] sm:text-[2.6rem] lg:text-5xl xl:text-[3.25rem]'
-            : 'max-w-none font-serif uppercase text-[1.85rem] leading-[0.95] tracking-[0.06em] sm:text-4xl sm:whitespace-nowrap lg:text-5xl xl:text-[3.25rem]'"
+            : 'max-w-full font-serif uppercase text-[1.85rem] leading-[0.95] tracking-[0.06em] sm:text-4xl lg:whitespace-nowrap lg:text-5xl xl:text-[3.25rem]'"
           [innerHTML]="'HERO.TITLE' | translate"></h1>
 
         <p
@@ -125,7 +125,11 @@
         <div *ngFor="let sector of sectors; let i = index" data-aos="fade-up" [attr.data-aos-delay]="i * 80"
           class="luxury-card sector-card flex items-center gap-1.5 rounded-xl p-2.5 sm:gap-4 sm:p-6">
           <span class="material-symbols-outlined shrink-0 text-xl text-holding-gold sm:text-4xl">{{ sector.icon }}</span>
-          <p class="min-w-0 flex-1 leading-tight text-gray-300 sm:text-lg sm:leading-snug">{{ sector.key | translate }}</p>
+          <p
+            class="min-w-0 flex-1 truncate leading-tight text-gray-300 sm:text-lg sm:leading-snug"
+            [attr.title]="sector.key | translate">
+            {{ sector.key | translate }}
+          </p>
         </div>
       </div>
     </div>
@@ -188,7 +192,7 @@
 
   <section class="brands-showcase py-24 bg-holding-black px-6 section-block">
     <div class="max-w-7xl mx-auto">
-      <div class="mb-14 flex flex-col items-center gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
+      <div class="mb-10 flex flex-col items-center gap-4 sm:mb-14 md:mb-16 md:flex-row md:items-end md:justify-between">
         <div class="text-center md:text-start">
           <h2
             class="text-holding-gold text-3xl font-serif gold-shimmer-text sm:text-4xl"
@@ -210,34 +214,54 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-        <a
-          *ngFor="let item of brandsList; let i = index"
-          [routerLink]="['/brand', item.id]"
-          class="brand-card"
-          data-aos="fade-up"
-          [attr.data-aos-delay]="(i % 3 + 1) * 90">
-          <span class="brand-card-index">0{{ i + 1 }}</span>
+      <div class="brands-carousel-shell">
+        <div
+          #brandsCarouselTrack
+          class="brands-carousel-track"
+          (scroll)="onBrandsScroll()">
+          <div
+            *ngFor="let item of brandsList; let i = index"
+            class="brand-card-slide">
+            <button
+              type="button"
+              class="brand-card"
+              (click)="openBrand(item.id)">
+              <span class="brand-card-index">0{{ i + 1 }}</span>
 
-          <div class="brand-card-media">
-            <img [src]="item.image" [alt]="currentLang === 'ar' ? item.nameAr : item.name" loading="lazy" />
-            <div class="brand-card-media-overlay" aria-hidden="true"></div>
-          </div>
+              <div class="brand-card-media">
+                <img [src]="item.image" [alt]="currentLang === 'ar' ? item.nameAr : item.name" loading="lazy" draggable="false" />
+                <div class="brand-card-media-overlay" aria-hidden="true"></div>
+              </div>
 
-          <div class="brand-card-body">
-            <h3 class="brand-card-title text-holding-gold">
-              {{ currentLang === 'ar' ? item.nameAr : item.name }}
-            </h3>
-            <p class="brand-card-desc">{{ item.translateKey | translate }}</p>
-            <span
-              class="brand-card-cta"
-              [class.uppercase]="currentLang !== 'ar'"
-              [class.tracking-[0.22em]]="currentLang !== 'ar'"
-              [class.text-xs]="currentLang === 'ar'">
-              {{ 'COMMON.VIEW_DETAIL' | translate }}
-            </span>
+              <div class="brand-card-body">
+                <h3 class="brand-card-title text-holding-gold">
+                  {{ currentLang === 'ar' ? item.nameAr : item.name }}
+                </h3>
+                <p class="brand-card-desc">{{ item.translateKey | translate }}</p>
+                <span
+                  class="brand-card-cta"
+                  [class.uppercase]="currentLang !== 'ar'"
+                  [class.tracking-[0.22em]]="currentLang !== 'ar'"
+                  [class.text-xs]="currentLang === 'ar'">
+                  {{ 'COMMON.VIEW_DETAIL' | translate }}
+                </span>
+              </div>
+            </button>
           </div>
-        </a>
+        </div>
+
+        <div class="brands-carousel-dots sm:hidden" role="tablist" aria-label="Brands carousel">
+          <button
+            *ngFor="let item of brandsList; let i = index"
+            type="button"
+            class="brands-carousel-dot"
+            role="tab"
+            [class.is-active]="activeBrandSlide === i"
+            [attr.aria-selected]="activeBrandSlide === i"
+            [attr.aria-label]="(currentLang === 'ar' ? item.nameAr : item.name)"
+            (click)="goToBrandSlide(i)">
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -255,18 +279,18 @@
     </div>
   </section>
 
-  <section class="py-20 bg-holding-black px-6 section-block">
+  <section class="py-20 bg-holding-black px-6 section-block overflow-x-clip">
     <div class="max-w-7xl mx-auto sustain-showcase">
       <h2 class="text-center text-holding-gold text-2xl sm:text-3xl md:text-4xl font-serif uppercase tracking-[0.08em] sm:tracking-[0.18em] md:tracking-[0.3em] gold-shimmer-text mb-4"
         data-aos="fade-up">{{ 'HOME.SUSTAIN.TITLE' | translate }}</h2>
       <div class="animated-divider mx-auto mb-10"></div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div *ngFor="let item of sustainPillars; let i = index" class="sustain-item rounded-xl p-6 text-center" data-aos="fade-up"
+      <div class="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
+        <div *ngFor="let item of sustainPillars; let i = index" class="sustain-item rounded-xl p-3 text-center sm:p-6" data-aos="fade-up"
           [attr.data-aos-delay]="i * 90">
-          <span class="material-symbols-outlined text-holding-gold mb-3 inline-block">
+          <span class="material-symbols-outlined mb-2 inline-block text-2xl text-holding-gold sm:mb-3 sm:text-3xl">
             {{ i === 0 ? 'handshake' : i === 1 ? 'eco' : i === 2 ? 'rocket_launch' : 'groups' }}
           </span>
-          <p class="text-gray-100 font-medium">{{ item | translate }}</p>
+          <p class="text-[11px] font-medium leading-tight text-gray-100 sm:text-base sm:leading-normal">{{ item | translate }}</p>
         </div>
       </div>
     </div>

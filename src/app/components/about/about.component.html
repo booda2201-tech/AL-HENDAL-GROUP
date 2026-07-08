@@ -32,7 +32,7 @@
   </header>
 
   <!-- Vision & Mission -->
-  <section class="py-32 bg-background-dark text-slate-300 relative">
+  <section class="relative bg-background-dark py-16 text-slate-300 md:py-32">
     <div class="absolute inset-0 overflow-hidden opacity-10">
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
       <div class="absolute top-1/2 -left-24 w-64 h-64 bg-primary rounded-full blur-[100px]"></div>
@@ -40,36 +40,44 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       <div class="grid lg:grid-cols-2 gap-20 items-center">
-        <div class="space-y-32">
+        <div class="space-y-16 md:space-y-32">
 
           <!-- Vision -->
-          <div class="space-y-8 group" data-aos="fade-right">
+          <div class="group space-y-6 md:space-y-8" data-aos="fade-right">
             <div class="flex items-baseline space-x-6" [class.space-x-reverse]="currentLang === 'ar'">
-              <h2 class="text-4xl lg:text-5xl font-display gold-shimmer-text">
+              <h2 class="font-display text-3xl gold-shimmer-text md:text-4xl lg:text-5xl">
                 {{ currentLang === 'ar' ? ('ABOUT.VISION_AR' | translate) : ('ABOUT.VISION_EN' | translate) }}
               </h2>
             </div>
             <div class="animated-divider"></div>
             <div class="space-y-6">
-              <p *ngIf="currentLang === 'ar'" class="font-arabic text-slate-300 leading-relaxed text-xl">{{
+              <p *ngIf="currentLang === 'ar'" class="font-arabic text-base leading-relaxed text-slate-300 md:hidden">{{
+                'ABOUT.VISION_DESC_AR_SHORT' | translate }}</p>
+              <p *ngIf="currentLang === 'ar'" class="font-arabic hidden text-xl leading-relaxed text-slate-300 md:block">{{
                 'ABOUT.VISION_DESC_AR' | translate }}</p>
-              <p *ngIf="currentLang !== 'ar'" class="text-xl leading-relaxed font-light text-slate-300">{{
+              <p *ngIf="currentLang !== 'ar'" class="text-base font-light leading-relaxed text-slate-300 md:hidden">{{
+                'ABOUT.VISION_DESC_EN_SHORT' | translate }}</p>
+              <p *ngIf="currentLang !== 'ar'" class="hidden text-xl font-light leading-relaxed text-slate-300 md:block">{{
                 'ABOUT.VISION_DESC_EN' | translate }}</p>
             </div>
           </div>
 
           <!-- Mission -->
-          <div class="space-y-8 group" data-aos="fade-right" data-aos-delay="200">
+          <div class="group space-y-6 md:space-y-8" data-aos="fade-right" data-aos-delay="200">
             <div class="flex items-baseline space-x-6" [class.space-x-reverse]="currentLang === 'ar'">
-              <h2 class="text-4xl lg:text-5xl font-display gold-shimmer-text">
+              <h2 class="font-display text-3xl gold-shimmer-text md:text-4xl lg:text-5xl">
                 {{ currentLang === 'ar' ? ('ABOUT.MISSION_AR' | translate) : ('ABOUT.MISSION_EN' | translate) }}
               </h2>
             </div>
             <div class="animated-divider"></div>
             <div class="space-y-6">
-              <p *ngIf="currentLang === 'ar'" class="font-arabic text-slate-300 leading-relaxed text-xl">{{
+              <p *ngIf="currentLang === 'ar'" class="font-arabic text-base leading-relaxed text-slate-300 md:hidden">{{
+                'ABOUT.MISSION_DESC_AR_SHORT' | translate }}</p>
+              <p *ngIf="currentLang === 'ar'" class="font-arabic hidden text-xl leading-relaxed text-slate-300 md:block">{{
                 'ABOUT.MISSION_DESC_AR' | translate }}</p>
-              <p *ngIf="currentLang !== 'ar'" class="text-xl leading-relaxed font-light text-slate-300">{{
+              <p *ngIf="currentLang !== 'ar'" class="text-base font-light leading-relaxed text-slate-300 md:hidden">{{
+                'ABOUT.MISSION_DESC_EN_SHORT' | translate }}</p>
+              <p *ngIf="currentLang !== 'ar'" class="hidden text-xl font-light leading-relaxed text-slate-300 md:block">{{
                 'ABOUT.MISSION_DESC_EN' | translate }}</p>
             </div>
           </div>
@@ -81,8 +89,16 @@
           <div
             class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-colors duration-700">
           </div>
-          <h2 class="text-5xl font-display gold-shimmer-text mb-2">{{ 'ABOUT.VALUES_TITLE' | translate }}</h2>
-          <p class="font-arabic text-slate-400 mb-16 tracking-wide">{{ 'ABOUT.VALUES_SUBTITLE' | translate }}</p>
+          <h2
+            class="about-values-title font-display gold-shimmer-text mb-2 text-5xl">
+            {{ 'ABOUT.VALUES_TITLE' | translate }}
+          </h2>
+          <p
+            class="about-values-subtitle text-slate-400 mb-10 md:mb-16"
+            [class.font-arabic]="currentLang === 'ar'"
+            [class.tracking-wide]="currentLang !== 'ar'">
+            {{ 'ABOUT.VALUES_SUBTITLE' | translate }}
+          </p>
 
           <div class="space-y-16">
             <div class="flex items-start space-x-8" [class.space-x-reverse]="currentLang === 'ar'" data-aos="fade-left"
@@ -143,10 +159,10 @@
           class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
       </div>
-      <div class="p-12 md:p-16 md:w-3/5 flex flex-col justify-center bg-[#151515]">
-        <i class="fas fa-quote-left text-primary/20 text-6xl mb-4" data-aos="fade-down" data-aos-delay="400"></i>
-        <p class="text-gray-300 text-xl leading-relaxed mb-8 italic font-light" data-aos="fade-up" data-aos-delay="500">
-          "{{ 'ABOUT.QUOTE' | translate }}"
+      <div class="flex flex-col justify-center bg-[#151515] p-8 md:w-3/5 md:p-16">
+        <i class="fas fa-quote-left mb-3 text-4xl text-primary/20 md:mb-4 md:text-6xl" data-aos="fade-down" data-aos-delay="400"></i>
+        <p class="mb-6 text-base font-light italic leading-relaxed text-gray-300 md:mb-8 md:text-xl" data-aos="fade-up" data-aos-delay="500">
+          "<span class="md:hidden">{{ 'ABOUT.QUOTE_SHORT' | translate }}</span><span class="hidden md:inline">{{ 'ABOUT.QUOTE' | translate }}</span>"
         </p>
         <div data-aos="fade-up" data-aos-delay="600">
           <h4 class="text-primary font-display text-3xl mb-1 uppercase tracking-wider gold-shimmer-text">

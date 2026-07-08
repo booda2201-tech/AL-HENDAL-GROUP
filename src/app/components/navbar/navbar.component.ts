@@ -13,6 +13,7 @@ export class NavbarComponent {
   currentLang: string = 'en';
 
   constructor(private langService: LanguageService) {
+    this.currentLang = localStorage.getItem('lang') || 'en';
     this.langService.languageChanged$.subscribe(lang => {
       this.currentLang = lang;
     });

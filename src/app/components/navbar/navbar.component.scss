@@ -29,6 +29,24 @@ nav {
   padding: 0.15rem 0.1rem;
 }
 
+.navbar-mobile-actions--ar {
+  transform: translateX(-1.05rem);
+  margin-inline-start: -0.3rem;
+}
+
+.navbar-mobile-actions--en {
+  transform: translateX(0.75rem);
+  margin-inline-end: -0.2rem;
+}
+
+.navbar-actions--ar {
+  transform: translateX(-0.85rem);
+}
+
+.navbar-actions--en {
+  transform: translateX(0.6rem);
+}
+
 
 .-translate-y-full {
   transition-duration: 500ms !important;

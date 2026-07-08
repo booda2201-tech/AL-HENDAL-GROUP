@@ -134,8 +134,9 @@
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-holding-gold to-transparent opacity-50"></div>
     <div class="max-w-4xl mx-auto pt-10">
       <i class="fas fa-quote-right text-holding-gold/10 text-7xl absolute top-10 right-10"></i>
-      <h2 class="text-holding-gold font-serif text-4xl mb-10 italic leading-snug gold-shimmer-text" data-aos="zoom-in">
-        "{{ 'SUSTAIN.CLOSING_QUOTE' | translate }}"
+      <h2 class="sustain-closing-quote text-holding-gold font-serif mb-10 italic gold-shimmer-text" data-aos="zoom-in">
+        <span class="hidden md:inline">"{{ 'SUSTAIN.CLOSING_QUOTE' | translate }}"</span>
+        <span class="md:hidden">"{{ 'SUSTAIN.CLOSING_QUOTE_MOBILE' | translate }}"</span>
       </h2>
       <div class="h-[1px] w-24 bg-holding-gold/40 mx-auto mb-10"></div>
       <p class="text-gray-500 uppercase tracking-[0.5em] text-xs">{{ 'SUSTAIN.CLOSING_TAG' | translate }}</p>

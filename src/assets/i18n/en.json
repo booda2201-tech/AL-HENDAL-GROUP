@@ -73,11 +73,15 @@
     "VISION_EN": "Our Vision",
     "VISION_AR": "رؤيتنا",
     "VISION_DESC_EN": "Our vision is to become a leading regional group recognized for responsible growth, operational excellence, and future-ready innovation. We aim to shape benchmarks in every sector we enter by integrating quality, efficiency, and customer-centric thinking into every stage of the value chain. Through strategic expansion, advanced technologies, and high-performance teams, we seek to transform opportunities into durable value. We envision an ecosystem of brands that are trusted by customers, respected by partners, and admired for consistency, integrity, and positive market contribution.",
+    "VISION_DESC_EN_SHORT": "To become a leading regional group known for responsible growth, operational excellence, and innovation—building trusted brands that create lasting value.",
     "VISION_DESC_AR": "رؤيتنا أن نكون الرواد المبتكرين في قطاعاتنا، ملتزمين بتقديم الحلول المتطورة والنمو المستدام في كل ما نقوم به.",
+    "VISION_DESC_AR_SHORT": "أن نصبح مجموعة إقليمية رائدة في النمو المسؤول والتميز التشغيلي والابتكار، ونبني علامات موثوقة تخلق قيمة مستدامة.",
     "MISSION_EN": "Our Mission",
     "MISSION_AR": "مهمتنا",
     "MISSION_DESC_EN": "Our mission is to deliver measurable and sustainable value to all stakeholders through disciplined execution, ethical governance, and continuous improvement. We commit to building products and services that meet international standards while remaining relevant to local market needs. We invest in talent, systems, and partnerships that strengthen performance and long-term competitiveness. In every operation, we prioritize accountability, customer trust, and responsible business practices, ensuring that growth is not only profitable but also meaningful for society and aligned with long-term environmental and community priorities.",
+    "MISSION_DESC_EN_SHORT": "To deliver sustainable value through disciplined execution and ethical governance—offering international-quality products tailored to local market needs.",
     "MISSION_DESC_AR": "مهمتنا تقديم قيمة استثنائية لشركائنا من خلال عمليات متميزة والالتزام بالمسؤولية المجتمعية والبيئية في كل سوق نخدمه.",
+    "MISSION_DESC_AR_SHORT": "تقديم قيمة مستدامة عبر التنفيذ المنضبط والحوكمة الأخلاقية، بمنتجات وخدمات عالمية تلبي احتياجات السوق المحلي.",
     "VALUES_TITLE": "Core Values",
     "VALUES_SUBTITLE": "القيم الأساسية التي نؤمن بها",
     "INTEGRITY": "Integrity",
@@ -90,6 +94,7 @@
     "INNOVATION_AR": "الابتكار",
     "INNOVATION_DESC": "Embracing change and fostering creativity to drive future growth.",
     "QUOTE": "Our company was established in Egypt as a specialized import and general trading firm. From day one, our goal has been to connect world-class products and expertise with local market needs through long-lasting partnerships built on trust. Over time, this vision has grown into a diversified group with multiple brands and sectors, yet our core principle remains the same: create real value through quality, innovation, and disciplined execution. Every expansion we pursue is guided by a long-term perspective, where success is measured not only by scale, but by the impact we create for customers, partners, and the communities we serve.",
+    "QUOTE_SHORT": "Established in Egypt as an import and trading firm, we grew into a diversified group built on trust, quality, and innovation—creating lasting value for customers, partners, and communities.",
     "FOUNDER": "Abdelmohsen AL Hendal",
     "FOUNDER_TITLE": "Founder & Chairman"
   },
@@ -124,6 +129,7 @@
     "EMPOWERMENT_TITLE": "Local Empowerment",
     "EMPOWERMENT_DESC": "Providing sustainable job opportunities and training for the Egyptian youth in the F&B and interior design sectors through Dal and our franchise networks.",
     "CLOSING_QUOTE": "Our step towards expansion: We started our activity with our headquarters, then we recently opened a second office, and we are currently planning to open two new offices as part of our expansion plan and to support our growing business.",
+    "CLOSING_QUOTE_MOBILE": "Expanding steadily: from our headquarters to a second office, with two more planned to support our growth.",
     "CLOSING_TAG": "Al Hendal Holding • 2026 Strategy"
   },
   "CONTACT": {

@@ -59,6 +59,21 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
   }
 }
 
+:host-context([dir='rtl']) {
+  .about-values-title {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.45;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .about-values-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    letter-spacing: normal;
+  }
+}
+
 
 .text-gray-500 {
   color: $gray-warm !important;

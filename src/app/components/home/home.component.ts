@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -8,13 +9,26 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('brandsCarouselTrack') brandsCarouselTrack?: ElementRef<HTMLElement>;
+
   currentLang: string = 'en';
+  activeBrandSlide = 0;
   hasAnimatedStats = false;
   animatedStats: Record<string, number> = {};
   private observer?: IntersectionObserver;
   private counterTimers: number[] = [];
+  private brandsScrollRaf = 0;
+  private brandsDidSwipe = false;
+  private brandsPointerId = -1;
+  private brandsIsDragging = false;
+  private brandsDragStartX = 0;
+  private brandsDragScrollLeft = 0;
+  private brandsDragCleanup?: () => void;
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private router: Router
+  ) {
     this.currentLang = this.translate.currentLang || 'en';
   }
 
@@ -89,6 +103,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.translate.onLangChange.subscribe(event => {
       this.currentLang = event.lang;
+      setTimeout(() => this.resetBrandsCarousel(), 0);
     });
     AOS.init({
       duration: 1000,
@@ -99,24 +114,176 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     const numbersSection = document.getElementById('numbersSection');
-    if (!numbersSection) {
+    if (numbersSection) {
+      this.observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !this.hasAnimatedStats) {
+              this.hasAnimatedStats = true;
+              this.startCounters();
+              this.observer?.disconnect();
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      this.observer.observe(numbersSection);
+    }
+
+    this.resetBrandsCarousel();
+    this.setupBrandsCarouselDrag();
+  }
+
+  private resetBrandsCarousel(): void {
+    const track = this.brandsCarouselTrack?.nativeElement;
+    if (!track || window.innerWidth >= 640) {
       return;
     }
 
-    this.observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !this.hasAnimatedStats) {
-            this.hasAnimatedStats = true;
-            this.startCounters();
-            this.observer?.disconnect();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+    track.scrollLeft = 0;
+    this.activeBrandSlide = 0;
+  }
 
-    this.observer.observe(numbersSection);
+  private getCarouselActiveIndex(track: HTMLElement): number {
+    const scrollCenter = track.scrollLeft + track.clientWidth / 2;
+    let closest = 0;
+    let minDistance = Infinity;
+
+    Array.from(track.children).forEach((child, index) => {
+      const slide = child as HTMLElement;
+      const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+      const distance = Math.abs(slideCenter - scrollCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closest = index;
+      }
+    });
+
+    return closest;
+  }
+
+  onBrandsScroll(): void {
+    if (this.brandsIsDragging) {
+      return;
+    }
+
+    cancelAnimationFrame(this.brandsScrollRaf);
+    this.brandsScrollRaf = requestAnimationFrame(() => this.updateActiveBrandSlide());
+  }
+
+  openBrand(id: string): void {
+    if (this.brandsDidSwipe) {
+      return;
+    }
+
+    this.router.navigate(['/brand', id]);
+  }
+
+  goToBrandSlide(index: number): void {
+    const track = this.brandsCarouselTrack?.nativeElement;
+    const slide = track?.children[index] as HTMLElement | undefined;
+    if (!track || !slide) {
+      return;
+    }
+
+    const offset = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+    track.scrollTo({ left: offset, behavior: 'smooth' });
+    this.activeBrandSlide = index;
+  }
+
+  private updateActiveBrandSlide(): void {
+    const track = this.brandsCarouselTrack?.nativeElement;
+    if (!track || !track.children.length) {
+      return;
+    }
+
+    this.activeBrandSlide = this.getCarouselActiveIndex(track);
+  }
+
+  private setupBrandsCarouselDrag(): void {
+    const track = this.brandsCarouselTrack?.nativeElement;
+    if (!track || this.brandsDragCleanup) {
+      return;
+    }
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (window.innerWidth >= 640) {
+        return;
+      }
+
+      this.brandsPointerId = event.pointerId;
+      this.brandsIsDragging = false;
+      this.brandsDidSwipe = false;
+      this.brandsDragStartX = event.clientX;
+      this.brandsDragScrollLeft = track.scrollLeft;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(event.pointerId);
+    };
+
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.pointerId !== this.brandsPointerId) {
+        return;
+      }
+
+      const deltaX = event.clientX - this.brandsDragStartX;
+      if (!this.brandsIsDragging && Math.abs(deltaX) > 6) {
+        this.brandsIsDragging = true;
+        this.brandsDidSwipe = true;
+      }
+
+      if (!this.brandsIsDragging) {
+        return;
+      }
+
+      event.preventDefault();
+      track.scrollLeft = this.brandsDragScrollLeft - deltaX;
+      this.updateActiveBrandSlide();
+    };
+
+    const endDrag = (event: PointerEvent) => {
+      if (event.pointerId !== this.brandsPointerId) {
+        return;
+      }
+
+      track.classList.remove('is-dragging');
+      if (track.hasPointerCapture(event.pointerId)) {
+        track.releasePointerCapture(event.pointerId);
+      }
+
+      const wasDragging = this.brandsIsDragging;
+      this.brandsPointerId = -1;
+      this.brandsIsDragging = false;
+
+      if (wasDragging) {
+        this.snapToNearestBrandSlide();
+        window.setTimeout(() => {
+          this.brandsDidSwipe = false;
+        }, 180);
+      }
+    };
+
+    track.addEventListener('pointerdown', onPointerDown);
+    track.addEventListener('pointermove', onPointerMove, { passive: false });
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+
+    this.brandsDragCleanup = () => {
+      track.removeEventListener('pointerdown', onPointerDown);
+      track.removeEventListener('pointermove', onPointerMove);
+      track.removeEventListener('pointerup', endDrag);
+      track.removeEventListener('pointercancel', endDrag);
+    };
+  }
+
+  private snapToNearestBrandSlide(): void {
+    const track = this.brandsCarouselTrack?.nativeElement;
+    if (!track || !track.children.length) {
+      return;
+    }
+
+    this.goToBrandSlide(this.getCarouselActiveIndex(track));
   }
 
   private startCounters(): void {
@@ -145,5 +312,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.observer?.disconnect();
     this.counterTimers.forEach(timerId => clearInterval(timerId));
+    cancelAnimationFrame(this.brandsScrollRaf);
+    this.brandsDragCleanup?.();
   }
 }

@@ -46,7 +46,7 @@
     <div class="portfolio-showcase-glow" aria-hidden="true"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="portfolio-showcase-header mb-14 md:mb-16 text-center" data-aos="fade-up">
+      <div class="portfolio-showcase-header mb-10 md:mb-16 text-center" data-aos="fade-up">
         <p
           class="text-[#C5A059] text-[10px] font-medium mb-3 flex items-center justify-center gap-3"
           [class.uppercase]="currentLang !== 'ar'"
@@ -73,49 +73,70 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-        <a
-          *ngFor="let item of subsidiaries; let i = index"
-          [routerLink]="['/brand', item.id]"
-          class="portfolio-brand-card"
-          [class.portfolio-brand-card--active]="isBrandActive(item.id)"
-          data-aos="fade-up"
-          [attr.data-aos-delay]="(i % 3 + 1) * 90">
-          <span class="portfolio-brand-index">0{{ i + 1 }}</span>
+      <div class="portfolio-carousel-shell">
+        <div
+          #portfolioCarouselTrack
+          class="portfolio-carousel-track"
+          (scroll)="onPortfolioScroll()">
+          <div
+            *ngFor="let item of subsidiaries; let i = index"
+            class="portfolio-brand-slide">
+            <button
+              type="button"
+              class="portfolio-brand-card"
+              [class.portfolio-brand-card--active]="isBrandActive(item.id)"
+              (click)="openBrand(item.id)">
+              <span class="portfolio-brand-index">0{{ i + 1 }}</span>
 
-          <div class="portfolio-brand-media">
-            <img
-              [src]="item.image"
-              [alt]="currentLang === 'ar' ? item.title_ar : item.title"
-              loading="lazy" />
-            <div class="portfolio-brand-media-overlay" aria-hidden="true"></div>
-            <span
-              class="portfolio-brand-tag"
-              [class.uppercase]="currentLang !== 'ar'"
-              [class.tracking-[0.2em]]="currentLang !== 'ar'">
-              {{ currentLang === 'ar' ? item.tag_ar : item.tag }}
-            </span>
-          </div>
+              <div class="portfolio-brand-media">
+                <img
+                  [src]="item.image"
+                  [alt]="currentLang === 'ar' ? item.title_ar : item.title"
+                  loading="lazy"
+                  draggable="false" />
+                <div class="portfolio-brand-media-overlay" aria-hidden="true"></div>
+                <span
+                  class="portfolio-brand-tag"
+                  [class.uppercase]="currentLang !== 'ar'"
+                  [class.tracking-[0.2em]]="currentLang !== 'ar'">
+                  {{ currentLang === 'ar' ? item.tag_ar : item.tag }}
+                </span>
+              </div>
 
-          <div class="portfolio-brand-body">
-            <h3 class="portfolio-brand-title text-holding-gold">
-              {{ currentLang === 'ar' ? item.title_ar : item.title }}
-            </h3>
-            <p class="portfolio-brand-desc">{{ item.translateKey | translate }}</p>
-            <div class="portfolio-brand-meta">
-              <span class="portfolio-brand-location">
-                {{ currentLang === 'ar' ? item.location_ar : item.location }}
-              </span>
-              <span
-                class="portfolio-brand-cta"
-                [class.uppercase]="currentLang !== 'ar'"
-                [class.tracking-[0.2em]]="currentLang !== 'ar'"
-                [class.text-xs]="currentLang === 'ar'">
-                {{ 'COMMON.VIEW_DETAIL' | translate }}
-              </span>
-            </div>
+              <div class="portfolio-brand-body">
+                <h3 class="portfolio-brand-title text-holding-gold">
+                  {{ currentLang === 'ar' ? item.title_ar : item.title }}
+                </h3>
+                <p class="portfolio-brand-desc">{{ item.translateKey | translate }}</p>
+                <div class="portfolio-brand-meta">
+                  <span class="portfolio-brand-location">
+                    {{ currentLang === 'ar' ? item.location_ar : item.location }}
+                  </span>
+                  <span
+                    class="portfolio-brand-cta"
+                    [class.uppercase]="currentLang !== 'ar'"
+                    [class.tracking-[0.2em]]="currentLang !== 'ar'"
+                    [class.text-xs]="currentLang === 'ar'">
+                    {{ 'COMMON.VIEW_DETAIL' | translate }}
+                  </span>
+                </div>
+              </div>
+            </button>
           </div>
-        </a>
+        </div>
+
+        <div class="portfolio-carousel-dots sm:hidden" role="tablist" aria-label="Portfolio carousel">
+          <button
+            *ngFor="let item of subsidiaries; let i = index"
+            type="button"
+            class="portfolio-carousel-dot"
+            role="tab"
+            [class.is-active]="activePortfolioSlide === i"
+            [attr.aria-selected]="activePortfolioSlide === i"
+            [attr.aria-label]="(currentLang === 'ar' ? item.title_ar : item.title)"
+            (click)="goToPortfolioSlide(i)">
+          </button>
+        </div>
       </div>
     </div>
   </section>

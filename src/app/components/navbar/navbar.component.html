@@ -68,7 +68,10 @@
       <a routerLink="/contact" routerLinkActive="active" class="nav-link">{{ 'NAV.CONTACT' | translate }}</a>
     </div>
 
-    <div class="navbar-actions flex items-center gap-4 border-s border-gray-800 ps-4 justify-self-end shrink-0">
+    <div
+      class="navbar-actions flex items-center gap-4 border-s border-gray-800 ps-4 justify-self-end shrink-0"
+      [class.navbar-actions--ar]="currentLang === 'ar'"
+      [class.navbar-actions--en]="currentLang === 'en'">
       <button (click)="toggleLanguage()" class="navbar-lang text-white hover:text-[#d4af37] transition-colors flex items-center gap-2">
         <i class="fa-solid fa-globe text-sm md:text-lg"></i>
         <span class="text-xs md:text-sm font-bold uppercase">{{ currentLang === 'en' ? 'AR' : 'EN' }}</span>
@@ -83,7 +86,10 @@
             class="w-auto h-8 md:h-10 object-contain transition-transform duration-300 group-hover:scale-105">
     </div>
 
-    <div class="flex items-center gap-3 border-s border-gray-800 ps-3 shrink-0">
+    <div
+      class="navbar-mobile-actions flex items-center gap-3 border-s border-gray-800 ps-3 shrink-0"
+      [class.navbar-mobile-actions--ar]="currentLang === 'ar'"
+      [class.navbar-mobile-actions--en]="currentLang === 'en'">
       <button (click)="toggleLanguage()" class="text-white hover:text-[#d4af37] transition-colors flex items-center gap-2">
         <i class="fa-solid fa-globe text-sm"></i>
         <span class="text-xs font-bold uppercase">{{ currentLang === 'en' ? 'AR' : 'EN' }}</span>

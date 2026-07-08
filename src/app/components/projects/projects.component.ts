@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 
@@ -27,11 +28,21 @@ interface HeroSlide {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('portfolioCarouselTrack') portfolioCarouselTrack?: ElementRef<HTMLElement>;
+
   activeFilter = 'All';
   currentLang = 'en';
   activeSlideIndex = 0;
+  activePortfolioSlide = 0;
   private slideInterval?: ReturnType<typeof setInterval>;
+  private portfolioScrollRaf = 0;
+  private portfolioDidSwipe = false;
+  private portfolioPointerId = -1;
+  private portfolioIsDragging = false;
+  private portfolioDragStartX = 0;
+  private portfolioDragScrollLeft = 0;
+  private portfolioDragCleanup?: () => void;
 
   private readonly brandHeroImages: Record<string, string[]> = {
     forto: [
@@ -147,7 +158,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     }
   ];
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    private router: Router
+  ) {}
 
   get filteredSubsidiaries() {
     if (this.activeFilter === 'All') return this.subsidiaries;
@@ -166,6 +180,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.currentLang = this.translate.currentLang || 'en';
     this.translate.onLangChange.subscribe(event => {
       this.currentLang = event.lang;
+      setTimeout(() => this.resetPortfolioCarousel(), 0);
     });
 
     this.slideInterval = setInterval(() => {
@@ -180,10 +195,169 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     });
   }
 
+  ngAfterViewInit(): void {
+    this.resetPortfolioCarousel();
+    this.setupPortfolioCarouselDrag();
+  }
+
+  private resetPortfolioCarousel(): void {
+    const track = this.portfolioCarouselTrack?.nativeElement;
+    if (!track || window.innerWidth >= 640) {
+      return;
+    }
+
+    track.scrollLeft = 0;
+    this.activePortfolioSlide = 0;
+  }
+
+  private getCarouselActiveIndex(track: HTMLElement): number {
+    const scrollCenter = track.scrollLeft + track.clientWidth / 2;
+    let closest = 0;
+    let minDistance = Infinity;
+
+    Array.from(track.children).forEach((child, index) => {
+      const slide = child as HTMLElement;
+      const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+      const distance = Math.abs(slideCenter - scrollCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closest = index;
+      }
+    });
+
+    return closest;
+  }
+
+  onPortfolioScroll(): void {
+    if (this.portfolioIsDragging) {
+      return;
+    }
+
+    cancelAnimationFrame(this.portfolioScrollRaf);
+    this.portfolioScrollRaf = requestAnimationFrame(() => this.updateActivePortfolioSlide());
+  }
+
+  openBrand(id: string): void {
+    if (this.portfolioDidSwipe) {
+      return;
+    }
+
+    this.router.navigate(['/brand', id]);
+  }
+
+  goToPortfolioSlide(index: number): void {
+    const track = this.portfolioCarouselTrack?.nativeElement;
+    const slide = track?.children[index] as HTMLElement | undefined;
+    if (!track || !slide) {
+      return;
+    }
+
+    const offset = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+    track.scrollTo({ left: offset, behavior: 'smooth' });
+    this.activePortfolioSlide = index;
+  }
+
+  private updateActivePortfolioSlide(): void {
+    const track = this.portfolioCarouselTrack?.nativeElement;
+    if (!track || !track.children.length) {
+      return;
+    }
+
+    this.activePortfolioSlide = this.getCarouselActiveIndex(track);
+  }
+
+  private setupPortfolioCarouselDrag(): void {
+    const track = this.portfolioCarouselTrack?.nativeElement;
+    if (!track || this.portfolioDragCleanup) {
+      return;
+    }
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (window.innerWidth >= 640) {
+        return;
+      }
+
+      this.portfolioPointerId = event.pointerId;
+      this.portfolioIsDragging = false;
+      this.portfolioDidSwipe = false;
+      this.portfolioDragStartX = event.clientX;
+      this.portfolioDragScrollLeft = track.scrollLeft;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(event.pointerId);
+    };
+
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.pointerId !== this.portfolioPointerId) {
+        return;
+      }
+
+      const deltaX = event.clientX - this.portfolioDragStartX;
+      if (!this.portfolioIsDragging && Math.abs(deltaX) > 6) {
+        this.portfolioIsDragging = true;
+        this.portfolioDidSwipe = true;
+      }
+
+      if (!this.portfolioIsDragging) {
+        return;
+      }
+
+      event.preventDefault();
+      track.scrollLeft = this.portfolioDragScrollLeft - deltaX;
+      this.updateActivePortfolioSlide();
+    };
+
+    const endDrag = (event: PointerEvent) => {
+      if (event.pointerId !== this.portfolioPointerId) {
+        return;
+      }
+
+      track.classList.remove('is-dragging');
+      if (track.hasPointerCapture(event.pointerId)) {
+        track.releasePointerCapture(event.pointerId);
+      }
+
+      const wasDragging = this.portfolioIsDragging;
+      this.portfolioPointerId = -1;
+      this.portfolioIsDragging = false;
+
+      if (wasDragging) {
+        this.snapToNearestPortfolioSlide();
+        window.setTimeout(() => {
+          this.portfolioDidSwipe = false;
+        }, 180);
+      }
+    };
+
+    track.addEventListener('pointerdown', onPointerDown);
+    track.addEventListener('pointermove', onPointerMove, { passive: false });
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+
+    this.portfolioDragCleanup = () => {
+      track.removeEventListener('pointerdown', onPointerDown);
+      track.removeEventListener('pointermove', onPointerMove);
+      track.removeEventListener('pointerup', endDrag);
+      track.removeEventListener('pointercancel', endDrag);
+    };
+  }
+
+  private snapToNearestPortfolioSlide(): void {
+    const track = this.portfolioCarouselTrack?.nativeElement;
+    if (!track || !track.children.length) {
+      return;
+    }
+
+    this.goToPortfolioSlide(this.getCarouselActiveIndex(track));
+  }
+
   ngOnDestroy(): void {
     if (this.slideInterval) {
       clearInterval(this.slideInterval);
     }
+
+    cancelAnimationFrame(this.portfolioScrollRaf);
+    this.portfolioDragCleanup?.();
   }
 
   setFilter(cat: string) {

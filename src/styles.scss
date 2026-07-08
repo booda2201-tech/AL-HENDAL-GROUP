@@ -6,10 +6,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   body {
     @apply bg-[#0a0a0a] text-white font-sans overflow-x-hidden;
+    max-width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -70,6 +73,21 @@ html[lang="ar"] .font-display {
 
 *::-webkit-scrollbar-thumb:hover {
   background: rgba(197, 160, 89, 0.7);
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
