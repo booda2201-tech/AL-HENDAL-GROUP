@@ -1,5 +1,5 @@
 
-<div class="bg-[#0a0a0a] text-white min-h-screen pt-32 pb-24 font-sans relative overflow-hidden contact-page"
+<div class="bg-[#0a0a0a] text-white min-h-screen pt-32 pb-0 font-sans relative overflow-x-hidden contact-page"
       [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
   <!-- Background -->
@@ -21,171 +21,14 @@
     <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-holding-gold/50 to-transparent mx-auto mt-8"></div>
   </div>
 
-  <main class="pt-24 pb-20 abstract-bg relative z-10">
+  <main class="pt-24 pb-0 abstract-bg relative z-10">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start pb-10">
 
-        <!-- Media Section -->
-        <section class="lg:col-span-5 section-shell">
-          <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
-            {{ 'CONTACT.MEDIA_TITLE' | translate }}
-          </h2>
-          <div class="space-y-8 max-h-[760px] overflow-y-auto pr-2 media-list">
-            <div *ngFor="let news of mediaReleases" class="group flex gap-6 items-start">
-              <div class="w-32 h-24 flex-shrink-0 overflow-hidden rounded">
-                <img [alt]="news.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" [src]="news.image"/>
-              </div>
-              <div class="flex-1">
-                <span class="text-[10px] text-primary/70 uppercase tracking-widest block mb-1">{{ news.date }}</span>
-                <h3 class="text-lg font-display group-hover:text-primary transition-colors leading-snug text-white">{{ news.title }}</h3>
-                <p class="text-sm text-gray-300 mt-2 line-clamp-3 leading-relaxed">{{ news.desc }}</p>
-                <a class="text-[11px] uppercase tracking-widest text-primary border-b border-primary/30 hover:border-primary mt-3 inline-block transition-all" href="#">
-                  {{ 'CONTACT.READ_MORE' | translate }}
-                </a>
-              </div>
-            </div>
-          </div>
-          <button class="mt-12 px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-bold border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all duration-500">
-            {{ 'CONTACT.VIEW_ALL' | translate }}
-          </button>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="lg:col-span-7 section-shell">
-          <h2 class="font-display text-2xl tracking-widest text-primary mb-12 uppercase">
-            {{ 'CONTACT.FORM_TITLE' | translate }}
-          </h2>
-          <!-- <div class="luxury-card p-4 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-primary/20">
-            <form class="space-y-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="relative">
-                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
-                    {{ 'CONTACT.NAME_LABEL' | translate }}
-                  </label>
-                  <input class="w-full custom-input px-2 py-4 rounded text-sm bg-transparent"
-                          [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate" type="text"/>
-                </div>
-                <div class="relative">
-                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
-                    {{ 'CONTACT.EMAIL_LABEL' | translate }}
-                  </label>
-                  <input class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent"
-                          [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate" type="email"/>
-                </div>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="relative">
-                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
-                    {{ 'CONTACT.SUBJECT_LABEL' | translate }}
-                  </label>
-                  <input class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent"
-                          [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate" type="text"/>
-                </div>
-                <div class="relative">
-                  <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
-                    {{ 'CONTACT.CATEGORY_LABEL' | translate }}
-                  </label>
-                  <select class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent appearance-none">
-                    <option class="bg-background-dark">{{ 'CONTACT.CAT1' | translate }}</option>
-                    <option class="bg-background-dark">{{ 'CONTACT.CAT2' | translate }}</option>
-                    <option class="bg-background-dark">{{ 'CONTACT.CAT3' | translate }}</option>
-                    <option class="bg-background-dark">{{ 'CONTACT.CAT4' | translate }}</option>
-                  </select>
-                  <span class="material-symbols-outlined absolute right-4 bottom-4 text-primary pointer-events-none text-sm opacity-50">expand_more</span>
-                </div>
-              </div>
-              <div class="relative">
-                <label class="block text-[10px] uppercase tracking-widest text-primary/70 mb-2 font-semibold">
-                  {{ 'CONTACT.MESSAGE_LABEL' | translate }}
-                </label>
-                <textarea class="w-full custom-input px-5 py-4 rounded text-sm bg-transparent resize-none"
-                          [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate" rows="5"></textarea>
-              </div>
-              <button class="w-full gold-gradient-bg text-black font-bold uppercase
-                      tracking-[0.4em] py-5 text-xs hover:brightness-110 transition-all
-                      shadow-xl active:scale-[0.98] raunded-3" type="submit">
-                {{ 'CONTACT.SEND_BTN' | translate }}
-              </button>
-            </form>
-          </div> -->
-
-<div class="max-w-3xl mx-auto bg-[#0f0f0f]/95 p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] border border-[#d4af37]/25">
-  <form class="space-y-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="relative flex flex-col">
-        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
-          {{ 'CONTACT.NAME_LABEL' | translate }}*
-        </label>
-        <input
-          type="text"
-          [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
-          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
-        />
-      </div>
-
-      <div class="relative flex flex-col">
-        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
-          {{ 'CONTACT.EMAIL_LABEL' | translate }}*
-        </label>
-        <input
-          type="email"
-          [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
-          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
-        />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="relative flex flex-col">
-        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
-          {{ 'CONTACT.SUBJECT_LABEL' | translate }}*
-        </label>
-        <input
-          type="text"
-          [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate"
-          class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-all duration-300"
-        />
-      </div>
-
-      <div class="relative flex flex-col">
-        <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
-          {{ 'CONTACT.CATEGORY_LABEL' | translate }}*
-        </label>
-        <div class="relative">
-          <select class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white appearance-none focus:outline-none focus:border-[#d4af37] transition-all duration-300 cursor-pointer">
-            <option class="bg-[#111111]">{{ 'CONTACT.CAT1' | translate }}</option>
-            <option class="bg-[#111111]">{{ 'CONTACT.CAT2' | translate }}</option>
-            <option class="bg-[#111111]">{{ 'CONTACT.CAT3' | translate }}</option>
-          </select>
-          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#d4af37] pointer-events-none text-sm opacity-70">expand_more</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative flex flex-col">
-      <label class="block text-[10px] uppercase tracking-widest text-[#d4af37]/80 mb-2 font-semibold">
-        {{ 'CONTACT.MESSAGE_LABEL' | translate }}*
-      </label>
-      <textarea
-        rows="5"
-        [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
-        class="w-full bg-black/55 border border-[#d4af37]/20 rounded-md px-4 py-4 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#d4af37] resize-none transition-all duration-300"
-      ></textarea>
-    </div>
-
-    <button
-      type="submit"
-      class="w-full bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#b8860b] text-black font-bold py-4 rounded-md shadow-xl transition-all duration-300 hover:brightness-110 active:scale-[0.98] uppercase tracking-[0.4em] text-xs"
-    >
-      {{ 'CONTACT.SEND_BTN' | translate }}
-    </button>
-  </form>
-</div>
-
-
-          <!-- Address -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-6 border border-primary/20 rounded-lg bg-black/35">
+        <!-- Contact Info -->
+        <section class="lg:col-span-5 contact-info-panel">
+          <div class="contact-info-stack">
+            <div class="contact-info-card">
               <h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">
                 {{ 'CONTACT.OFFICE_TITLE' | translate }}
               </h3>
@@ -196,7 +39,8 @@
                 <a class="text-primary hover:text-gold-light transition-colors" href="mailto:info@alhendal.com">info@alhendal.com</a>
               </address>
             </div>
-            <div class="grid grid-cols-1 gap-8 p-6 border border-primary/20 rounded-lg bg-black/35">
+
+            <div class="contact-info-card contact-info-card--split">
               <div>
                 <h3 class="text-[10px] font-bold uppercase tracking-widest text-primary/70 mb-2">
                   {{ 'CONTACT.INVEST_TITLE' | translate }}
@@ -210,6 +54,112 @@
                 <a class="text-sm text-white/80 hover:text-primary transition-colors" href="mailto:careers@alhendal.com">careers@alhendal.com</a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="lg:col-span-7 contact-form-section">
+          <h2 class="contact-form-heading">
+            {{ 'CONTACT.FORM_TITLE' | translate }}
+          </h2>
+
+          <div class="contact-form-card">
+            <form class="contact-form">
+              <div class="contact-form-grid">
+                <div class="contact-field">
+                  <label class="contact-label" for="contact-name">
+                    {{ 'CONTACT.NAME_LABEL' | translate }}<span class="contact-required">*</span>
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    class="contact-input"
+                    [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
+                  />
+                </div>
+
+                <div class="contact-field">
+                  <label class="contact-label" for="contact-email">
+                    {{ 'CONTACT.EMAIL_LABEL' | translate }}<span class="contact-required">*</span>
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    class="contact-input"
+                    [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-grid">
+                <div class="contact-field">
+                  <label class="contact-label" for="contact-subject">
+                    {{ 'CONTACT.SUBJECT_LABEL' | translate }}<span class="contact-required">*</span>
+                  </label>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    class="contact-input"
+                    [placeholder]="'CONTACT.SUBJECT_PLACEHOLDER' | translate"
+                  />
+                </div>
+
+                <div class="contact-field">
+                  <span class="contact-label" id="contact-category-label">
+                    {{ 'CONTACT.CATEGORY_LABEL' | translate }}<span class="contact-required">*</span>
+                  </span>
+                  <div
+                    class="contact-custom-select"
+                    [class.is-open]="categoryOpen">
+                    <button
+                      type="button"
+                      class="contact-custom-select-trigger"
+                      id="contact-category"
+                      aria-haspopup="listbox"
+                      [attr.aria-expanded]="categoryOpen"
+                      aria-labelledby="contact-category-label contact-category"
+                      (click)="toggleCategoryDropdown()">
+                      <span class="contact-custom-select-value">{{ selectedCategoryLabelKey | translate }}</span>
+                      <span class="contact-custom-select-chevron" aria-hidden="true"></span>
+                    </button>
+                    <ul
+                      *ngIf="categoryOpen"
+                      class="contact-custom-select-menu"
+                      role="listbox"
+                      aria-labelledby="contact-category-label">
+                      <li *ngFor="let option of categoryOptions" role="presentation">
+                        <button
+                          type="button"
+                          role="option"
+                          class="contact-custom-select-option"
+                          [class.is-selected]="selectedCategory === option.value"
+                          [attr.aria-selected]="selectedCategory === option.value"
+                          (click)="selectCategory(option)">
+                          {{ option.labelKey | translate }}
+                        </button>
+                      </li>
+                    </ul>
+                    <input type="hidden" name="category" [value]="selectedCategory" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label class="contact-label" for="contact-message">
+                  {{ 'CONTACT.MESSAGE_LABEL' | translate }}<span class="contact-required">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  rows="5"
+                  class="contact-textarea"
+                  [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit">
+                {{ 'CONTACT.SEND_BTN' | translate }}
+              </button>
+            </form>
           </div>
         </section>
       </div>

@@ -34,8 +34,11 @@ body *:not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fat):not([cl
 .golden-text-gradient {
   background: linear-gradient(to bottom, #F9E498 0%, #D4AF37 50%, #B8860B 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  line-height: 1.35;
+  padding-block-end: 0.08em;
 }
 
 .hero-overlay {
@@ -107,9 +110,67 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  line-height: 1.35;
+  padding-block-end: 0.08em;
   animation: shimmer 8s linear infinite;
+}
+
+// Arabic glyphs need full descender space — gradient clip cuts letter bottoms
+html[dir="rtl"] {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.65;
+    overflow: visible;
+  }
+
+  h1.leading-tight,
+  h2.leading-tight,
+  h3.leading-tight,
+  h4.leading-tight,
+  .leading-tight {
+    line-height: 1.65 !important;
+    padding-block-end: 0.12em;
+  }
+
+  .leading-snug {
+    line-height: 1.6 !important;
+    padding-block-end: 0.1em;
+  }
+
+  .font-serif,
+  .font-display {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif !important;
+  }
+
+  .gold-shimmer-text,
+  .golden-text-gradient {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: $gold-primary !important;
+    animation: none !important;
+    line-height: 1.65 !important;
+    height: auto !important;
+    min-height: unset !important;
+    max-height: none !important;
+    padding-block: 0.1em 0.22em !important;
+    overflow: visible !important;
+  }
+
+  h1.uppercase,
+  h2.uppercase,
+  h3.uppercase,
+  h4.uppercase,
+  h1[class*='tracking-'],
+  h2[class*='tracking-'],
+  h3[class*='tracking-'],
+  h4[class*='tracking-'] {
+    text-transform: none;
+    letter-spacing: normal;
+  }
 }
 
 @keyframes shimmer {

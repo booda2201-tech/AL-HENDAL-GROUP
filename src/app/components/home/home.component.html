@@ -1,38 +1,91 @@
 <div class="bg-holding-black text-white min-h-screen font-sans home-shell">
   
-  <header class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-    <video class="absolute inset-0 w-full h-full object-cover opacity-35" autoplay muted loop playsinline
-      poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070">
-      <source src="https://cdn.coverr.co/videos/coverr-modern-city-at-night-1566/1080p.mp4" type="video/mp4" />
-    </video>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-holding-black/60 to-holding-black"></div>
-    <div class="relative z-10">
-      <h1 data-aos="fade-up" data-aos-duration="1200"
-        class="text-5xl md:text-8xl font-serif text-holding-gold tracking-[0.1em] uppercase leading-tight mb-4 gold-shimmer-text"
-        [innerHTML]="'HERO.TITLE' | translate"></h1>
-      <p data-aos="fade-up" data-aos-delay="400" class="text-gray-400 tracking-[0.5em] text-sm md:text-lg uppercase">{{
-        'HERO.SUBTITLE' | translate }}</p>
+  <header class="home-hero relative flex min-h-[92svh] flex-col justify-end overflow-hidden">
+    <div class="home-hero-bg" aria-hidden="true">
+      <video
+        class="home-hero-bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070">
+        <source src="https://cdn.coverr.co/videos/coverr-modern-city-at-night-1566/1080p.mp4" type="video/mp4" />
+      </video>
+      <div class="home-hero-bg-gradient"></div>
+      <div class="home-hero-bg-grain"></div>
     </div>
-  </header>
 
-  <section class="py-20 px-6 bg-holding-black overflow-hidden section-block">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="text-holding-gold text-4xl font-serif uppercase tracking-[0.3em] gold-shimmer-text"
-          data-aos="fade-up">{{ 'HOME.SECTORS.TITLE' | translate }}</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let sector of sectors; let i = index" data-aos="fade-up" [attr.data-aos-delay]="i * 80"
-          class="luxury-card rounded-xl p-6 flex items-center gap-4 sector-card">
-          <span class="material-symbols-outlined text-4xl text-holding-gold">{{ sector.icon }}</span>
-          <p class="text-gray-300 text-lg">{{ sector.key | translate }}</p>
+    <div
+      class="home-hero-content relative z-10 w-full px-5 pb-12 pt-28 sm:px-8 md:pb-16 lg:px-12"
+      data-aos="fade-up"
+      data-aos-duration="900">
+      <div class="home-hero-inner mx-auto max-w-7xl">
+        <p
+          class="home-hero-eyebrow mb-3 text-holding-gold/75 sm:mb-4"
+          [class.uppercase]="currentLang !== 'ar'"
+          [class.tracking-[0.34em]]="currentLang !== 'ar'">
+          {{ 'HERO.EYEBROW' | translate }}
+        </p>
+
+        <h1
+          class="home-hero-title text-holding-gold gold-shimmer-text"
+          [ngClass]="currentLang === 'ar'
+            ? 'max-w-3xl font-semibold text-[2.15rem] leading-[1.22] sm:text-[2.6rem] lg:text-5xl xl:text-[3.25rem]'
+            : 'max-w-none font-serif uppercase text-[1.85rem] leading-[0.95] tracking-[0.06em] sm:text-4xl sm:whitespace-nowrap lg:text-5xl xl:text-[3.25rem]'"
+          [innerHTML]="'HERO.TITLE' | translate"></h1>
+
+        <p
+          class="home-hero-subtitle mt-3 max-w-md text-gray-300/90 sm:mt-4"
+          [class.uppercase]="currentLang !== 'ar'"
+          [class.tracking-[0.22em]]="currentLang !== 'ar'"
+          [class.text-[11px]]="currentLang !== 'ar'"
+          [class.sm:text-xs]="currentLang !== 'ar'"
+          [class.text-sm]="currentLang === 'ar'"
+          [class.sm:text-base]="currentLang === 'ar'">
+          {{ 'HERO.SUBTITLE' | translate }}
+        </p>
+
+        <div class="home-hero-actions mt-7 flex flex-wrap items-center gap-6 sm:mt-8">
+          <a routerLink="/projects" class="home-hero-cta group">
+            <span
+              [class.uppercase]="currentLang !== 'ar'"
+              [class.tracking-[0.22em]]="currentLang !== 'ar'"
+              [class.text-[11px]]="currentLang !== 'ar'"
+              [class.text-sm]="currentLang === 'ar'">
+              {{ 'HERO.CTA_PRIMARY' | translate }}
+            </span>
+            <span class="home-hero-cta-line" aria-hidden="true"></span>
+          </a>
+          <a
+            routerLink="/about"
+            class="text-[11px] text-white/40 transition-colors duration-300 hover:text-holding-gold sm:text-xs"
+            [class.uppercase]="currentLang !== 'ar'"
+            [class.tracking-[0.18em]]="currentLang !== 'ar'">
+            {{ 'HERO.CTA_SECONDARY' | translate }}
+          </a>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="home-hero-scroll absolute bottom-8 inset-inline-end-6 z-10 flex flex-col items-center gap-3 sm:bottom-10 sm:inset-inline-end-10" data-aos="fade-up" data-aos-delay="280">
+      <div class="home-hero-scroll-track" aria-hidden="true">
+        <span class="hero-scroll-line home-hero-scroll-thumb"></span>
+      </div>
+      <span
+        class="home-hero-scroll-label text-[10px] text-gray-500"
+        [class.uppercase]="currentLang !== 'ar'"
+        [class.tracking-[0.32em]]="currentLang !== 'ar'">
+        {{ 'HERO.SCROLL' | translate }}
+      </span>
+    </div>
+  </header>
 
   <section class="py-20 bg-holding-black text-center px-8 overflow-hidden section-block">
-    <h2 data-aos="fade-right" class="text-4xl lg:text-5xl font-display gold-shimmer-text mb-4">{{ 'WHO.TITLE' |
+    <h2 data-aos="fade-right"
+      class="text-4xl lg:text-5xl gold-shimmer-text mb-4"
+      [class.font-display]="currentLang !== 'ar'"
+      [class.leading-[1.65]]="currentLang === 'ar'"
+      [class.pb-1]="currentLang === 'ar'">{{ 'WHO.TITLE' |
       translate }}</h2>
     <div class="max-w-5xl mx-auto space-y-8">
       <p data-aos="fade-up" class="text-gray-300 leading-relaxed text-lg italic">{{ 'WHO.DESC1' | translate }}</p>
@@ -61,19 +114,55 @@
     </div>
   </section>
 
-  <section id="numbersSection" class="py-24 bg-holding-black px-6 section-block">
+
+  <section class="py-20 px-6 bg-holding-black overflow-hidden section-block">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <h2 data-aos="fade-up"
-          class="text-holding-gold text-4xl font-serif uppercase tracking-[0.35em] gold-shimmer-text">{{
-          'HOME.NUMBERS.TITLE' | translate }}</h2>
+        <h2 class="text-holding-gold text-4xl font-serif uppercase tracking-[0.3em] gold-shimmer-text"
+          data-aos="fade-up">{{ 'HOME.SECTORS.TITLE' | translate }}</h2>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let stat of stats; let i = index" data-aos="zoom-in" [attr.data-aos-delay]="i * 90"
-          class="luxury-card rounded-xl p-8 text-center">
-          <p class="text-5xl text-holding-gold font-light gold-shimmer-text mb-3">{{ stat.prefix || '' }}{{
-            animatedStats[stat.key] || 0 }}{{ stat.suffix || '' }}</p>
-          <p class="text-gray-300 uppercase tracking-wider text-sm">{{ stat.label | translate }}</p>
+      <div class="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
+        <div *ngFor="let sector of sectors; let i = index" data-aos="fade-up" [attr.data-aos-delay]="i * 80"
+          class="luxury-card sector-card flex items-center gap-1.5 rounded-xl p-2.5 sm:gap-4 sm:p-6">
+          <span class="material-symbols-outlined shrink-0 text-xl text-holding-gold sm:text-4xl">{{ sector.icon }}</span>
+          <p class="min-w-0 flex-1 leading-tight text-gray-300 sm:text-lg sm:leading-snug">{{ sector.key | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="numbersSection" class="stats-showcase py-20 bg-holding-black px-6 section-block">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-10 text-center">
+        <h2
+          data-aos="fade-up"
+          class="text-holding-gold text-3xl font-serif gold-shimmer-text sm:text-4xl"
+          [class.uppercase]="currentLang !== 'ar'"
+          [class.tracking-[0.28em]]="currentLang !== 'ar'"
+          [class.tracking-normal]="currentLang === 'ar'">
+          {{ 'HOME.NUMBERS.TITLE' | translate }}
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        <div
+          *ngFor="let stat of stats; let i = index"
+          data-aos="zoom-in"
+          [attr.data-aos-delay]="i * 70"
+          class="stat-card text-center">
+          <p class="stat-card-value gold-shimmer-text mb-1.5 text-holding-gold">
+            {{ stat.prefix || '' }}{{ animatedStats[stat.key] || 0 }}{{ stat.suffix || '' }}
+          </p>
+          <p
+            class="stat-card-label text-gray-400"
+            [class.uppercase]="currentLang !== 'ar'"
+            [class.tracking-wider]="currentLang !== 'ar'"
+            [class.text-xs]="currentLang !== 'ar'"
+            [class.text-[11px]]="currentLang === 'ar'"
+            [class.leading-snug]="currentLang === 'ar'">
+            {{ stat.label | translate }}
+          </p>
         </div>
       </div>
     </div>
@@ -86,43 +175,69 @@
           'FOOTPRINT.TITLE' | translate }}</h2>
         <p class="text-gray-400 text-lg leading-relaxed mb-8">{{ 'FOOTPRINT.DESC' | translate }}</p>
       </div>
-      <div class="relative map-container" data-aos="zoom-in">
-        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2033"
-          class="opacity-40 grayscale transition duration-700 shadow-2xl border border-holding-gold/10 rounded-xl w-full"
+      <div class="relative map-container w-full overflow-hidden rounded-xl border border-holding-gold/10 shadow-2xl" data-aos="zoom-in">
+        <img src="assets/imges/world-map-night.jpg"
+          class="map-image block w-full aspect-[2/1] object-cover transition duration-700"
           alt="World Map">
-        <div class="absolute inset-0 bg-gradient-to-t from-holding-black via-transparent to-transparent rounded-xl">
-        </div>
+        <div class="map-vignette pointer-events-none absolute inset-0"></div>
         <div *ngFor="let pin of mapLocations" class="map-pin" [style.top.%]="pin.top" [style.left.%]="pin.left"
-          [attr.title]="pin.title"><span></span></div>
+          [attr.title]="pin.labelKey | translate"><span></span></div>
       </div>
     </div>
   </section>
 
-  <section class="py-24 bg-holding-black px-6 section-block">
+  <section class="brands-showcase py-24 bg-holding-black px-6 section-block">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-holding-gold text-4xl font-serif uppercase tracking-[0.4em] gold-shimmer-text"
-          data-aos="fade-up">{{ 'BRANDS.TITLE' | translate }}</h2>
-        <div class="h-[1px] w-20 bg-holding-gold mx-auto mt-4 opacity-50" data-aos="zoom-in"></div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-        <div *ngFor="let item of brandsList; let i = index" [routerLink]="['/brand', item.id]"
-          class="group relative h-[320px] rounded rounded-lg flex items-center justify-center p-8 overflow-hidden transition-transform hover:scale-105 shadow-lg cursor-pointer border border-holding-gold/20"
-          data-aos="zoom-in" [attr.data-aos-delay]="(i % 3 + 1) * 100">
-          <img [src]="item.image"
-            class="absolute inset-0 w-full h-full object-cover group-hover:grayscale-0 transition duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-65">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20"></div>
-          <h3 [class]="'text-2xl font-bold z-10 relative drop-shadow-md text-holding-gold mb-8'">{{ currentLang === 'ar'
-            ? item.nameAr : item.name }}</h3>
-          <!-- <p class="absolute bottom-14 left-6 right-6 text-center text-gray-200 z-10 text-sm">{{ item.translateKey |
-            translate }}</p> -->
-          <div
-            class="absolute inset-0 bg-black/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-center items-center p-6 text-center z-20">
-            <p class="text-white text-sm mb-4">{{ item.translateKey | translate }}</p>
-            <span class="text-holding-gold text-xs tracking-widest uppercase border-b border-holding-gold/30 pb-1">{{
-              'COMMON.VIEW_DETAIL' | translate }}</span>
-          </div>
+      <div class="mb-14 flex flex-col items-center gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
+        <div class="text-center md:text-start">
+          <h2
+            class="text-holding-gold text-3xl font-serif gold-shimmer-text sm:text-4xl"
+            [class.uppercase]="currentLang !== 'ar'"
+            [class.tracking-[0.28em]]="currentLang !== 'ar'"
+            [class.tracking-normal]="currentLang === 'ar'"
+            data-aos="fade-up">
+            {{ 'BRANDS.TITLE' | translate }}
+          </h2>
+          <div class="mx-auto mt-4 h-px w-16 bg-gradient-to-r from-transparent via-holding-gold/50 to-transparent md:mx-0 md:w-24" data-aos="zoom-in"></div>
         </div>
+        <p
+          class="text-[10px] text-gray-500 sm:text-[11px]"
+          [class.uppercase]="currentLang !== 'ar'"
+          [class.tracking-[0.38em]]="currentLang !== 'ar'"
+          data-aos="fade-up"
+          data-aos-delay="100">
+          {{ brandsList.length }} {{ 'BRANDS.TITLE' | translate }}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <a
+          *ngFor="let item of brandsList; let i = index"
+          [routerLink]="['/brand', item.id]"
+          class="brand-card"
+          data-aos="fade-up"
+          [attr.data-aos-delay]="(i % 3 + 1) * 90">
+          <span class="brand-card-index">0{{ i + 1 }}</span>
+
+          <div class="brand-card-media">
+            <img [src]="item.image" [alt]="currentLang === 'ar' ? item.nameAr : item.name" loading="lazy" />
+            <div class="brand-card-media-overlay" aria-hidden="true"></div>
+          </div>
+
+          <div class="brand-card-body">
+            <h3 class="brand-card-title text-holding-gold">
+              {{ currentLang === 'ar' ? item.nameAr : item.name }}
+            </h3>
+            <p class="brand-card-desc">{{ item.translateKey | translate }}</p>
+            <span
+              class="brand-card-cta"
+              [class.uppercase]="currentLang !== 'ar'"
+              [class.tracking-[0.22em]]="currentLang !== 'ar'"
+              [class.text-xs]="currentLang === 'ar'">
+              {{ 'COMMON.VIEW_DETAIL' | translate }}
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   </section>

@@ -30,19 +30,30 @@
     }
   },
   "HERO": {
-    "TITLE": "Al Hendal <br> Group",
-    "SUBTITLE": "Global Vision. Timeless Legacy"
+    "TITLE": "Al Hendal Group",
+    "SUBTITLE": "Global Vision. Timeless Legacy",
+    "EYEBROW": "Diversified Investment Group",
+    "CTA_PRIMARY": "Explore the Group",
+    "CTA_SECONDARY": "About Us",
+    "SCROLL": "Scroll",
+    "METRIC_SECTORS": "Sectors"
   },
   "WHO": {
     "TITLE": "Who We Are",
-    "DESC1": "AL HENDAL Group is a diversified investment and multi-activity company dedicated to building long-term value across multiple industries. Established in the Arab Republic of Egypt, the company began as a specialized import and general trading firm and has since grown into a dynamic business group with operations spanning construction materials, hospitality, food & beverage, retail services, and lifestyle brands. Over the years, AL HENDAL has successfully developed and managed several brands serving different sectors of the market. Our portfolio includes high-quality construction and waterproofing products, premium tea and beverage brands, modern bubble tea cafés, and professional automotive care and detailing centers. Each brand reflects our commitment to innovation, quality, and delivering exceptional customer experiences. The group proudly operates through a growing network of branches and business partnerships both inside and outside Egypt, strengthening our regional presence and expanding our reach into international markets. Through strategic collaborations and franchise partnerships, we continue to connect global expertise with local market needs while maintaining international standards across all our operations.At AL HENDAL, we believe in continuous growth, operational excellence, and creating brands that combine functionality, innovation, and modern lifestyle experiences. Our vision is to become a leading regional business group recognized for quality, trust, and diversified success across multiple industries.",
+    "DESC1": "AL HENDAL Group is a diversified investment company building long-term value across construction, hospitality, food & beverage, automotive services, and trading. Founded in Egypt, we grew from a specialized import firm into a dynamic business group with trusted brands across multiple sectors. Each venture reflects our commitment to quality, innovation, and exceptional customer experience. We continue to expand through branches and strategic partnerships in Egypt and beyond.",
     "DESC2": "تُعد مجموعة الهندال شركة استثمارية متعددة الأنشطة تهدف إلى بناء قيمة طويلة الأمد من خلال العمل في العديد من القطاعات المختلفة. تأسست الشركة في جمهورية مصر العربية كشركة متخصصة في الاستيراد والتجارة العامة، ثم تطورت لتصبح مجموعة أعمال متكاملة تعمل في مجالات مواد البناء، والعوازل، والضيافة، والمشروبات، وخدمات السيارات، والتجزئة الحديثة. على مدار السنوات، نجحت مجموعة الهندال في إنشاء وإدارة عدة علامات تجارية تخدم قطاعات متنوعة من السوق، حيث تضم المجموعة علامات متخصصة في منتجات البناء والعزل عالية الجودة، بالإضافة إلى علامات متخصصة في الشاي والمشروبات المميزة، ومقاهي البابل تي العصرية، إلى جانب مراكز متطورة لغسيل وتفصيل السيارات. وتعكس جميع هذه العلامات التزامنا المستمر بالجودة والابتكار وتقديم تجربة استثنائية للعملاء. تمتلك المجموعة شبكة متنامية من الفروع والشراكات التجارية داخل مصر وخارجها، مما يعزز من تواجدها الإقليمي ويدعم خططها للتوسع في الأسواق الدولية. كما تعتمد المجموعة على شراكات استراتيجية وخبرات عالمية لتقديم منتجات وخدمات تتوافق مع احتياجات السوق المحلي مع الحفاظ على أعلى معايير الجودة العالمية. في مجموعة الهندال، نؤمن بأن النجاح الحقيقي يقوم على التنوع، والتطوير المستمر، وبناء علامات تجارية تجمع بين الجودة والابتكار والتجربة العصرية. وتسعى المجموعة إلى أن تكون واحدة من أبرز الكيانات الاستثمارية الرائدة في المنطقة من خلال تقديم حلول ومنتجات وخدمات موثوقة في مختلف القطاعات."
   },
   "FOOTPRINT": {
     "TITLE": "Global Footprint",
     "DESC": "Our strategic investments span across continents, driving innovation and sustainable growth in diverse markets. Through a growing network of partners, brands, and operational hubs, we connect global expertise with local opportunities to create measurable economic impact and long-term value for the communities we serve.",
     "CITIES": "Cities Worldwide",
-    "ASSETS": "Strategic Assets"
+    "ASSETS": "Strategic Assets",
+    "COUNTRIES": {
+      "EGYPT": "Egypt",
+      "KUWAIT": "Kuwait",
+      "OMAN": "Oman",
+      "TURKEY": "Turkey"
+    }
   },
   "BRANDS": {
     "TITLE": "Our Brands",

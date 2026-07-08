@@ -11,30 +11,19 @@ $gray-light:   #a3a3a3;   // رمادي فاتح للنصوص الثانوية
   display: block;
 }
 
-// --- 2. تأثير النص الذهبي المتوهج (Shimmer) ---
-// يُستخدم فقط للعناوين الرئيسية والسنوات (Titles & Years)
-.gold-shimmer-text {
-  background: linear-gradient(
-    90deg,
-    $gold-soft 0%,
-    $gold-bright 20%,
-    $gold-soft 40%,
-    $gold-bright 60%,
-    $gold-dark 80%,
-    $gold-soft 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  height: 1.2em;
-  animation: shimmer 8s linear infinite;
+.about-hero-image {
+  filter: grayscale(25%) contrast(1.05) brightness(0.88);
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+.about-hero-side-fade {
+  background: linear-gradient(to right, rgba(5, 5, 5, 0.62) 0%, rgba(5, 5, 5, 0.18) 38%, transparent 100%);
 }
+
+:host-context([dir='rtl']) .about-hero-side-fade {
+  background: linear-gradient(to left, rgba(5, 5, 5, 0.62) 0%, rgba(5, 5, 5, 0.18) 38%, transparent 100%);
+}
+
+// gold-shimmer-text: defined globally in src/styles.scss
 
     .animated-dividerr {
         height: 1px;

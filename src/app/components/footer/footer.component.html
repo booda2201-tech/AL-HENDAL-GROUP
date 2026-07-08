@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<footer class="bg-[#0a0a0a] border-t border-yellow-900/20 pt-8 pb-8 text-gray-300"
+<footer class="site-footer bg-[#0a0a0a] pb-8 text-gray-300"
+        [ngClass]="contactWaveBlend ? 'site-footer--contact-wave' : 'site-footer--default'"
         [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
   <div class="max-w-8xl mx-auto px-6 lg:px-12">
 
@@ -42,7 +43,7 @@
         <ul class="space-y-3 text-sm">
           <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/about">{{ 'FOOTER.ABOUT' | translate }}</a></li>
           <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/sustainability">{{ 'FOOTER.GROWTH' | translate }}</a></li>
-          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/Projects">{{ 'FOOTER.PROJECTS' | translate }}</a></li>
+          <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/projects">{{ 'FOOTER.PROJECTS' | translate }}</a></li>
           <li><a href="#" class="hover:text-yellow-500 transition-colors" routerLink="/contact">{{ 'FOOTER.CONTACT' | translate }}</a></li>
         </ul>
       </div>

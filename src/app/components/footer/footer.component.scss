@@ -3,3 +3,19 @@
   font-family: inherit;
   font-weight: 600;
 }
+
+.site-footer--default {
+  border-top: 1px solid rgba(120, 53, 15, 0.2);
+  padding-top: 2rem;
+}
+
+.site-footer--contact-wave {
+  margin-top: 0;
+  border-top: none;
+  position: relative;
+  z-index: 1;
+
+  > div {
+    padding-top: 2rem;
+  }
+}

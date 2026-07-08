@@ -85,7 +85,8 @@
 
 
 
-<div class="bg-holding-black min-h-screen text-white font-sans overflow-x-hidden w-full">
+<div class="bg-holding-black min-h-screen text-white font-sans overflow-x-hidden w-full"
+     [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
   <section class="relative h-[62vh] md:h-[78vh] flex items-end pb-10 md:pb-20 px-6 md:px-10 overflow-hidden brand-hero">
     <div class="absolute inset-0 z-0">
@@ -121,88 +122,108 @@
   </div>
 </section>
 
-  <section class="py-12 md:py-24 px-6 relative">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+  <section class="brand-story-section py-16 md:py-28 px-6 relative overflow-hidden">
+    <div class="brand-story-glow" aria-hidden="true"></div>
 
-      <div data-aos="fade-right" class="brand-info-shell">
-        <div class="w-16 md:w-20 h-[2px] bg-holding-gold mb-6 md:mb-10"></div>
-        <h2 class="text-2xl md:text-3xl font-serif mb-6 md:mb-8 leading-tight italic text-gray-200">
-          {{ brand.tagline | translate }}
-        </h2>
-        <p class="text-gray-400 text-base md:text-lg leading-relaxed first-letter:text-4xl md:first-letter:text-5xl first-letter:text-holding-gold first-letter:mr-3">
-          {{ brand.fullDescription | translate }}
-        </p>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="brand-story-grid grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
-        <div class="grid grid-cols-2 gap-4 md:gap-5 mt-10 md:mt-12 border-t border-white/10 pt-8">
-            <div *ngFor="let feature of brand.features">
-                <span class="text-holding-gold block text-base md:text-lg font-serif mb-2">
-                    {{ feature.title | translate }}
-                </span>
-                <span class="feature-value-pill">
-                    {{ feature.value | translate }}
-                </span>
+        <!-- Story content — start side (left EN / right AR) -->
+        <div class="lg:col-span-7 lg:col-start-1"
+             [attr.data-aos]="currentLang === 'ar' ? 'fade-left' : 'fade-right'">
+          <div class="brand-info-shell">
+            <span class="brand-story-eyebrow">{{ 'BRAND_DETAILS.ELITE_BRAND' | translate }}</span>
+            <div class="brand-story-divider"></div>
+
+            <h2 class="brand-story-tagline gold-shimmer-text">
+              {{ brand.tagline | translate }}
+            </h2>
+
+            <p class="brand-story-desc">
+              {{ brand.fullDescription | translate }}
+            </p>
+
+            <!-- Features -->
+            <div class="brand-features-grid">
+              <div *ngFor="let feature of brand.features; let i = index"
+                   class="brand-feature-card"
+                   [attr.data-aos]="'fade-up'"
+                   [attr.data-aos-delay]="i * 80">
+                <span class="brand-feature-label">{{ feature.title | translate }}</span>
+                <span class="brand-feature-value">{{ feature.value | translate }}</span>
+              </div>
             </div>
+
+            <!-- Mission & Vision -->
+            <div *ngIf="brand.mission || brand.vision" class="brand-mv-grid">
+              <div *ngIf="brand.mission" class="brand-mv-card">
+                <span class="brand-mv-icon" aria-hidden="true">◆</span>
+                <h4 class="brand-mv-title">{{ 'FEATURES.MISSION' | translate }}</h4>
+                <p class="brand-mv-text">{{ brand.mission | translate }}</p>
+              </div>
+              <div *ngIf="brand.vision" class="brand-mv-card">
+                <span class="brand-mv-icon" aria-hidden="true">◇</span>
+                <h4 class="brand-mv-title">{{ 'FEATURES.VISION' | translate }}</h4>
+                <p class="brand-mv-text">{{ brand.vision | translate }}</p>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="brand-actions-bar" data-aos="fade-up">
+              <div class="brand-social-group">
+                <span class="brand-connect-label">{{ 'BRAND_DETAILS.CONNECT' | translate }}</span>
+                <div class="flex gap-3">
+                  <a *ngIf="brand.socialLinks?.facebook" [href]="brand.socialLinks.facebook"
+                      target="_blank" rel="noopener" class="social-icon-btn fb-hover" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a *ngIf="brand.socialLinks?.instagram" [href]="brand.socialLinks.instagram"
+                      target="_blank" rel="noopener" class="social-icon-btn ig-hover" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a *ngIf="brand.socialLinks?.tiktok" [href]="brand.socialLinks.tiktok"
+                      target="_blank" rel="noopener" class="social-icon-btn tk-hover" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+                  <a *ngIf="brand.socialLinks?.whatsapp" [href]="brand.socialLinks.whatsapp"
+                      target="_blank" rel="noopener" class="social-icon-btn wa-hover" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+
+              <a *ngIf="brand.website"
+                  [href]="brand.website"
+                  target="_blank"
+                  rel="noopener"
+                  class="brand-website-btn btn-luxury">
+                <span>{{ 'BRAND_DETAILS.VISIT_WEBSITE' | translate }}</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 italic border-l-2 border-holding-gold pl-4">
-        <div *ngIf="brand.mission">
-            <h4 class="text-holding-gold text-sm uppercase tracking-widest mb-1">{{ 'FEATURES.MISSION' | translate }}</h4>
-            <p class="text-gray-400 text-sm">{{ brand.mission | translate }}</p>
+        <!-- Gallery — end side (right EN / left AR) -->
+        <div class="lg:col-span-5 lg:col-start-8"
+             [attr.data-aos]="currentLang === 'ar' ? 'zoom-in-right' : 'zoom-in-left'">
+          <div class="brand-gallery-bento">
+            <div *ngIf="brand.gallery[0]" class="gallery-cell gallery-cell--hero">
+              <img [src]="brand.gallery[0]" alt="" class="gallery-shot" loading="lazy">
+              <div class="gallery-cell-overlay" aria-hidden="true"></div>
+            </div>
+            <div *ngIf="brand.gallery[1]" class="gallery-cell gallery-cell--side">
+              <img [src]="brand.gallery[1]" alt="" class="gallery-shot" loading="lazy">
+              <div class="gallery-cell-overlay" aria-hidden="true"></div>
+            </div>
+            <div *ngIf="brand.gallery[2]" class="gallery-cell gallery-cell--side">
+              <img [src]="brand.gallery[2]" alt="" class="gallery-shot" loading="lazy">
+              <div class="gallery-cell-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
         </div>
-        <div *ngIf="brand.vision">
-            <h4 class="text-holding-gold text-sm uppercase tracking-widest mb-1">{{ 'FEATURES.VISION' | translate }}</h4>
-            <p class="text-gray-400 text-sm">{{ brand.vision | translate }}</p>
-        </div>
+
       </div>
-
-        <div class="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6" data-aos="fade-up">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-white/30">
-                {{ 'BRAND_DETAILS.CONNECT' | translate }} —
-            </span>
-      <div class="flex gap-4">
-          <a *ngIf="brand.socialLinks?.facebook" [href]="brand.socialLinks.facebook"
-              target="_blank" class="social-icon-btn fb-hover">
-              <i class="fab fa-facebook-f fs-2"></i>
-          </a>
-
-          <a *ngIf="brand.socialLinks?.instagram" [href]="brand.socialLinks.instagram"
-              target="_blank" class="social-icon-btn ig-hover">
-              <i class="fab fa-instagram fs-2"></i>
-          </a>
-
-          <a *ngIf="brand.socialLinks?.tiktok" [href]="brand.socialLinks.tiktok"
-              target="_blank" class="social-icon-btn tk-hover">
-              <i class="fab fa-tiktok fs-2"></i>
-          </a>
-
-          <a *ngIf="brand.socialLinks?.whatsapp" [href]="brand.socialLinks.whatsapp"
-              target="_blank" class="social-icon-btn wa-hover">
-              <i class="fab fa-whatsapp fs-2"></i>
-          </a>
-</div>
-        </div>
-
-        <div *ngIf="brand.website" class="mt-8" data-aos="fade-up">
-          <a [href]="brand.website"
-              target="_blank"
-              class="inline-flex items-center gap-3 px-8 py-3 border border-holding-gold text-holding-gold hover:bg-holding-gold hover:text-black transition-all duration-500 rounded-sm uppercase tracking-widest text-xs font-bold btn-luxury">
-            <span>{{ 'BRAND_DETAILS.VISIT_WEBSITE' | translate }}</span>
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-
-      </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" data-aos="zoom-in-left">
-          <img *ngIf="brand.gallery[0]" [src]="brand.gallery[0]"
-                class="gallery-shot col-span-1 md:col-span-2 w-full h-48 md:h-80 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
-
-          <img *ngIf="brand.gallery[1]" [src]="brand.gallery[1]"
-                class="gallery-shot w-full h-48 md:h-52 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
-
-          <img *ngIf="brand.gallery[2]" [src]="brand.gallery[2]"
-                class="gallery-shot w-full h-48 md:h-52 object-cover rounded-sm grayscale hover:grayscale-0 transition duration-700 shadow-xl">
-        </div>
     </div>
   </section>
 </div>

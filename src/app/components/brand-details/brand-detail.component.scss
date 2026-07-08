@@ -1,17 +1,5 @@
 
 
-.gold-shimmer-text {
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shimmer 4s linear infinite;
-}
-
-@keyframes shimmer {
-  to { background-position: 200% center; }
-}
-
 section {
   border-bottom: 1px solid rgba(191, 149, 63, 0.05);
 }
@@ -93,18 +81,6 @@ html, body {
   }
 }
 
-.gold-shimmer-text {
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shimmer 4s linear infinite;
-}
-
-@keyframes shimmer {
-  to { background-position: 200% center; }
-}
-
 .animate-slow-zoom {
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
@@ -125,38 +101,275 @@ html, body {
   background: rgba(191, 149, 63, 0.05);
 }
 
-.gallery-shot {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  transition: transform 0.5s ease, border-color 0.5s ease, filter 0.5s ease;
+.btn-luxury {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.gallery-shot:hover {
-  transform: translateY(-5px);
-  border-color: rgba(191, 149, 63, 0.5);
+// ── Brand Story Section ──────────────────────────────────────
+
+.brand-story-section {
+  border-bottom: 1px solid rgba(191, 149, 63, 0.06);
+}
+
+.brand-story-glow {
+  position: absolute;
+  top: -6rem;
+  right: -8rem;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(191, 149, 63, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -18rem;
+    left: -14rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(191, 149, 63, 0.04) 0%, transparent 70%);
+  }
 }
 
 .brand-info-shell {
-  border: 1px solid rgba(191, 149, 63, 0.18);
-  border-radius: 1rem;
-  padding: 1.4rem;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
+  border: 1px solid rgba(191, 149, 63, 0.14);
+  border-radius: 1.25rem;
+  padding: 2rem 2rem 1.75rem;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.15) 100%);
+  backdrop-filter: blur(4px);
 }
 
-.feature-value-pill {
-  display: inline-block;
-  border: 1px solid rgba(191, 149, 63, 0.3);
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  color: #d2d2d2;
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
+.brand-story-eyebrow {
+  display: block;
+  font-size: 0.625rem;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
-  background: rgba(191, 149, 63, 0.08);
+  color: rgba(191, 149, 63, 0.7);
+  margin-bottom: 1rem;
 }
 
-.btn-luxury {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+.brand-story-divider {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, #bf953f, rgba(191, 149, 63, 0.2));
+  margin-bottom: 1.75rem;
+}
+
+.brand-story-tagline {
+  font-family: serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-style: italic;
+  line-height: 1.3;
+  color: #e8e8e8;
+  margin-bottom: 1.5rem;
+}
+
+.brand-story-desc {
+  color: #9ca3af;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+// Features grid
+.brand-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand-feature-card {
+  padding: 1rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(191, 149, 63, 0.12);
+  background: rgba(191, 149, 63, 0.04);
+  transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
+
+  &:hover {
+    border-color: rgba(191, 149, 63, 0.35);
+    background: rgba(191, 149, 63, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.brand-feature-label {
+  display: block;
+  font-family: serif;
+  font-size: 0.9rem;
+  color: #bf953f;
+  margin-bottom: 0.35rem;
+}
+
+.brand-feature-value {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  line-height: 1.5;
+}
+
+// Mission & Vision
+.brand-mv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.brand-mv-card {
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.75rem;
+  border-inline-start: 2px solid rgba(191, 149, 63, 0.5);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.brand-mv-icon {
+  display: block;
+  font-size: 0.5rem;
+  color: #bf953f;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.brand-mv-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #bf953f;
+  margin-bottom: 0.4rem;
+}
+
+.brand-mv-text {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  line-height: 1.65;
+  font-style: italic;
+}
+
+// Actions bar
+.brand-actions-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  @media (min-width: 540px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.brand-social-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @media (min-width: 540px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+.brand-connect-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}
+
+.brand-website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #bf953f;
+  border-radius: 0.25rem;
+  color: #bf953f;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background 0.5s ease, color 0.5s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #bf953f;
+    color: #000;
+  }
+}
+
+// ── Bento Gallery ────────────────────────────────────────────
+
+.brand-gallery-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.65rem;
+}
+
+.gallery-cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.5s ease, transform 0.5s ease;
+
+  &:hover {
+    border-color: rgba(191, 149, 63, 0.45);
+    transform: translateY(-4px);
+
+    .gallery-shot {
+      transform: scale(1.06);
+      filter: grayscale(0);
+    }
+
+    .gallery-cell-overlay {
+      opacity: 0.15;
+    }
+  }
+
+  &--hero {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+  }
+
+  &--side {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.gallery-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.6);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.gallery-cell-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 50%);
+  opacity: 0.35;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -166,6 +379,6 @@ html, body {
   }
 
   .brand-info-shell {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 }

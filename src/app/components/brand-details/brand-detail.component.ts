@@ -1,14 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-brand-detail',
   templateUrl: './brand-detail.component.html',
   styleUrls: ['./brand-detail.component.scss']
 })
-export class BrandDetailComponent implements OnInit {
+export class BrandDetailComponent implements OnInit, OnDestroy {
   brand: any;
+  currentLang = 'en';
   currentHeroIndex = 0;
   intervalId: any;
 
@@ -39,6 +41,7 @@ export class BrandDetailComponent implements OnInit {
         whatsapp: 'https://wa.me/yournumber',
         tiktok: 'https://www.tiktok.com/@bubblehope.eg?_r=1&_t=ZS-94jUtf7alIC'
       },
+      website: 'https://alamanamarket.com/',
       gallery: [
         '../../../assets/imges/al-5.png',
         '../../../assets/imges/al-6.png',
@@ -178,15 +181,21 @@ export class BrandDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
-
-  ) {}
+    private location: Location,
+    private translate: TranslateService
+  ) {
+    this.currentLang = this.translate.currentLang || 'en';
+  }
 
   goBack() {
     this.location.back();
   }
 
   ngOnInit(): void {
+    this.translate.onLangChange.subscribe(event => {
+      this.currentLang = event.lang;
+    });
+
     const id = this.route.snapshot.paramMap.get('id');
     this.brand = this.brandsData[id || 'bubble-hope'];
 

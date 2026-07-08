@@ -18,6 +18,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.currentLang = this.translate.currentLang || 'en';
   }
 
+  heroMetrics = [
+    { value: '6+', labelKey: 'HOME.NUMBERS.BRANDS' },
+    { value: '6', labelKey: 'HERO.METRIC_SECTORS' },
+    { value: '3+', labelKey: 'HOME.NUMBERS.COUNTRIES' }
+  ];
+
   sectors = [
     { icon: 'construction', key: 'HOME.SECTORS.ITEM1' },
     { icon: 'local_cafe', key: 'HOME.SECTORS.ITEM2' },
@@ -46,11 +52,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ];
 
   mapLocations = [
-    { top: 56, left: 55, title: 'Egypt - Cairo HQ' },
-    { top: 48, left: 58, title: 'Kuwait - Regional Partner' },
-    { top: 43, left: 52, title: 'Turkey - Trading Hub' },
-    { top: 52, left: 62, title: 'UAE - Strategic Office' }
+    HomeComponent.mapPin(30.04, 31.24, 'FOOTPRINT.COUNTRIES.EGYPT'),
+    HomeComponent.mapPin(39.9, 32.85, 'FOOTPRINT.COUNTRIES.TURKEY'),
+    HomeComponent.mapPin(29.38, 47.99, 'FOOTPRINT.COUNTRIES.KUWAIT'),
+    HomeComponent.mapPin(23.59, 58.38, 'FOOTPRINT.COUNTRIES.OMAN')
   ];
+
+  private static mapPin(lat: number, lon: number, labelKey: string) {
+    return {
+      top: +(((90 - lat) / 180) * 100).toFixed(2),
+      left: +(((lon + 180) / 360) * 100).toFixed(2),
+      labelKey
+    };
+  }
 
   featuredProjects = [
     { key: 'HOME.PROJECTS.ITEM1', image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1887' },

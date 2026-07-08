@@ -2,62 +2,33 @@
   [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
   <!-- Hero -->
-  <header class="relative min-h-[60vh] flex items-center  overflow-hidden bg-luxury-black">
-    <div class="absolute inset-0 opacity-40">
-      <img alt="Abstract Golden Texture" class="w-full h-full object-cover mix-blend-overlay"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSoxL-fvy20qDEgnSi3Gav-7lrkCPj7iM0QbDM_Zjl458rW0yXfPtRTA4tmgJzOibTe3UVT-8sCoR-RdPNTkA6SQzsrrzEeJC50trmvkKBIezqd1hAqHDzZ9Ya0s-rJHAVPTsstOAUZ1rCezWaZO1YCNuVzJxxoSZ-1NYzullSeoCEhPlpIC_M1Vibu5iyeaVp_ruFFERgdLeAFHkx8HOak3ro4lCM8Yxmaf0tSJ1vwrvwKJH8OAANXbHaYQd4laKhdD4Wm4qwwsBd" />
-      <div class="absolute inset-0 bg-gradient-to-r from-luxury-black via-luxury-black/80 to-transparent"></div>
+  <header class="about-hero relative flex min-h-[58vh] items-center overflow-hidden bg-[#050505] md:min-h-[62vh]">
+    <div class="absolute inset-0">
+      <img
+        alt=""
+        class="about-hero-image h-full w-full object-cover"
+        src="assets/imges/about-hero.jpg"
+        loading="eager"
+        fetchpriority="high" />
+      <div class="absolute inset-0 bg-[#050505]/25"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/55 via-[#050505]/20 to-transparent"></div>
+      <div class="about-hero-side-fade absolute inset-0"></div>
     </div>
 
-    <!-- <div class="main relative z-10 max-w-8x1 mx-auto px-3 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
-      <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200">
-        <div class="inline-block py-1 px-4 border border-white rounded-full text-xs tracking-widest uppercase text-primary mb-4">
-          {{ 'ABOUT.BADGE' | translate }}
-        </div>
-        <h1 class="text-5xl lg:text-7xl font-display leading-tight">
-          {{ 'ABOUT.TITLE' | translate }} <br />
-          <span class="gold-shimmer-text">{{ 'ABOUT.TITLE_SPAN' | translate }}</span>
+    <div class="main relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-20">
+      <div class="space-y-8" data-aos="fade-up" data-aos-duration="1100">
+        <h1
+          class="font-display leading-tight text-white"
+          [class.text-4xl]="currentLang === 'ar'"
+          [class.sm:text-5xl]="currentLang === 'ar'"
+          [class.lg:text-6xl]="currentLang === 'ar'"
+          [class.text-5xl]="currentLang !== 'ar'"
+          [class.lg:text-7xl]="currentLang !== 'ar'">
+          {{ 'ABOUT.TITLE' | translate }}
+          <span class="gold-shimmer-text text-holding-gold">{{ 'ABOUT.TITLE_SPAN' | translate }}</span>
         </h1>
-        <div class="space-y-6 max-w-xl">
-          <p class="text-lg text-gray-400 font-arabic leading-relaxed">
-            {{ 'ABOUT.DESC_AR' | translate }}
-          </p>
-          <p class="text-gray-500 leading-relaxed font-light">
-            {{ 'ABOUT.DESC_EN' | translate }}
-          </p>
-        </div>
-      </div>
-
-      <div class="hidden lg:block" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-        <div class="relative p-4 border border-primary/20 rounded-2xl">
-          <img alt="Architecture"
-                class="w-full h-[450px] object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                src="../../../assets/imges/b1.jpeg"/>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="main relative z-10 max-w-full mx-auto px-6 lg:px-20 flex items-center">
-      <div class="space-y-8 d-flex justify-content-center align-items-center gap-5" data-aos="fade-right" data-aos-duration="1200">
-        <!-- <div
-          class="inline-block py-1 px-4 border border-white rounded-full text-xs tracking-widest uppercase text-primary mb-4">
-          {{ 'ABOUT.BADGE' | translate }}
-        </div> -->
-        <h1 class="text-5xl lg:text-7xl font-display leading-tight">
-          {{ 'ABOUT.TITLE' | translate }} 
-          <span class="gold-shimmer-text">{{ 'ABOUT.TITLE_SPAN' | translate }}</span>
-        </h1>
-        <!-- <div class="space-y-6 max-w-xl">
-          <p *ngIf="currentLang === 'ar'" class="text-lg text-gray-400 font-arabic leading-relaxed">
-            {{ 'ABOUT.DESC_AR' | translate }}
-          </p>
-          <p *ngIf="currentLang !== 'ar'" class="text-gray-500 leading-relaxed font-light text-lg">
-            {{ 'ABOUT.DESC_EN' | translate }}
-          </p>
-        </div> -->
       </div>
     </div>
-
   </header>
 
   <!-- Vision & Mission -->
