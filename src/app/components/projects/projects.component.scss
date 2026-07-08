@@ -230,7 +230,7 @@ $white-pure: #fff;
   }
 
   .portfolio-carousel-dots {
-    display: flex;
+    display: none;
     flex-direction: row;
     direction: ltr;
     justify-content: center;
@@ -239,6 +239,10 @@ $white-pure: #fff;
     gap: 0.5rem;
     margin-top: 1rem;
     padding-inline: 1.5rem;
+
+    @media (max-width: 639px) {
+      display: flex;
+    }
   }
 
   .portfolio-carousel-dot {

@@ -52,42 +52,17 @@ html[lang="ar"] .font-display {
   letter-spacing: 0.01em;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(197, 160, 89, 0.45) rgba(255, 255, 255, 0.04);
+*,
+*::before,
+*::after {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-*::-webkit-scrollbar-thumb {
-  background: rgba(197, 160, 89, 0.45);
-  border-radius: 999px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: rgba(197, 160, 89, 0.7);
-}
-
-@media (max-width: 768px) {
-  html,
-  body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
-  }
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
